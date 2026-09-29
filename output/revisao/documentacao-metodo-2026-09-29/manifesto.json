@@ -1,0 +1,41 @@
+{
+  "results_sha256": "7b037106994b96d623d6c25f42256387e1f613faa4955067ac7b79e9dcc1a836",
+  "source_sha256": {
+    "src/nlu_extractor.py": "cc75c4a28e98c43e11a6e1b6acd25a05f1ddd83c7930a21725bd08ca0c1d20a3",
+    "src/closing_llm.py": "d303945b6a510b168caa7ea14181020fbf06da677806f1e6c82ce45c62f5105b",
+    "src/grounding.py": "4843d24bca0708c00100166a1fb0bcb80e27329d6fd7da632d1a1bcf1b3548d3",
+    "src/coaching_units.py": "3a598db983a2c1e03aee15745d6b91edcc3684482a8c5e71cc4785d8f99f33f4",
+    "src/coaching_fact_audit.py": "4355e8fc73b0100796449345089c482b6d09430a5b14c07be24c551a96e7d403",
+    "src/heuristic_engine.py": "844e41aacad42316cd3fb4ad3737a52da18769aeea023855ad92fc249f7f424f",
+    "src/pipeline.py": "088fd6cc22a3bf5d7312e91c928355abc55daef447787982835a1731581e78bc",
+    "src/methods.py": "c2603d2253f98ceca9fc95d3b477b57fb47a778ecdc819378193b80736164557",
+    "src/review_recording.py": "8ac11d04b7d878c3f07d29ef3e61d6a8b9e532bee9d233d0826f42722fae5ac4",
+    "src/store.py": "593b2c84c33bcf21c721dccf318efc7a26c97db8b3dfcb2cf467dc07602f4149",
+    "src/models.py": "b51ac2a8a02440c53c3a2c70292bb9094f3b7cb0c0c4578405776d1faac6def1"
+  },
+  "prompts": {
+    "interpretacao": {
+      "sha256": "ac1c0fcfdb65a82eebd37680be2887bb02999a4f85cfcbd777bc694bcea9edce",
+      "characters": 1385
+    },
+    "geracao": {
+      "sha256": "77f1f3172ecef7cd205db108a9249b2991dea307dae3da0ea6f11bcac8655cc9",
+      "characters": 3543
+    },
+    "revisao_unidades": {
+      "sha256": "9e16ce46da66919d5c4566a5dac5c4990b8c4038cdc193320face0dc97b5cc9e",
+      "characters": 3295
+    },
+    "auditoria_factual": {
+      "sha256": "d82cc101b9d517924a74cc8baac8f451699c4eaa73203ca870f0a03d2af2d0c2",
+      "characters": 3179
+    },
+    "reformulacao": {
+      "sha256": "e95ae9b748d1779834775757a13902bb82061ab8212694497f4107b6cd90e0fe",
+      "characters": 5582
+    }
+  },
+  "extraction": "AST literals and string concatenations; no module imported or inference executed",
+  "case_id": "CASE-015",
+  "human_export_sha256": "1720d59b914df36f4ebfa50188519e40dd827629e4b6bed826202c01ba914d57"
+}

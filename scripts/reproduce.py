@@ -54,6 +54,13 @@ def main():
         check=True,
     )
     subprocess.run([sys.executable, "latex/generate_human_review_tables.py"], cwd=ROOT, env=environment, check=True)
+    subprocess.run(
+        [sys.executable, "latex/generate_method_documentation.py", "--poc", ".", "--results", RUN],
+        cwd=ROOT,
+        env=environment,
+        stdout=subprocess.DEVNULL,
+        check=True,
+    )
     check_hashes(manifest["expected_outputs_sha256"])
     print(f"Pacote conferido: 100 casos, 400 registros, 400 julgamentos e {len(manifest['expected_outputs_sha256'])} saídas idênticas.")
 

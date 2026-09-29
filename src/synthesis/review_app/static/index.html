@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curadoria e Validação Humana — MBA TCC (ICMC-USP)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-bright: #f0f6fc;
+      --text-muted: #8b949e;
+      --accent: #238636;
+      --accent-hover: #2ea043;
+      --blue: #58a6ff;
+      --blue-subtle: rgba(56, 139, 253, 0.15);
+      --red: #f85149;
+      --red-subtle: rgba(248, 81, 73, 0.15);
+      --amber: #d29922;
+      --amber-subtle: rgba(210, 153, 34, 0.15);
+      --purple: #bc8cff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand h1 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-bright);
+    }
+    .brand span {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: #21262d;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .stats-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+    }
+    .stat-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .stat-approved { background: rgba(35, 134, 54, 0.2); color: #3fb950; }
+    .stat-pending { background: var(--amber-subtle); color: #e3b341; }
+    .stat-rejected { background: var(--red-subtle); color: #f85149; }
+    .stat-total { background: #21262d; color: var(--text-bright); }
+    .progress-bar-container {
+      width: 140px;
+      height: 8px;
+      background: #21262d;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #2ea043;
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .main-layout {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 360px;
+      background: var(--card-bg);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar-controls {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .search-input, .filter-select {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      color: var(--text-bright);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      width: 100%;
+    }
+    .tabs {
+      display: flex;
+      gap: 4px;
+      padding: 0 12px;
+      margin-top: 8px;
+    }
+    .tab {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .tab.active {
+      background: #21262d;
+      color: var(--text-bright);
+    }
+    .case-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .case-item {
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: #0d1117;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .case-item:hover {
+      border-color: #58a6ff;
+    }
+    .case-item.active {
+      border-color: #58a6ff;
+      background: #1c2128;
+    }
+    .case-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+    }
+    .case-id {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: var(--text-bright);
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .status-dot.approved { background: #3fb950; box-shadow: 0 0 6px #3fb950; }
+    .status-dot.pending { background: #d29922; }
+    .status-dot.rejected { background: #f85149; }
+    .case-item-q {
+      font-size: 12px;
+      color: var(--text);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    /* Content Area */
+    .content-pane {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 24px;
+      gap: 20px;
+    }
+    .case-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .provenance-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+    }
+    .pill {
+      background: #21262d;
+      padding: 3px 8px;
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+    .pill strong { color: var(--text-bright); }
+    .pill-blue { background: var(--blue-subtle); color: var(--blue); }
+    .pill-purple { background: rgba(188, 140, 255, 0.15); color: var(--purple); }
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .field-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
+    .textarea-styled {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      color: var(--text-bright);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .rubric-box {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .rubric-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-bright);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .suggested-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .suggested-item {
+      font-size: 12px;
+      background: #161b22;
+      border-left: 3px solid #30363d;
+      padding: 6px 10px;
+      color: var(--text-muted);
+      border-radius: 0 4px 4px 0;
+    }
+    .editable-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .editable-item {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .editable-input {
+      flex: 1;
+      background: #161b22;
+      border: 1px solid var(--border);
+      color: var(--text-bright);
+      padding: 8px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .btn-icon {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .btn-icon:hover {
+      color: var(--red);
+      border-color: var(--red);
+    }
+    .btn-add {
+      background: #21262d;
+      border: 1px dashed var(--border);
+      color: var(--blue);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+    .btn-add:hover {
+      background: var(--blue-subtle);
+    }
+    /* Handoff Section */
+    .handoff-box {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .toggle-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-toggle {
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #161b22;
+      color: var(--text-muted);
+    }
+    .btn-toggle.active-yes {
+      background: var(--amber-subtle);
+      border-color: var(--amber);
+      color: #e3b341;
+    }
+    .btn-toggle.active-no {
+      background: var(--blue-subtle);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    /* Action Footer */
+    .action-bar {
+      position: sticky;
+      bottom: 0;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-secondary {
+      background: #21262d;
+      color: var(--text-bright);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { background: #30363d; }
+    .btn-danger {
+      background: transparent;
+      color: var(--red);
+      border: 1px solid var(--red);
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .btn-danger:hover { background: var(--red-subtle); }
+    .btn-export {
+      background: #1f6feb;
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-export:hover { background: #388bfd; }
+    .toast {
+      position: fixed;
+      bottom: 70px;
+      right: 24px;
+      background: #238636;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>Validação Humana de Casos</h1>
+      <span>MBA IA & Big Data · ICMC-USP</span>
+    </div>
+    <div class="stats-row">
+      <div class="stat-badge stat-total">Total: <span id="stat-total">0</span></div>
+      <div class="stat-badge stat-approved">✓ <span id="stat-approved">0</span> Aprovados</div>
+      <div class="stat-badge stat-rejected">✕ <span id="stat-rejected">0</span> Rejeitados</div>
+      <div class="stat-badge stat-pending">⏳ <span id="stat-pending">0</span> Pendentes</div>
+      <div class="progress-bar-container" title="Progresso da Revisão">
+        <div class="progress-bar" id="stat-progress"></div>
+      </div>
+      <button class="btn-export" onclick="exportCanonicalDataset()">Exportar Canonical (cases_reviewed.jsonl)</button>
+    </div>
+  </header>
+
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-controls">
+        <input type="text" id="search-box" class="search-input" placeholder="Buscar pergunta ou ID..." oninput="applyFilters()">
+        <select id="category-filter" class="filter-select" onchange="applyFilters()">
+          <option value="">Todas as Categorias</option>
+        </select>
+        <div class="tabs">
+          <button class="tab active" data-filter="all" onclick="setTab('all')">Todos</button>
+          <button class="tab" data-filter="pending" onclick="setTab('pending')">Pendentes</button>
+          <button class="tab" data-filter="approved" onclick="setTab('approved')">Aprovados</button>
+          <button class="tab" data-filter="rejected" onclick="setTab('rejected')">Rejeitados</button>
+        </div>
+      </div>
+      <div class="case-list" id="case-list"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-pane" id="content-pane">
+      <div id="no-case-selected" style="margin: auto; color: var(--text-muted); text-align: center;">
+        Selecione uma dúvida na lista lateral para iniciar a revisão.
+      </div>
+
+      <div class="case-card" id="case-card" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <h2 id="view-id" style="font-family: 'JetBrains Mono', monospace; font-size: 18px; color: var(--text-bright);">CASE-001</h2>
+            <span id="view-status-pill" class="pill">Pendente</span>
+          </div>
+          <div class="provenance-pills">
+            <span class="pill">Gerador: <strong id="prov-gen">-</strong></span>
+            <span class="pill">Curador: <strong id="prov-cur">-</strong></span>
+            <span class="pill">Anotador: <strong id="prov-ann">-</strong></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Mensagem do Consumidor (WhatsApp)</label>
+          <textarea id="edit-question" class="textarea-styled" rows="3"></textarea>
+        </div>
+
+        <div class="grid-2">
+          <div class="field-group">
+            <label class="field-label">Categoria</label>
+            <select id="edit-category" class="filter-select">
+              <option value="energia_assinatura_gd">energia_assinatura_gd</option>
+              <option value="mercado_livre_acl">mercado_livre_acl</option>
+              <option value="leitura_fatura_tarifas">leitura_fatura_tarifas</option>
+              <option value="objecoes_e_seguranca">objecoes_e_seguranca</option>
+              <option value="pos_venda_e_suporte">pos_venda_e_suporte</option>
+              <option value="solicitacao_humana">solicitacao_humana</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Tipo de Intenção</label>
+            <input type="text" id="edit-intent" class="filter-select" placeholder="duvida_conceitual, objecao...">
+          </div>
+        </div>
+
+        <!-- Expected Facts -->
+        <div class="grid-2">
+          <div class="rubric-box">
+            <div class="rubric-title">
+              <span>Fatos Esperados Sugeridos (IA)</span>
+              <span class="pill pill-blue">Referência</span>
+            </div>
+            <div class="suggested-list" id="suggested-facts"></div>
+          </div>
+          <div class="rubric-box">
+            <div class="rubric-title">
+              <span>Fatos Esperados Revisados (Gabarito Humano)</span>
+              <button class="btn-add" onclick="addReviewedFact()">+ Adicionar Fato</button>
+            </div>
+            <div class="editable-list" id="reviewed-facts"></div>
+          </div>
+        </div>
+
+        <!-- Forbidden Claims -->
+        <div class="grid-2">
+          <div class="rubric-box">
+            <div class="rubric-title">
+              <span>Afirmações Proibidas Sugeridas (IA)</span>
+              <span class="pill pill-purple">Referência</span>
+            </div>
+            <div class="suggested-list" id="suggested-forbidden"></div>
+          </div>
+          <div class="rubric-box">
+            <div class="rubric-title">
+              <span>Afirmações Proibidas Revisadas (Gabarito Humano)</span>
+              <button class="btn-add" onclick="addReviewedForbidden()">+ Adicionar Proibição</button>
+            </div>
+            <div class="editable-list" id="reviewed-forbidden"></div>
+          </div>
+        </div>
+
+        <!-- Handoff Section -->
+        <div class="handoff-box">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label class="field-label">Encaminhamento Humano Obrigatório (Handoff)?</label>
+            <span id="suggested-handoff-pill" class="pill">Sugestão IA: Não</span>
+          </div>
+          <div class="toggle-group">
+            <button type="button" id="btn-handoff-no" class="btn-toggle" onclick="setHandoff(false)">NÃO (Atendimento Automatizado)</button>
+            <button type="button" id="btn-handoff-yes" class="btn-toggle" onclick="setHandoff(true)">SIM (Transferir para Consultor)</button>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Justificativa do Encaminhamento</label>
+            <input type="text" id="edit-handoff-reason" class="textarea-styled" placeholder="Ex: Pedido explícito de atendente humano...">
+          </div>
+        </div>
+
+        <!-- Grounding Chunks -->
+        <div class="field-group">
+          <label class="field-label">Trechos Canônicos da KB (IDs de Grounding)</label>
+          <div id="grounding-chunks" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--blue);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Bar -->
+  <div class="action-bar" id="action-bar" style="display: none;">
+    <div style="display: flex; gap: 8px;">
+      <button class="btn-secondary" onclick="navigateOffset(-1)" title="Alt + Seta Esquerda">← Anterior</button>
+      <button class="btn-secondary" onclick="navigateOffset(1)" title="Alt + Seta Direita">Próximo →</button>
+    </div>
+    <div style="display: flex; gap: 12px;">
+      <button class="btn-danger" onclick="rejectCurrentCase()">✕ Rejeitar Dúvida</button>
+      <button class="btn-secondary" onclick="saveCurrentCase(false)">Salvar Ajustes</button>
+      <button class="btn-primary" onclick="approveWithSuggestions()" title="Ctrl + Enter">✓ Aprovar Sugestão Integral (IA)</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Alteração salva com sucesso!</div>
+
+  <script>
+    let allCases = [];
+    let currentCase = null;
+    let currentTab = 'all';
+    let currentFilterCat = '';
+
+    async function init() {
+      await loadStats();
+      await loadCases();
+      setupShortcuts();
+    }
+
+    async function loadStats() {
+      try {
+        const res = await fetch('/api/stats');
+        const stats = await res.json();
+        document.getElementById('stat-total').textContent = stats.total;
+        document.getElementById('stat-approved').textContent = stats.counts.approved || 0;
+        document.getElementById('stat-rejected').textContent = stats.counts.rejected || 0;
+        document.getElementById('stat-pending').textContent = stats.counts.pending || 0;
+        document.getElementById('stat-progress').style.width = stats.percent_completed + '%';
+
+        // populate category filter options
+        const select = document.getElementById('category-filter');
+        const existing = new Set();
+        select.innerHTML = '<option value="">Todas as Categorias</option>';
+        for (const cat in stats.categories) {
+          const opt = document.createElement('option');
+          opt.value = cat;
+          opt.textContent = `${cat} (${stats.categories[cat]})`;
+          select.appendChild(opt);
+        }
+      } catch (err) {
+        console.error('Error loading stats:', err);
+      }
+    }
+
+    async function loadCases() {
+      try {
+        const res = await fetch('/api/cases');
+        allCases = await res.json();
+        applyFilters();
+        if (allCases.length > 0 && !currentCase) {
+          selectCase(allCases[0].id);
+        }
+      } catch (err) {
+        console.error('Error loading cases:', err);
+      }
+    }
+
+    function applyFilters() {
+      const search = document.getElementById('search-box').value.toLowerCase();
+      const cat = document.getElementById('category-filter').value;
+      const listEl = document.getElementById('case-list');
+      listEl.innerHTML = '';
+
+      const filtered = allCases.filter(c => {
+        if (currentTab !== 'all' && c.review_status !== currentTab) return false;
+        if (cat && c.category !== cat) return false;
+        if (search) {
+          const matchQ = (c.question || '').toLowerCase().includes(search);
+          const matchId = (c.curated_id || c.id || '').toLowerCase().includes(search);
+          if (!matchQ && !matchId) return false;
+        }
+        return true;
+      });
+
+      filtered.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'case-item' + (currentCase && currentCase.id === c.id ? ' active' : '');
+        item.onclick = () => selectCase(c.id);
+        item.innerHTML = `
+          <div class="case-item-header">
+            <span class="case-id">${c.curated_id || c.id}</span>
+            <div class="status-dot ${c.review_status || 'pending'}"></div>
+          </div>
+          <div class="case-item-q">${c.question}</div>
+        `;
+        listEl.appendChild(item);
+      });
+    }
+
+    async function selectCase(caseId) {
+      try {
+        const res = await fetch(`/api/cases/${caseId}`);
+        currentCase = await res.json();
+        renderCase(currentCase);
+        applyFilters();
+      } catch (err) {
+        console.error('Error selecting case:', err);
+      }
+    }
+
+    function renderCase(c) {
+      document.getElementById('no-case-selected').style.display = 'none';
+      document.getElementById('case-card').style.display = 'flex';
+      document.getElementById('action-bar').style.display = 'flex';
+
+      document.getElementById('view-id').textContent = c.curated_id || c.id;
+      const statusPill = document.getElementById('view-status-pill');
+      statusPill.textContent = (c.review_status || 'Pendente').toUpperCase();
+      statusPill.className = 'pill ' + (c.review_status === 'approved' ? 'stat-approved' : c.review_status === 'rejected' ? 'stat-rejected' : 'stat-pending');
+
+      document.getElementById('prov-gen').textContent = c.source_model || '-';
+      document.getElementById('prov-cur').textContent = c.curator_model || '-';
+      document.getElementById('prov-ann').textContent = c.annotator_model || '-';
+
+      document.getElementById('edit-question').value = c.question || '';
+      document.getElementById('edit-category').value = c.category || 'energia_assinatura_gd';
+      document.getElementById('edit-intent').value = c.intent_type || 'duvida_conceitual';
+
+      // Suggested Facts
+      const sFacts = document.getElementById('suggested-facts');
+      sFacts.innerHTML = '';
+      (c.expected_facts_suggested || []).forEach(f => {
+        const d = document.createElement('div');
+        d.className = 'suggested-item';
+        d.textContent = f;
+        sFacts.appendChild(d);
+      });
+
+      // Reviewed Facts
+      const rFacts = document.getElementById('reviewed-facts');
+      rFacts.innerHTML = '';
+      const factsToRender = (c.expected_facts_reviewed && c.expected_facts_reviewed.length > 0)
+        ? c.expected_facts_reviewed
+        : (c.expected_facts_suggested || []);
+      factsToRender.forEach(f => addReviewedFact(f));
+
+      // Suggested Forbidden
+      const sForb = document.getElementById('suggested-forbidden');
+      sForb.innerHTML = '';
+      (c.forbidden_claims_suggested || []).forEach(f => {
+        const d = document.createElement('div');
+        d.className = 'suggested-item';
+        d.textContent = f;
+        sForb.appendChild(d);
+      });
+
+      // Reviewed Forbidden
+      const rForb = document.getElementById('reviewed-forbidden');
+      rForb.innerHTML = '';
+      const forbToRender = (c.forbidden_claims_reviewed && c.forbidden_claims_reviewed.length > 0)
+        ? c.forbidden_claims_reviewed
+        : (c.forbidden_claims_suggested || []);
+      forbToRender.forEach(f => addReviewedForbidden(f));
+
+      // Handoff
+      const isHandoff = (c.handoff_expected_reviewed !== null && c.handoff_expected_reviewed !== undefined)
+        ? c.handoff_expected_reviewed
+        : c.handoff_expected_suggested;
+      setHandoff(!!isHandoff);
+      document.getElementById('suggested-handoff-pill').textContent = `Sugestão IA: ${c.handoff_expected_suggested ? 'SIM' : 'NÃO'}`;
+      document.getElementById('edit-handoff-reason').value = c.handoff_reason_reviewed || c.handoff_reason_suggested || '';
+
+      // Grounding Chunks
+      const chunksEl = document.getElementById('grounding-chunks');
+      const chunks = c.grounding_chunk_ids_suggested || [];
+      chunksEl.textContent = chunks.length > 0 ? chunks.join(', ') : '(Nenhum chunk específico associado)';
+    }
+
+    function addReviewedFact(text = '') {
+      const list = document.getElementById('reviewed-facts');
+      const item = document.createElement('div');
+      item.className = 'editable-item';
+      item.innerHTML = `
+        <input type="text" class="editable-input fact-input" value="${escapeHtml(text)}" placeholder="Descreva o fato esperado...">
+        <button type="button" class="btn-icon" onclick="this.parentElement.remove()" title="Remover">✕</button>
+      `;
+      list.appendChild(item);
+    }
+
+    function addReviewedForbidden(text = '') {
+      const list = document.getElementById('reviewed-forbidden');
+      const item = document.createElement('div');
+      item.className = 'editable-item';
+      item.innerHTML = `
+        <input type="text" class="editable-input forbidden-input" value="${escapeHtml(text)}" placeholder="Descreva a alegação proibida...">
+        <button type="button" class="btn-icon" onclick="this.parentElement.remove()" title="Remover">✕</button>
+      `;
+      list.appendChild(item);
+    }
+
+    let currentHandoffState = false;
+    function setHandoff(val) {
+      currentHandoffState = val;
+      const btnYes = document.getElementById('btn-handoff-yes');
+      const btnNo = document.getElementById('btn-handoff-no');
+      if (val) {
+        btnYes.className = 'btn-toggle active-yes';
+        btnNo.className = 'btn-toggle';
+      } else {
+        btnNo.className = 'btn-toggle active-no';
+        btnYes.className = 'btn-toggle';
+      }
+    }
+
+    async function approveWithSuggestions() {
+      if (!currentCase) return;
+      try {
+        const res = await fetch(`/api/cases/${currentCase.id}/approve_suggestions`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reviewer: 'Pedro Saulo Brito' })
+        });
+        const data = await res.json();
+        showToast('✓ Aprovado integralmente com sugestões da IA!');
+        await loadStats();
+        await loadCases();
+        if (data.next_id) {
+          selectCase(data.next_id);
+        }
+      } catch (err) {
+        console.error('Error approving:', err);
+      }
+    }
+
+    async function saveCurrentCase(stayOnPage = false) {
+      if (!currentCase) return;
+      const facts = Array.from(document.querySelectorAll('.fact-input')).map(i => i.value.trim()).filter(Boolean);
+      const forbidden = Array.from(document.querySelectorAll('.forbidden-input')).map(i => i.value.trim()).filter(Boolean);
+
+      const payload = {
+        question: document.getElementById('edit-question').value.trim(),
+        category: document.getElementById('edit-category').value,
+        intent_type: document.getElementById('edit-intent').value.trim(),
+        expected_facts_reviewed: facts,
+        forbidden_claims_reviewed: forbidden,
+        handoff_expected_reviewed: currentHandoffState,
+        handoff_reason_reviewed: document.getElementById('edit-handoff-reason').value.trim(),
+        review_status: 'approved',
+        reviewer: 'Pedro Saulo Brito'
+      };
+
+      try {
+        const res = await fetch(`/api/cases/${currentCase.id}/save`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        showToast('✓ Ajustes salvos e caso aprovado!');
+        await loadStats();
+        await loadCases();
+        if (!stayOnPage && data.next_id) {
+          selectCase(data.next_id);
+        }
+      } catch (err) {
+        console.error('Error saving:', err);
+      }
+    }
+
+    async function rejectCurrentCase() {
+      if (!currentCase) return;
+      const reason = prompt('Motivo da rejeição (ex: Fora de escopo, duplicada, irrealista):', 'Pergunta descartada na curadoria humana');
+      if (reason === null) return;
+
+      try {
+        const res = await fetch(`/api/cases/${currentCase.id}/reject`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ rejection_reason: reason, reviewer: 'Pedro Saulo Brito' })
+        });
+        const data = await res.json();
+        showToast('✕ Dúvida rejeitada e excluída do conjunto');
+        await loadStats();
+        await loadCases();
+        if (data.next_id) {
+          selectCase(data.next_id);
+        }
+      } catch (err) {
+        console.error('Error rejecting:', err);
+      }
+    }
+
+    function navigateOffset(offset) {
+      if (!currentCase || allCases.length === 0) return;
+      const idx = allCases.findIndex(c => c.id === currentCase.id);
+      if (idx === -1) return;
+      const target = idx + offset;
+      if (target >= 0 && target < allCases.length) {
+        selectCase(allCases[target].id);
+      }
+    }
+
+    async function exportCanonicalDataset() {
+      try {
+        const res = await fetch('/api/export', { method: 'POST' });
+        const data = await res.json();
+        alert(`Exportação concluída com sucesso!\n${data.exported_count} casos aprovados salvos em:\n${data.path}`);
+      } catch (err) {
+        console.error('Error exporting:', err);
+      }
+    }
+
+    function setTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll('.tab').forEach(t => {
+        t.className = 'tab' + (t.dataset.filter === tab ? ' active' : '');
+      });
+      applyFilters();
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 2500);
+    }
+
+    function setupShortcuts() {
+      window.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+          e.preventDefault();
+          approveWithSuggestions();
+        } else if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+          e.preventDefault();
+          saveCurrentCase(true);
+        } else if (e.altKey && e.key === 'ArrowRight') {
+          e.preventDefault();
+          navigateOffset(1);
+        } else if (e.altKey && e.key === 'ArrowLeft') {
+          e.preventDefault();
+          navigateOffset(-1);
+        }
+      });
+    }
+
+    function escapeHtml(text) {
+      return (text || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

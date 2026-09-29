@@ -1,0 +1,31 @@
+TEMPLATES = {
+        "cancelamento_e_fidelidade": "Podemos conferir as condições de cancelamento e eventual fidelidade no contrato da oferta escolhida?",
+        "garantia_de_fornecimento": "A distribuidora continua responsável pela rede física. A contratação de energia não elimina o risco de interrupções.",
+        "duas_faturas": "Vamos conferir a fatura da distribuidora e a cobrança do fornecedor para identificar as parcelas e comparar o custo total?",
+        "titularidade_inquilino": "Podemos verificar a titularidade da conta e as condições da oferta para um imóvel alugado?",
+        "default": "Qual condição da proposta você gostaria de esclarecer? Para estimar economia, precisamos verificar os dados da fatura e da oferta."
+    }
+
+def generate_support(
+        self,
+        consumer: ConsumerProfile,
+        extracted_context: ExtractedDealContext,
+        handoff: HandoffDecision,
+        retrieved_knowledge: list[Any],
+    ) -> ClosingSupport:
+        # Seleciona template pela objeção prioritária
+        primary = extracted_context.detected_objections[0] if extracted_context.detected_objections else "default"
+        text = self.TEMPLATES.get(primary, self.TEMPLATES["default"])
+
+        return ClosingSupport(
+            next_best_action="enviar_template_predefinido",
+            strategic_rationale="Resposta padronizada baseada em casamento de palavras-chave do dicionário operacional.",
+            primary_risk="Rigidez comunicacional e potencial falta de contextualização para perguntas atípicas.",
+            risk_mitigation="Recomendar escalada para atendimento humano se o cliente insistir na dúvida.",
+            suggested_talk_track=text,
+            high_construal_guidance=f"Esclarecer a dúvida sobre {primary} com base no roteiro padrão da empresa.",
+            low_construal_template=text,
+            generation_source="heuristic_template",
+            grounding_review={"status": "not_reviewed", "protocol": "symbolic-template-v1"},
+            anti_manipulation_flags=[],
+        )

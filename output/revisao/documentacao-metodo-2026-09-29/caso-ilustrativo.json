@@ -1,0 +1,2069 @@
+{
+  "selection": "Shortest final consumer draft among the 34 blocks judged incorrect; illustrative, not representative",
+  "case": {
+    "case_id": "CASE-015",
+    "method": "neuro_symbolic",
+    "input": {
+      "consumer_id": "CASE-015",
+      "name": "CASE-015",
+      "segment": "unknown",
+      "region": "unknown",
+      "consumption_profile": "unknown",
+      "interests": [],
+      "maturity": "unknown",
+      "urgency": "unknown",
+      "restrictions": [],
+      "objections": [],
+      "current_stage": "descoberta",
+      "distributor": null,
+      "monthly_consumption_kwh": null,
+      "icp_category": "unknown",
+      "installation_code": "",
+      "tenant_status": "unknown",
+      "chat_transcript": [
+        {
+          "sender": "customer",
+          "content": "O que é essa tal de TUSD na fatura? É taxa extra?"
+        }
+      ],
+      "notes": "",
+      "bill_facts": null,
+      "offer_projection": null,
+      "catalog_terms": null
+    },
+    "rubric": {
+      "expected_facts": [
+        "A TUSD (Tarifa de Uso do Sistema de Distribuição) remunera o transporte da energia pela rede física.",
+        "A TUSD cobre custos operacionais da concessionária, custos do sistema de transmissão e encargos setoriais.",
+        "A TUSD não é uma taxa extra, mas parte da composição tarifária homologada pela ANEEL."
+      ],
+      "forbidden_claims": [
+        "A TUSD é uma taxa opcional.",
+        "A TUSD pode ser eliminada completamente da fatura.",
+        "A TUSD é uma taxa cobrada apenas em algumas regiões.",
+        "A TUSD é uma taxa que pode ser negociada diretamente com a distribuidora."
+      ]
+    },
+    "status": "blocked",
+    "result": {
+      "status": "blocked",
+      "support": null,
+      "handoff": {
+        "action": "escalate_human",
+        "urgency": "high",
+        "rationale": "Revisão rejeitou a resposta; assistência humana recomendada.",
+        "triggered_policies": [],
+        "risk_factors": [],
+        "confidence": null
+      },
+      "interpretation": {
+        "distributor": null,
+        "monthly_consumption_kwh": null,
+        "detected_objections": [
+          "duvida_taxa_extra"
+        ],
+        "sentiment": "cauteloso",
+        "friction_score": 0.2,
+        "explicit_human_requested": false,
+        "is_immediate_urgency": false,
+        "current_stage": "fatura",
+        "key_intent": "entender_tusd_e_taxas",
+        "raw_summary": "Cliente pergunta sobre o significado da TUSD na fatura de energia e teme que seja uma taxa adicional.",
+        "handoff_recommended": false,
+        "handoff_reason": "",
+        "interpretation_source": "llm"
+      },
+      "retrieved_chunks": [
+        {
+          "chunk_id": "pub-61a26859e8808af2999a",
+          "title": "Leitura de fatura > Anatomia da fatura para o diagnóstico comercial > 4. Componentes tarifários: TE e TUSD",
+          "content": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física.\n* **Bandeira tarifária:** Adicional por kWh decorrente das condições hidrológicas (Verde, Amarela, Vermelha 1 ou Vermelha 2).",
+          "similarity_score": 0.7734170826176361,
+          "metadata": {
+            "source_path": "okf/sales/leitura-de-fatura.md",
+            "content_hash": "61a26859e8808af2999a04d2e99613d669c42af7e0b6cb58cb525efb85411605"
+          }
+        },
+        {
+          "chunk_id": "pub-24c4f657fff094437ead",
+          "title": "Distribuidoras e tarifas de energia > Composição tarifária: TUSD e TE",
+          "content": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas.\n   * Cobrada tanto em reais por quilowatt-hora consumido (R$/kWh) quanto em reais por quilowatt de demanda de potência contratada (R$/kW) no caso do Grupo A.\n2. **TE (Tarifa de Energia):**\n   * Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas) e os encargos vinculados à compra e contratação regulada de suprimento.\n   * Cobrada estritamente em reais por quilowatt-hora consumido (R$/kWh).\n\n```text\nTarifa Homologada da Distribuidora = TUSD + TE\nFatura Final = (Consumo x TE) + (Uso da Rede x TUSD) + Encargos + Tributos (ICMS/PIS/COFINS) + CIP/COSIP\n```\n\n---",
+          "similarity_score": 0.7555697096676514,
+          "metadata": {
+            "source_path": "okf/market/distribuidoras-e-tarifas.md",
+            "content_hash": "24c4f657fff094437eadee23afe4fbd6874dd0b710b95e9e2f251ae605eb6146"
+          }
+        },
+        {
+          "chunk_id": "pub-956e3a26cfe47d8878fe",
+          "title": "Leitura de fatura > O que é descontável vs. O que permanece fixo",
+          "content": "Um dos erros mais graves do vendedor é prometer desconto sobre o valor total da fatura. A proposta deve deixar claro onde incide a redução:\n\n| Componente da Fatura | O desconto incide? | Explicação técnica |\n| :--- | :---: | :--- |\n| **Consumo TE (kWh)** | **SIM** | O fornecedor substitui ou compensa a energia da distribuidora a preço menor. |\n| **Parcela compensável da TUSD** | **SIM** | Na GD compartilhada, a energia compensada abate componentes da TUSD conforme a Lei 14.300/2022. |\n| **Demanda Contratada (kW)** | **NÃO** | Valor regulado pago diretamente à distribuidora pelo uso da rede física no Grupo A. |\n| **Custo de Disponibilidade (Grupo B)** | **NÃO** | Taxa mínima da distribuidora (30 kWh monofásico, 50 kWh bifásico, 100 kWh trifásico). |\n| **CIP / COSIP (Iluminação Pública)** | **NÃO** | Tributo municipal cobrado na fatura e repassado integralmente à prefeitura. |\n| **Multas e Reativos Excedentes (UFER/FER)** | **NÃO** | Penalidades por baixo fator de potência ou atraso de pagamento, que devem ser corrigidas na instalação do cliente. |\n\n---",
+          "similarity_score": 0.7375503055661383,
+          "metadata": {
+            "source_path": "okf/sales/leitura-de-fatura.md",
+            "content_hash": "956e3a26cfe47d8878fe4f5251573d435c2a49169c89f0ebaa8c3b3f98f437ce"
+          }
+        }
+      ],
+      "review": {
+        "review": {
+          "segments": [
+            {
+              "unit_id": "6d2ea756b0b7d4e3:0",
+              "kind": "recommendation",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:1",
+              "kind": "format",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:2",
+              "kind": "general_fact",
+              "sources": [
+                {
+                  "id": "knowledge:pub-24c4f657fff094437ead",
+                  "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                },
+                {
+                  "id": "knowledge:pub-61a26859e8808af2999a",
+                  "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                }
+              ]
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:3",
+              "kind": "format",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:4",
+              "kind": "recommendation",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:5",
+              "kind": "format",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:6",
+              "kind": "hypothesis",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:7",
+              "kind": "format",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:8",
+              "kind": "recommendation",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:9",
+              "kind": "format",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:10",
+              "kind": "recommendation",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:11",
+              "kind": "format",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:12",
+              "kind": "general_fact",
+              "sources": [
+                {
+                  "id": "knowledge:pub-61a26859e8808af2999a",
+                  "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                },
+                {
+                  "id": "knowledge:pub-24c4f657fff094437ead",
+                  "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                }
+              ]
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:13",
+              "kind": "format",
+              "sources": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:14",
+              "kind": "format",
+              "sources": []
+            }
+          ]
+        },
+        "fact_audit": {
+          "units": [
+            {
+              "unit_id": "6d2ea756b0b7d4e3:0",
+              "claims": [
+                {
+                  "text": "TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção)",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                    },
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)"
+                    }
+                  ]
+                },
+                {
+                  "text": "TE, que remunera a energia gerada",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas) e os encargos vinculados à compra e contratação regulada de suprimento."
+                    }
+                  ]
+                }
+              ],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:1",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:2",
+              "claims": [
+                {
+                  "text": "A TUSD não é uma cobrança extra ou penalidade",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                    },
+                    {
+                      "id": "knowledge:pub-956e3a26cfe47d8878fe",
+                      "quote": "Multas e Reativos Excedentes (UFER/FER) | NÃO | Penalidades por baixo fator de potência ou atraso de pagamento"
+                    }
+                  ]
+                },
+                {
+                  "text": "A sigla significa Tarifa de Uso do Sistema de Distribuição",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                    }
+                  ]
+                },
+                {
+                  "text": "A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia)... e a TUSD",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)... 2. TE (Tarifa de Energia)"
+                    }
+                  ]
+                },
+                {
+                  "text": "a TE (Tarifa de Energia), que remunera a energia elétrica consumida",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia."
+                    },
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)"
+                    }
+                  ]
+                },
+                {
+                  "text": "a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos)",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                    },
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)"
+                    }
+                  ]
+                }
+              ],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:3",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:4",
+              "claims": [
+                {
+                  "text": "a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física"
+                    }
+                  ]
+                }
+              ],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:5",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:6",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:7",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:8",
+              "claims": [
+                {
+                  "text": "TE (custo da energia consumida)",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia."
+                    }
+                  ]
+                },
+                {
+                  "text": "TUSD (transporte e manutenção da rede física)",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                }
+              ],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:9",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:10",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:11",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:12",
+              "claims": [
+                {
+                  "text": "A TUSD não é uma taxa extra",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                    }
+                  ]
+                },
+                {
+                  "text": "Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                    }
+                  ]
+                },
+                {
+                  "text": "a TE remunera a energia consumida",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia."
+                    }
+                  ]
+                },
+                {
+                  "text": "a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel",
+                  "scope": "general",
+                  "status": "supported",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                }
+              ],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:13",
+              "claims": [],
+              "completed_actions": []
+            },
+            {
+              "unit_id": "6d2ea756b0b7d4e3:14",
+              "claims": [],
+              "completed_actions": []
+            }
+          ]
+        }
+      }
+    },
+    "elapsed_s": 108.58928170800209,
+    "trace": [
+      {
+        "component": "nlu",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-3.8-flash",
+        "timeout_s": 60.0,
+        "returned_model": "gemini-3.8-flash",
+        "tokens": {
+          "prompt_tokens": 394,
+          "completion_tokens": 381,
+          "total_tokens": 775
+        },
+        "status": "success",
+        "elapsed_ms": 2170.5495830101427
+      },
+      {
+        "component": "generation",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-3.8-flash",
+        "timeout_s": 60.0,
+        "returned_model": "gemini-3.8-flash",
+        "tokens": {
+          "prompt_tokens": 3667,
+          "completion_tokens": 939,
+          "total_tokens": 4606
+        },
+        "status": "success",
+        "elapsed_ms": 4931.75366698415
+      },
+      {
+        "component": "grounding",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-3.8-flash",
+        "timeout_s": 120.0,
+        "returned_model": "gemini-3.8-flash",
+        "tokens": {
+          "prompt_tokens": 3013,
+          "completion_tokens": 21065,
+          "total_tokens": 24078
+        },
+        "status": "success",
+        "elapsed_ms": 65241.09262498678
+      },
+      {
+        "component": "fact_audit",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-3.8-flash",
+        "timeout_s": 120.0,
+        "returned_model": "gemini-3.8-flash",
+        "tokens": {
+          "prompt_tokens": 3022,
+          "completion_tokens": 4166,
+          "total_tokens": 7188
+        },
+        "status": "failed",
+        "error_type": "ReviewRejected",
+        "elapsed_ms": 11782.932541012997
+      },
+      {
+        "component": "rewrite",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-3.8-flash",
+        "timeout_s": 60.0,
+        "returned_model": "gemini-3.8-flash",
+        "tokens": {
+          "prompt_tokens": 5975,
+          "completion_tokens": 1074,
+          "total_tokens": 7049
+        },
+        "status": "success",
+        "elapsed_ms": 4781.098791980185
+      },
+      {
+        "component": "grounding",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-3.8-flash",
+        "timeout_s": 120.0,
+        "returned_model": "gemini-3.8-flash",
+        "tokens": {
+          "prompt_tokens": 2995,
+          "completion_tokens": 2705,
+          "total_tokens": 5700
+        },
+        "status": "success",
+        "elapsed_ms": 7445.260167005472
+      },
+      {
+        "component": "fact_audit",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-3.8-flash",
+        "timeout_s": 120.0,
+        "returned_model": "gemini-3.8-flash",
+        "tokens": {
+          "prompt_tokens": 3004,
+          "completion_tokens": 4017,
+          "total_tokens": 7021
+        },
+        "status": "failed",
+        "error_type": "ReviewRejected",
+        "elapsed_ms": 11430.99108300521
+      },
+      {
+        "component": "retrieval",
+        "backend": "pgvector_cosine",
+        "corpus_sha256": "75efcbf8185464ead54b4a9b9f166486e1823ac968a5a72dc1ad4706aaec4f22",
+        "query": "Cliente pergunta sobre o significado da TUSD na fatura de energia e teme que seja uma taxa adicional.",
+        "top_k": 3,
+        "chunks": [
+          {
+            "id": "pub-61a26859e8808af2999a",
+            "score": 0.7734170826176361,
+            "content_hash": "61a26859e8808af2999a04d2e99613d669c42af7e0b6cb58cb525efb85411605"
+          },
+          {
+            "id": "pub-24c4f657fff094437ead",
+            "score": 0.7555697096676514,
+            "content_hash": "24c4f657fff094437eadee23afe4fbd6874dd0b710b95e9e2f251ae605eb6146"
+          },
+          {
+            "id": "pub-956e3a26cfe47d8878fe",
+            "score": 0.7375503055661383,
+            "content_hash": "956e3a26cfe47d8878fe4f5251573d435c2a49169c89f0ebaa8c3b3f98f437ce"
+          }
+        ]
+      },
+      {
+        "component": "embedding",
+        "execution_kind": "live",
+        "requested_model": "gemini/gemini-embedding-2",
+        "inputs": 1,
+        "timeout_s": 60.0,
+        "status": "success",
+        "dimension": 1536,
+        "returned_model": "gemini-embedding-2",
+        "tokens": {
+          "prompt_tokens": 25,
+          "completion_tokens": 0,
+          "total_tokens": 25
+        },
+        "elapsed_s": 0.7770741250133142
+      }
+    ],
+    "review_audit": {
+      "schema_version": 1,
+      "sources": [
+        {
+          "id": "knowledge:pub-61a26859e8808af2999a",
+          "kind": "knowledge",
+          "content": "{\"chunk_id\": \"pub-61a26859e8808af2999a\", \"content\": \"* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física.\\n* **Bandeira tarifária:** Adicional por kWh decorrente das condições hidrológicas (Verde, Amarela, Vermelha 1 ou Vermelha 2).\", \"metadata\": {\"content_hash\": \"61a26859e8808af2999a04d2e99613d669c42af7e0b6cb58cb525efb85411605\", \"source_path\": \"okf/sales/leitura-de-fatura.md\"}, \"similarity_score\": 0.7734170826176361, \"title\": \"Leitura de fatura > Anatomia da fatura para o diagnóstico comercial > 4. Componentes tarifários: TE e TUSD\"}"
+        },
+        {
+          "id": "knowledge:pub-24c4f657fff094437ead",
+          "kind": "knowledge",
+          "content": "{\"chunk_id\": \"pub-24c4f657fff094437ead\", \"content\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\\n\\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas.\\n   * Cobrada tanto em reais por quilowatt-hora consumido (R$/kWh) quanto em reais por quilowatt de demanda de potência contratada (R$/kW) no caso do Grupo A.\\n2. **TE (Tarifa de Energia):**\\n   * Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas) e os encargos vinculados à compra e contratação regulada de suprimento.\\n   * Cobrada estritamente em reais por quilowatt-hora consumido (R$/kWh).\\n\\n```text\\nTarifa Homologada da Distribuidora = TUSD + TE\\nFatura Final = (Consumo x TE) + (Uso da Rede x TUSD) + Encargos + Tributos (ICMS/PIS/COFINS) + CIP/COSIP\\n```\\n\\n---\", \"metadata\": {\"content_hash\": \"24c4f657fff094437eadee23afe4fbd6874dd0b710b95e9e2f251ae605eb6146\", \"source_path\": \"okf/market/distribuidoras-e-tarifas.md\"}, \"similarity_score\": 0.7555697096676514, \"title\": \"Distribuidoras e tarifas de energia > Composição tarifária: TUSD e TE\"}"
+        },
+        {
+          "id": "knowledge:pub-956e3a26cfe47d8878fe",
+          "kind": "knowledge",
+          "content": "{\"chunk_id\": \"pub-956e3a26cfe47d8878fe\", \"content\": \"Um dos erros mais graves do vendedor é prometer desconto sobre o valor total da fatura. A proposta deve deixar claro onde incide a redução:\\n\\n| Componente da Fatura | O desconto incide? | Explicação técnica |\\n| :--- | :---: | :--- |\\n| **Consumo TE (kWh)** | **SIM** | O fornecedor substitui ou compensa a energia da distribuidora a preço menor. |\\n| **Parcela compensável da TUSD** | **SIM** | Na GD compartilhada, a energia compensada abate componentes da TUSD conforme a Lei 14.300/2022. |\\n| **Demanda Contratada (kW)** | **NÃO** | Valor regulado pago diretamente à distribuidora pelo uso da rede física no Grupo A. |\\n| **Custo de Disponibilidade (Grupo B)** | **NÃO** | Taxa mínima da distribuidora (30 kWh monofásico, 50 kWh bifásico, 100 kWh trifásico). |\\n| **CIP / COSIP (Iluminação Pública)** | **NÃO** | Tributo municipal cobrado na fatura e repassado integralmente à prefeitura. |\\n| **Multas e Reativos Excedentes (UFER/FER)** | **NÃO** | Penalidades por baixo fator de potência ou atraso de pagamento, que devem ser corrigidas na instalação do cliente. |\\n\\n---\", \"metadata\": {\"content_hash\": \"956e3a26cfe47d8878fe4f5251573d435c2a49169c89f0ebaa8c3b3f98f437ce\", \"source_path\": \"okf/sales/leitura-de-fatura.md\"}, \"similarity_score\": 0.7375503055661383, \"title\": \"Leitura de fatura > O que é descontável vs. O que permanece fixo\"}"
+        }
+      ],
+      "conversation_context": [
+        {
+          "sender": "customer",
+          "content": "O que é essa tal de TUSD na fatura? É taxa extra?"
+        }
+      ],
+      "attempts": [
+        {
+          "index": 0,
+          "kind": "initial",
+          "draft": {
+            "next_best_action": "Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.",
+            "strategic_rationale": "Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece confiança técnica antes de qualquer abordagem sobre economia ou assinatura.",
+            "primary_risk": "O cliente presumir que a TUSD é uma penalidade ou cobrança arbitrária e criar resistência desnecessária com a fatura.",
+            "risk_mitigation": "Explicar de forma didática a divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.",
+            "suggested_talk_track": "A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz. De forma simples: a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.",
+            "high_construal_guidance": "Explique a TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações), em oposição à TE, que é a energia propriamente dita. Mantenha um tom informativo e convide o cliente a conferir os detalhes caso queira.",
+            "low_construal_template": "A TUSD não é uma cobrança extra ou penalidade! Ela significa Tarifa de Uso do Sistema de Distribuição. Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação. Se quiser, posso analisar sua fatura completa ou você prefere que um consultor humano o auxilie na conferência detalhada desses itens?",
+            "transparency_score": null,
+            "generation_source": "llm",
+            "grounding_review": {
+              "status": "not_reviewed"
+            },
+            "anti_manipulation_flags": []
+          },
+          "draft_text": "high_construal_guidance: Explique a TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações), em oposição à TE, que é a energia propriamente dita. Mantenha um tom informativo e convide o cliente a conferir os detalhes caso queira.\n\nlow_construal_template: A TUSD não é uma cobrança extra ou penalidade! Ela significa Tarifa de Uso do Sistema de Distribuição. Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação. Se quiser, posso analisar sua fatura completa ou você prefere que um consultor humano o auxilie na conferência detalhada desses itens?\n\nnext_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n\nprimary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança arbitrária e criar resistência desnecessária com a fatura.\n\nrisk_mitigation: Explicar de forma didática a divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.\n\nstrategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece confiança técnica antes de qualquer abordagem sobre economia ou assinatura.\n\nsuggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz. De forma simples: a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.\n\nanti_manipulation_flags: []",
+          "draft_sha256": "0a1979c066bb036fbe84b487263a12fdd219008c6a17a4c6027f7a5fd25fd03b",
+          "draft_units": [
+            {
+              "id": "0a1979c066bb036f:0",
+              "text": "high_construal_guidance: Explique a TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações), em oposição à TE, que é a energia propriamente dita. Mantenha um tom informativo e convide o cliente a conferir os detalhes caso queira.\n"
+            },
+            {
+              "id": "0a1979c066bb036f:1",
+              "text": "\n"
+            },
+            {
+              "id": "0a1979c066bb036f:2",
+              "text": "low_construal_template: A TUSD não é uma cobrança extra ou penalidade! Ela significa Tarifa de Uso do Sistema de Distribuição. Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação. Se quiser, posso analisar sua fatura completa ou você prefere que um consultor humano o auxilie na conferência detalhada desses itens?\n"
+            },
+            {
+              "id": "0a1979c066bb036f:3",
+              "text": "\n"
+            },
+            {
+              "id": "0a1979c066bb036f:4",
+              "text": "next_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n"
+            },
+            {
+              "id": "0a1979c066bb036f:5",
+              "text": "\n"
+            },
+            {
+              "id": "0a1979c066bb036f:6",
+              "text": "primary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança arbitrária e criar resistência desnecessária com a fatura.\n"
+            },
+            {
+              "id": "0a1979c066bb036f:7",
+              "text": "\n"
+            },
+            {
+              "id": "0a1979c066bb036f:8",
+              "text": "risk_mitigation: Explicar de forma didática a divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.\n"
+            },
+            {
+              "id": "0a1979c066bb036f:9",
+              "text": "\n"
+            },
+            {
+              "id": "0a1979c066bb036f:10",
+              "text": "strategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece confiança técnica antes de qualquer abordagem sobre economia ou assinatura.\n"
+            },
+            {
+              "id": "0a1979c066bb036f:11",
+              "text": "\n"
+            },
+            {
+              "id": "0a1979c066bb036f:12",
+              "text": "suggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz. De forma simples: a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.\n"
+            },
+            {
+              "id": "0a1979c066bb036f:13",
+              "text": "\n"
+            },
+            {
+              "id": "0a1979c066bb036f:14",
+              "text": "anti_manipulation_flags: []"
+            }
+          ],
+          "generation": {
+            "status": "success",
+            "response_text": "{\n  \"next_best_action\": \"Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\",\n  \"strategic_rationale\": \"Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece confiança técnica antes de qualquer abordagem sobre economia ou assinatura.\",\n  \"primary_risk\": \"O cliente presumir que a TUSD é uma penalidade ou cobrança arbitrária e criar resistência desnecessária com a fatura.\",\n  \"risk_mitigation\": \"Explicar de forma didática a divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.\",\n  \"suggested_talk_track\": \"A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz. De forma simples: a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.\",\n  \"high_construal_guidance\": \"Explique a TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações), em oposição à TE, que é a energia propriamente dita. Mantenha um tom informativo e convide o cliente a conferir os detalhes caso queira.\",\n  \"low_construal_template\": \"A TUSD não é uma cobrança extra ou penalidade! Ela significa Tarifa de Uso do Sistema de Distribuição. Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação. Se quiser, posso analisar sua fatura completa ou você prefere que um consultor humano o auxilie na conferência detalhada desses itens?\",\n  \"anti_manipulation_flags\": []\n}"
+          },
+          "grounding": {
+            "status": "approved",
+            "response_text": "```json\n{\n  \"segments\": [\n    {\n      \"unit_id\": \"0a1979c066bb036f:0\",\n      \"kind\": \"recommendation\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:1\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:2\",\n      \"kind\": \"general_fact\",\n      \"sources\": [\n        {\n          \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n          \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\\n\\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\\n   * Remunera o transporte da energia pela rede física\"\n        },\n        {\n          \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n          \"quote\": \"* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física.\"\n        }\n      ]\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:3\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:4\",\n      \"kind\": \"recommendation\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:5\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:6\",\n      \"kind\": \"hypothesis\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:7\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:8\",\n      \"kind\": \"recommendation\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:9\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:10\",\n      \"kind\": \"hypothesis\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:11\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:12\",\n      \"kind\": \"general_fact\",\n      \"sources\": [\n        {\n          \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n          \"quote\": \"1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\\n   * Remunera o transporte da energia pela rede física\"\n        },\n        {\n          \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n          \"quote\": \"* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física.\"\n        }\n      ]\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:13\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:14\",\n      \"kind\": \"format\",\n      \"sources\": []\n    }\n  ]\n}\n```",
+            "report": {
+              "protocol": "coaching-unit-review-v2",
+              "status": "model_reviewed",
+              "draft_sha256": "0a1979c066bb036fbe84b487263a12fdd219008c6a17a4c6027f7a5fd25fd03b",
+              "segments": [
+                {
+                  "text": "high_construal_guidance: Explique a TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações), em oposição à TE, que é a energia propriamente dita. Mantenha um tom informativo e convide o cliente a conferir os detalhes caso queira.\n",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "low_construal_template: A TUSD não é uma cobrança extra ou penalidade! Ela significa Tarifa de Uso do Sistema de Distribuição. Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação. Se quiser, posso analisar sua fatura completa ou você prefere que um consultor humano o auxilie na conferência detalhada desses itens?\n",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física"
+                    },
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "next_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "primary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança arbitrária e criar resistência desnecessária com a fatura.\n",
+                  "kind": "hypothesis",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "risk_mitigation: Explicar de forma didática a divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.\n",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "strategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece confiança técnica antes de qualquer abordagem sobre economia ou assinatura.\n",
+                  "kind": "hypothesis",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "suggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz. De forma simples: a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.\n",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física"
+                    },
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "anti_manipulation_flags: []",
+                  "kind": "format",
+                  "sources": []
+                }
+              ],
+              "evidence_ids": [
+                "knowledge:pub-61a26859e8808af2999a",
+                "knowledge:pub-24c4f657fff094437ead",
+                "knowledge:pub-956e3a26cfe47d8878fe"
+              ],
+              "evidence_sha256": {
+                "knowledge:pub-61a26859e8808af2999a": "ebfb118550fd46738e89c135204a71ae65c531c610749a7d3c5e8c477b4812bc",
+                "knowledge:pub-24c4f657fff094437ead": "92709665900fd3dd04605dfc29149fb0be43b6de8a7ee5bc0431f52f53cfd7fd",
+                "knowledge:pub-956e3a26cfe47d8878fe": "e5a8b0ac5224db05b8741f5e21906a265e3a80b13ea492b8d3c7bef3f42e94f5"
+              },
+              "draft_units": [
+                {
+                  "id": "0a1979c066bb036f:0",
+                  "text": "high_construal_guidance: Explique a TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações), em oposição à TE, que é a energia propriamente dita. Mantenha um tom informativo e convide o cliente a conferir os detalhes caso queira.\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:1",
+                  "text": "\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:2",
+                  "text": "low_construal_template: A TUSD não é uma cobrança extra ou penalidade! Ela significa Tarifa de Uso do Sistema de Distribuição. Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação. Se quiser, posso analisar sua fatura completa ou você prefere que um consultor humano o auxilie na conferência detalhada desses itens?\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:3",
+                  "text": "\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:4",
+                  "text": "next_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:5",
+                  "text": "\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:6",
+                  "text": "primary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança arbitrária e criar resistência desnecessária com a fatura.\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:7",
+                  "text": "\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:8",
+                  "text": "risk_mitigation: Explicar de forma didática a divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:9",
+                  "text": "\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:10",
+                  "text": "strategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece confiança técnica antes de qualquer abordagem sobre economia ou assinatura.\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:11",
+                  "text": "\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:12",
+                  "text": "suggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz. De forma simples: a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:13",
+                  "text": "\n"
+                },
+                {
+                  "id": "0a1979c066bb036f:14",
+                  "text": "anti_manipulation_flags: []"
+                }
+              ],
+              "unit_reviews": [
+                {
+                  "unit_id": "0a1979c066bb036f:0",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:1",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:2",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física"
+                    },
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:3",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:4",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:5",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:6",
+                  "kind": "hypothesis",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:7",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:8",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:9",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:10",
+                  "kind": "hypothesis",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:11",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:12",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física"
+                    },
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:13",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "0a1979c066bb036f:14",
+                  "kind": "format",
+                  "sources": []
+                }
+              ],
+              "execution_kind": "live"
+            }
+          },
+          "fact_audit": {
+            "status": "rejected",
+            "response_text": "```json\n{\n  \"units\": [\n    {\n      \"unit_id\": \"0a1979c066bb036f:0\",\n      \"claims\": [\n        {\n          \"text\": \"TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações)\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física.\"\n            },\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"TE, que é a energia propriamente dita\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia.\"\n            },\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:1\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:2\",\n      \"claims\": [\n        {\n          \"text\": \"A TUSD não é uma cobrança extra ou penalidade!\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)\"\n            },\n            {\n              \"id\": \"knowledge:pub-956e3a26cfe47d8878fe\",\n              \"quote\": \"Multas e Reativos Excedentes (UFER/FER) | NÃO | Penalidades por baixo fator de potência ou atraso de pagamento\"\n            }\n          ]\n        },\n        {\n          \"text\": \"Ela significa Tarifa de Uso do Sistema de Distribuição.\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"TUSD (Tarifa de Uso do Sistema de Distribuição)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação.\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física... 2. TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)\"\n            },\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia. * Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física.\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:3\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:4\",\n      \"claims\": [\n        {\n          \"text\": \"a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:5\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:6\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:7\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:8\",\n      \"claims\": [\n        {\n          \"text\": \"divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física... 2. TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:9\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:10\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:11\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:12\",\n      \"claims\": [\n        {\n          \"text\": \"A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz.\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia. * Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física.\"\n            },\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física... TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:13\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"0a1979c066bb036f:14\",\n      \"claims\": [],\n      \"completed_actions\": []\n    }\n  ]\n}\n```",
+            "error_type": "ReviewRejected",
+            "reason": {
+              "code": "citation_not_found",
+              "category": "citation",
+              "validator_message": "Citation not found in supplied evidence"
+            },
+            "report": {
+              "review": {
+                "segments": [
+                  {
+                    "unit_id": "0a1979c066bb036f:0",
+                    "kind": "recommendation",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:1",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:2",
+                    "kind": "general_fact",
+                    "sources": [
+                      {
+                        "id": "knowledge:pub-24c4f657fff094437ead",
+                        "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física"
+                      },
+                      {
+                        "id": "knowledge:pub-61a26859e8808af2999a",
+                        "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                      }
+                    ]
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:3",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:4",
+                    "kind": "recommendation",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:5",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:6",
+                    "kind": "hypothesis",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:7",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:8",
+                    "kind": "recommendation",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:9",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:10",
+                    "kind": "hypothesis",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:11",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:12",
+                    "kind": "general_fact",
+                    "sources": [
+                      {
+                        "id": "knowledge:pub-24c4f657fff094437ead",
+                        "quote": "1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física"
+                      },
+                      {
+                        "id": "knowledge:pub-61a26859e8808af2999a",
+                        "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                      }
+                    ]
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:13",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:14",
+                    "kind": "format",
+                    "sources": []
+                  }
+                ]
+              },
+              "fact_audit": {
+                "units": [
+                  {
+                    "unit_id": "0a1979c066bb036f:0",
+                    "claims": [
+                      {
+                        "text": "TUSD como o custo de transporte/infraestrutura da distribuidora (fios, manutenção, subestações)",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                          },
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "TE, que é a energia propriamente dita",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia."
+                          },
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)"
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:1",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:2",
+                    "claims": [
+                      {
+                        "text": "A TUSD não é uma cobrança extra ou penalidade!",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                          },
+                          {
+                            "id": "knowledge:pub-956e3a26cfe47d8878fe",
+                            "quote": "Multas e Reativos Excedentes (UFER/FER) | NÃO | Penalidades por baixo fator de potência ou atraso de pagamento"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "Ela significa Tarifa de Uso do Sistema de Distribuição.",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "Toda conta de luz é composta basicamente por duas partes reguladas pela ANEEL: a TE (Tarifa de Energia), que é o insumo da eletricidade que você consome, e a TUSD, que cobre o custo de transporte e manutenção da rede física (postes, cabos e transformadores) até a sua instalação.",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física... 2. TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)"
+                          },
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia. * Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:3",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:4",
+                    "claims": [
+                      {
+                        "text": "a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física"
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:5",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:6",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:7",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:8",
+                    "claims": [
+                      {
+                        "text": "divisão entre o insumo energia (TE) e o transporte/uso dos postes e fios (TUSD), presentes em todas as contas reguladas.",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física... 2. TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)"
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:9",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:10",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:11",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:12",
+                    "claims": [
+                      {
+                        "text": "A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e sempre faz parte da conta de luz.",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "a TE paga a energia consumida, e a TUSD remunera o transporte dessa energia pelos fios e postes até o seu imóvel.",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia. * Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                          },
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física... TE (Tarifa de Energia): Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)"
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:13",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "0a1979c066bb036f:14",
+                    "claims": [],
+                    "completed_actions": []
+                  }
+                ]
+              }
+            }
+          },
+          "decision": "rejected"
+        },
+        {
+          "index": 1,
+          "kind": "rewrite",
+          "draft": {
+            "next_best_action": "Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.",
+            "strategic_rationale": "Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece clareza técnica antes de qualquer conversa comercial.",
+            "primary_risk": "O cliente presumir que a TUSD é uma penalidade ou cobrança indevida e resistir ao entendimento da conta.",
+            "risk_mitigation": "Explicar didaticamente a distinção entre a TE (custo da energia consumida) e a TUSD (transporte e manutenção da rede física).",
+            "suggested_talk_track": "A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular. De forma simples: a TE remunera a energia consumida, e a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel.",
+            "high_construal_guidance": "Apresente a TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção), em contraste com a TE, que remunera a energia gerada. Mantenha um tom didático e ofereça apoio para conferir a conta.",
+            "low_construal_template": "A TUSD não é uma cobrança extra ou penalidade! A sigla significa Tarifa de Uso do Sistema de Distribuição. A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia), que remunera a energia elétrica consumida, e a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos). Deseja que eu analise sua fatura para detalhar esses itens, ou prefere que um consultor humano o auxilie nessa conferência?",
+            "transparency_score": null,
+            "generation_source": "llm",
+            "grounding_review": {
+              "status": "not_reviewed"
+            },
+            "anti_manipulation_flags": []
+          },
+          "draft_text": "high_construal_guidance: Apresente a TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção), em contraste com a TE, que remunera a energia gerada. Mantenha um tom didático e ofereça apoio para conferir a conta.\n\nlow_construal_template: A TUSD não é uma cobrança extra ou penalidade! A sigla significa Tarifa de Uso do Sistema de Distribuição. A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia), que remunera a energia elétrica consumida, e a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos). Deseja que eu analise sua fatura para detalhar esses itens, ou prefere que um consultor humano o auxilie nessa conferência?\n\nnext_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n\nprimary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança indevida e resistir ao entendimento da conta.\n\nrisk_mitigation: Explicar didaticamente a distinção entre a TE (custo da energia consumida) e a TUSD (transporte e manutenção da rede física).\n\nstrategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece clareza técnica antes de qualquer conversa comercial.\n\nsuggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular. De forma simples: a TE remunera a energia consumida, e a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel.\n\nanti_manipulation_flags: []",
+          "draft_sha256": "6d2ea756b0b7d4e3550dbbddcdead860dc3ee4159a0c8106583632a319b68322",
+          "draft_units": [
+            {
+              "id": "6d2ea756b0b7d4e3:0",
+              "text": "high_construal_guidance: Apresente a TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção), em contraste com a TE, que remunera a energia gerada. Mantenha um tom didático e ofereça apoio para conferir a conta.\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:1",
+              "text": "\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:2",
+              "text": "low_construal_template: A TUSD não é uma cobrança extra ou penalidade! A sigla significa Tarifa de Uso do Sistema de Distribuição. A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia), que remunera a energia elétrica consumida, e a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos). Deseja que eu analise sua fatura para detalhar esses itens, ou prefere que um consultor humano o auxilie nessa conferência?\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:3",
+              "text": "\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:4",
+              "text": "next_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:5",
+              "text": "\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:6",
+              "text": "primary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança indevida e resistir ao entendimento da conta.\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:7",
+              "text": "\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:8",
+              "text": "risk_mitigation: Explicar didaticamente a distinção entre a TE (custo da energia consumida) e a TUSD (transporte e manutenção da rede física).\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:9",
+              "text": "\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:10",
+              "text": "strategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece clareza técnica antes de qualquer conversa comercial.\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:11",
+              "text": "\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:12",
+              "text": "suggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular. De forma simples: a TE remunera a energia consumida, e a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel.\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:13",
+              "text": "\n"
+            },
+            {
+              "id": "6d2ea756b0b7d4e3:14",
+              "text": "anti_manipulation_flags: []"
+            }
+          ],
+          "generation": {
+            "status": "success",
+            "response_text": "```json\n{\n  \"next_best_action\": \"Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\",\n  \"strategic_rationale\": \"Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece clareza técnica antes de qualquer conversa comercial.\",\n  \"primary_risk\": \"O cliente presumir que a TUSD é uma penalidade ou cobrança indevida e resistir ao entendimento da conta.\",\n  \"risk_mitigation\": \"Explicar didaticamente a distinção entre a TE (custo da energia consumida) e a TUSD (transporte e manutenção da rede física).\",\n  \"suggested_talk_track\": \"A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular. De forma simples: a TE remunera a energia consumida, e a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel.\",\n  \"high_construal_guidance\": \"Apresente a TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção), em contraste com a TE, que remunera a energia gerada. Mantenha um tom didático e ofereça apoio para conferir a conta.\",\n  \"low_construal_template\": \"A TUSD não é uma cobrança extra ou penalidade! A sigla significa Tarifa de Uso do Sistema de Distribuição. A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia), que remunera a energia elétrica consumida, e a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos). Deseja que eu analise sua fatura para detalhar esses itens, ou prefere que um consultor humano o auxilie nessa conferência?\",\n  \"anti_manipulation_flags\": []\n}\n```"
+          },
+          "grounding": {
+            "status": "approved",
+            "response_text": "```json\n{\n  \"segments\": [\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:0\",\n      \"kind\": \"recommendation\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:1\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:2\",\n      \"kind\": \"general_fact\",\n      \"sources\": [\n        {\n          \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n          \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\\n\\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas.\"\n        },\n        {\n          \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n          \"quote\": \"* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física.\"\n        }\n      ]\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:3\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:4\",\n      \"kind\": \"recommendation\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:5\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:6\",\n      \"kind\": \"hypothesis\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:7\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:8\",\n      \"kind\": \"recommendation\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:9\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:10\",\n      \"kind\": \"recommendation\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:11\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:12\",\n      \"kind\": \"general_fact\",\n      \"sources\": [\n        {\n          \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n          \"quote\": \"* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física.\"\n        },\n        {\n          \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n          \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\\n\\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas.\"\n        }\n      ]\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:13\",\n      \"kind\": \"format\",\n      \"sources\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:14\",\n      \"kind\": \"format\",\n      \"sources\": []\n    }\n  ]\n}\n```",
+            "report": {
+              "protocol": "coaching-unit-review-v2",
+              "status": "model_reviewed",
+              "draft_sha256": "6d2ea756b0b7d4e3550dbbddcdead860dc3ee4159a0c8106583632a319b68322",
+              "segments": [
+                {
+                  "text": "high_construal_guidance: Apresente a TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção), em contraste com a TE, que remunera a energia gerada. Mantenha um tom didático e ofereça apoio para conferir a conta.\n",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "low_construal_template: A TUSD não é uma cobrança extra ou penalidade! A sigla significa Tarifa de Uso do Sistema de Distribuição. A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia), que remunera a energia elétrica consumida, e a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos). Deseja que eu analise sua fatura para detalhar esses itens, ou prefere que um consultor humano o auxilie nessa conferência?\n",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                    },
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "next_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "primary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança indevida e resistir ao entendimento da conta.\n",
+                  "kind": "hypothesis",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "risk_mitigation: Explicar didaticamente a distinção entre a TE (custo da energia consumida) e a TUSD (transporte e manutenção da rede física).\n",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "strategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece clareza técnica antes de qualquer conversa comercial.\n",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "suggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular. De forma simples: a TE remunera a energia consumida, e a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel.\n",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    },
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                    }
+                  ]
+                },
+                {
+                  "text": "\n",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "text": "anti_manipulation_flags: []",
+                  "kind": "format",
+                  "sources": []
+                }
+              ],
+              "evidence_ids": [
+                "knowledge:pub-61a26859e8808af2999a",
+                "knowledge:pub-24c4f657fff094437ead",
+                "knowledge:pub-956e3a26cfe47d8878fe"
+              ],
+              "evidence_sha256": {
+                "knowledge:pub-61a26859e8808af2999a": "ebfb118550fd46738e89c135204a71ae65c531c610749a7d3c5e8c477b4812bc",
+                "knowledge:pub-24c4f657fff094437ead": "92709665900fd3dd04605dfc29149fb0be43b6de8a7ee5bc0431f52f53cfd7fd",
+                "knowledge:pub-956e3a26cfe47d8878fe": "e5a8b0ac5224db05b8741f5e21906a265e3a80b13ea492b8d3c7bef3f42e94f5"
+              },
+              "draft_units": [
+                {
+                  "id": "6d2ea756b0b7d4e3:0",
+                  "text": "high_construal_guidance: Apresente a TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção), em contraste com a TE, que remunera a energia gerada. Mantenha um tom didático e ofereça apoio para conferir a conta.\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:1",
+                  "text": "\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:2",
+                  "text": "low_construal_template: A TUSD não é uma cobrança extra ou penalidade! A sigla significa Tarifa de Uso do Sistema de Distribuição. A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia), que remunera a energia elétrica consumida, e a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos). Deseja que eu analise sua fatura para detalhar esses itens, ou prefere que um consultor humano o auxilie nessa conferência?\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:3",
+                  "text": "\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:4",
+                  "text": "next_best_action: Esclarecer que a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL.\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:5",
+                  "text": "\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:6",
+                  "text": "primary_risk: O cliente presumir que a TUSD é uma penalidade ou cobrança indevida e resistir ao entendimento da conta.\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:7",
+                  "text": "\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:8",
+                  "text": "risk_mitigation: Explicar didaticamente a distinção entre a TE (custo da energia consumida) e a TUSD (transporte e manutenção da rede física).\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:9",
+                  "text": "\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:10",
+                  "text": "strategic_rationale: Desmistificar os componentes da fatura elimina o receio de cobranças indevidas e estabelece clareza técnica antes de qualquer conversa comercial.\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:11",
+                  "text": "\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:12",
+                  "text": "suggested_talk_track: A TUSD não é uma taxa extra! Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular. De forma simples: a TE remunera a energia consumida, e a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel.\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:13",
+                  "text": "\n"
+                },
+                {
+                  "id": "6d2ea756b0b7d4e3:14",
+                  "text": "anti_manipulation_flags: []"
+                }
+              ],
+              "unit_reviews": [
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:0",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:1",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:2",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                    },
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    }
+                  ]
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:3",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:4",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:5",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:6",
+                  "kind": "hypothesis",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:7",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:8",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:9",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:10",
+                  "kind": "recommendation",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:11",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:12",
+                  "kind": "general_fact",
+                  "sources": [
+                    {
+                      "id": "knowledge:pub-61a26859e8808af2999a",
+                      "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                    },
+                    {
+                      "id": "knowledge:pub-24c4f657fff094437ead",
+                      "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                    }
+                  ]
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:13",
+                  "kind": "format",
+                  "sources": []
+                },
+                {
+                  "unit_id": "6d2ea756b0b7d4e3:14",
+                  "kind": "format",
+                  "sources": []
+                }
+              ],
+              "execution_kind": "live"
+            }
+          },
+          "fact_audit": {
+            "status": "rejected",
+            "response_text": "```json\n{\n  \"units\": [\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:0\",\n      \"claims\": [\n        {\n          \"text\": \"TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção)\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física.\"\n            },\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"TE, que remunera a energia gerada\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas) e os encargos vinculados à compra e contratação regulada de suprimento.\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:1\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:2\",\n      \"claims\": [\n        {\n          \"text\": \"A TUSD não é uma cobrança extra ou penalidade\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)\"\n            },\n            {\n              \"id\": \"knowledge:pub-956e3a26cfe47d8878fe\",\n              \"quote\": \"Multas e Reativos Excedentes (UFER/FER) | NÃO | Penalidades por baixo fator de potência ou atraso de pagamento\"\n            }\n          ]\n        },\n        {\n          \"text\": \"A sigla significa Tarifa de Uso do Sistema de Distribuição\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"TUSD (Tarifa de Uso do Sistema de Distribuição)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia)... e a TUSD\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)... 2. TE (Tarifa de Energia)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"a TE (Tarifa de Energia), que remunera a energia elétrica consumida\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia.\"\n            },\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos)\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física.\"\n            },\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:3\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:4\",\n      \"claims\": [\n        {\n          \"text\": \"a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:5\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:6\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:7\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:8\",\n      \"claims\": [\n        {\n          \"text\": \"TE (custo da energia consumida)\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia.\"\n            }\n          ]\n        },\n        {\n          \"text\": \"TUSD (transporte e manutenção da rede física)\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física.\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:9\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:10\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:11\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:12\",\n      \"claims\": [\n        {\n          \"text\": \"A TUSD não é uma taxa extra\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-24c4f657fff094437ead\",\n              \"quote\": \"A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)\"\n            }\n          ]\n        },\n        {\n          \"text\": \"a TE remunera a energia consumida\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia.\"\n            }\n          ]\n        },\n        {\n          \"text\": \"a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel\",\n          \"scope\": \"general\",\n          \"status\": \"supported\",\n          \"sources\": [\n            {\n              \"id\": \"knowledge:pub-61a26859e8808af2999a\",\n              \"quote\": \"Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física.\"\n            }\n          ]\n        }\n      ],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:13\",\n      \"claims\": [],\n      \"completed_actions\": []\n    },\n    {\n      \"unit_id\": \"6d2ea756b0b7d4e3:14\",\n      \"claims\": [],\n      \"completed_actions\": []\n    }\n  ]\n}\n```",
+            "error_type": "ReviewRejected",
+            "reason": {
+              "code": "claim_not_in_draft",
+              "category": "coverage",
+              "validator_message": "Factual claim not anchored in draft"
+            },
+            "report": {
+              "review": {
+                "segments": [
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:0",
+                    "kind": "recommendation",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:1",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:2",
+                    "kind": "general_fact",
+                    "sources": [
+                      {
+                        "id": "knowledge:pub-24c4f657fff094437ead",
+                        "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                      },
+                      {
+                        "id": "knowledge:pub-61a26859e8808af2999a",
+                        "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                      }
+                    ]
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:3",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:4",
+                    "kind": "recommendation",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:5",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:6",
+                    "kind": "hypothesis",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:7",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:8",
+                    "kind": "recommendation",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:9",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:10",
+                    "kind": "recommendation",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:11",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:12",
+                    "kind": "general_fact",
+                    "sources": [
+                      {
+                        "id": "knowledge:pub-61a26859e8808af2999a",
+                        "quote": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física."
+                      },
+                      {
+                        "id": "knowledge:pub-24c4f657fff094437ead",
+                        "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas."
+                      }
+                    ]
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:13",
+                    "kind": "format",
+                    "sources": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:14",
+                    "kind": "format",
+                    "sources": []
+                  }
+                ]
+              },
+              "fact_audit": {
+                "units": [
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:0",
+                    "claims": [
+                      {
+                        "text": "TUSD como o custo de transporte e infraestrutura da distribuidora (fios, postes e manutenção)",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                          },
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "TE, que remunera a energia gerada",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas) e os encargos vinculados à compra e contratação regulada de suprimento."
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:1",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:2",
+                    "claims": [
+                      {
+                        "text": "A TUSD não é uma cobrança extra ou penalidade",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                          },
+                          {
+                            "id": "knowledge:pub-956e3a26cfe47d8878fe",
+                            "quote": "Multas e Reativos Excedentes (UFER/FER) | NÃO | Penalidades por baixo fator de potência ou atraso de pagamento"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "A sigla significa Tarifa de Uso do Sistema de Distribuição",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia)... e a TUSD",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)... 2. TE (Tarifa de Energia)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "a TE (Tarifa de Energia), que remunera a energia elétrica consumida",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia."
+                          },
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos)",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                          },
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A)"
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:3",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:4",
+                    "claims": [
+                      {
+                        "text": "a TUSD não é uma taxa extra, mas sim a tarifa regular que remunera o transporte da energia pela rede física, homologada pela ANEEL",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição): Remunera o transporte da energia pela rede física"
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:5",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:6",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:7",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:8",
+                    "claims": [
+                      {
+                        "text": "TE (custo da energia consumida)",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia."
+                          }
+                        ]
+                      },
+                      {
+                        "text": "TUSD (transporte e manutenção da rede física)",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:9",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:10",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:11",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:12",
+                    "claims": [
+                      {
+                        "text": "A TUSD não é uma taxa extra",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "Ela significa Tarifa de Uso do Sistema de Distribuição e faz parte da fatura regular",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-24c4f657fff094437ead",
+                            "quote": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL: 1. TUSD (Tarifa de Uso do Sistema de Distribuição)"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "a TE remunera a energia consumida",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Consumo em kWh x TE (Tarifa de Energia): Custo do insumo energia."
+                          }
+                        ]
+                      },
+                      {
+                        "text": "a TUSD cobre o custo de transporte e manutenção da rede física até o seu imóvel",
+                        "scope": "general",
+                        "status": "supported",
+                        "sources": [
+                          {
+                            "id": "knowledge:pub-61a26859e8808af2999a",
+                            "quote": "Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição): Custo do transporte e manutenção da rede física."
+                          }
+                        ]
+                      }
+                    ],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:13",
+                    "claims": [],
+                    "completed_actions": []
+                  },
+                  {
+                    "unit_id": "6d2ea756b0b7d4e3:14",
+                    "claims": [],
+                    "completed_actions": []
+                  }
+                ]
+              }
+            }
+          },
+          "decision": "rejected"
+        }
+      ],
+      "outcome": "blocked",
+      "delivered_attempt": null
+    }
+  },
+  "human_review": {
+    "item_id": "R-0112",
+    "case_id": "CASE-015",
+    "method": "neuro_symbolic",
+    "target": "block",
+    "response_kind": "blocked_final_draft",
+    "execution_status": "blocked",
+    "response_sha256": "346339c42fd16ceb6b19ce0f7becb14daeae27279720465b80ddf7e76ad2c623",
+    "blocking": {
+      "reasons": [
+        {
+          "stage": "fact_audit",
+          "code": "claim_not_in_draft",
+          "message": "O revisor avaliou uma afirmação que não foi localizada na minuta.",
+          "recorded_message": "Factual claim not anchored in draft"
+        }
+      ],
+      "flagged_excerpts": [],
+      "attempts": 2
+    },
+    "review": {
+      "status": "completed",
+      "revision": 1,
+      "saved_at": "2026-09-28T00:27:47.608661+00:00",
+      "reviewed_by": "Pedro Saulo",
+      "judgment": {
+        "verdict": "incorrect",
+        "notes": ""
+      }
+    }
+  },
+  "unanchored_claims": [
+    {
+      "unit_id": "6d2ea756b0b7d4e3:2",
+      "unit_text": "low_construal_template: A TUSD não é uma cobrança extra ou penalidade! A sigla significa Tarifa de Uso do Sistema de Distribuição. A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia), que remunera a energia elétrica consumida, e a TUSD, que cobre o transporte dessa energia e a manutenção da rede física (postes e cabos). Deseja que eu analise sua fatura para detalhar esses itens, ou prefere que um consultor humano o auxilie nessa conferência?\n",
+      "claim_text": "A conta de luz homologada pela ANEEL é dividida essencialmente em duas partes: a TE (Tarifa de Energia)... e a TUSD"
+    }
+  ]
+}

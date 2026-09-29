@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Avaliação rápida de respostas</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><div><span class="eyebrow">POC · revisão simplificada</span><h1>Avaliação rápida</h1></div><div class="header-actions"><label>Avaliador<input id="reviewer" placeholder="Seu nome"></label><button id="export">Exportar</button></div></header>
+<div id="notice" role="status" aria-live="polite"></div>
+<div class="workspace"><aside><strong id="progress">Carregando…</strong><progress id="bar" value="0" max="400"></progress><p id="counts"></p><label>Buscar<input id="search" type="search" placeholder="Pergunta ou código"></label><label>Mostrar<select id="filter"><option value="all">Todas</option><option value="remaining">Por avaliar e em dúvida</option><option value="uncertain">Em dúvida</option><option value="completed">Avaliadas</option></select></label><label>Resultado do sistema<select id="kind"><option value="all">Todos</option><option value="delivered">Resposta entregue</option><option value="blocked">Bloqueio</option></select></label><nav id="queue" aria-label="Fila de avaliação"></nav></aside><main id="main" tabindex="-1">Carregando respostas…</main></div>
+<template id="editor">
+  <div class="item-heading">
+    <div class="item-identity"><h2 id="title"></h2><span id="outcome" class="status-label"><span id="outcome-title"></span></span></div>
+    <div class="navigation"><button id="previous" aria-keyshortcuts="ArrowLeft">← Anterior</button><button id="next" aria-keyshortcuts="ArrowRight">Próxima →</button><button id="save-next" class="correct" aria-keyshortcuts="Enter">Salvar e avançar ↵</button></div>
+  </div>
+  <div class="item-meta"><span id="saved"></span><span id="selection"></span><span title="Atalhos disponíveis fora dos campos de edição">← / → navegar · Enter salvar</span></div>
+  <div class="comparison">
+    <div class="context-column" tabindex="0" aria-label="Pergunta e referências">
+      <section class="card"><h3>Pergunta</h3><div id="question"></div><div id="evidence"></div></section>
+      <section id="block-details" class="card blocked" hidden><h3>Motivo do bloqueio</h3><p id="outcome-help"></p><div id="reason"></div></section>
+      <details class="card source-panel"><summary>Consultar fontes e referências</summary><div id="sources"></div></details>
+    </div>
+    <section class="card answer-card" tabindex="0" aria-label="Resposta para avaliação"><h3 id="answer-title"></h3><div id="answer" class="prose answer"></div><details><summary>Ver orientação completa ao consultor</summary><div id="full-answer"></div></details></section>
+  </div>
+  <section class="card judgment">
+    <div class="judgment-heading"><h3 id="judgment-title"></h3><p id="judgment-help" class="muted"></p></div>
+    <label>Comentário opcional<textarea id="notes" rows="2" placeholder="Motivo da sua decisão, se quiser"></textarea></label>
+    <div class="actions"><button id="correct" class="correct"></button><button id="incorrect" class="incorrect"></button><button id="uncertain">Em dúvida</button><small>Clicar salva e avança.</small></div>
+  </section>
+</template>
+</body></html>
