@@ -1,0 +1,37 @@
+name: mba-poc
+services:
+  db:
+    image: pgvector/pgvector:0.8.2-pg17@sha256:feb68f4f15446397d8cac7f4fe48fe4586de83160d1fc48b46283312d1a33966
+    environment:
+      POSTGRES_DB: mba_poc
+      POSTGRES_USER: mba_local
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-experiment-only}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mba_local -d mba_poc"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  app:
+    build: .
+    profiles: ["app"]
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://mba_local:${POSTGRES_PASSWORD:-local-experiment-only}@db:5432/mba_poc
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-gemini/gemini-3.8-flash}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-gemini/gemini-embedding-2}
+      LLM_TIMEOUT_S: ${LLM_TIMEOUT_S:-60}
+      REVIEW_TIMEOUT_S: ${REVIEW_TIMEOUT_S:-120}
+      EMBEDDING_TIMEOUT_S: ${EMBEDDING_TIMEOUT_S:-60}
+    volumes:
+      - runs_data:/app/runs
+volumes:
+  postgres_data:
+  runs_data:

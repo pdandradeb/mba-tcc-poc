@@ -1,0 +1,5199 @@
+{
+  "source_results": "runs/20260926T183838Z-c8c5b03b/results.json",
+  "results_sha256": "7b037106994b96d623d6c25f42256387e1f613faa4955067ac7b79e9dcc1a836",
+  "configuration": {
+    "started_at": "2026-09-26T18:38:38.895318+00:00",
+    "finished_at": "2026-09-26T19:11:22.414292+00:00",
+    "model": "gemini/gemini-3.8-flash",
+    "embedding_model": "gemini/gemini-embedding-2",
+    "embedding_dimension": 1536,
+    "top_k": 3,
+    "timeouts_s": {
+      "llm": 60.0,
+      "review": 120.0,
+      "embedding": 60.0
+    },
+    "workers": 4,
+    "python": "3.13.2",
+    "seed": 2026
+  },
+  "n_cases": 100,
+  "n_records": 400,
+  "corpus": {
+    "corpus_sha256": "75efcbf8185464ead54b4a9b9f166486e1823ac968a5a72dc1ad4706aaec4f22",
+    "documents": 10,
+    "chunks": 86,
+    "chunks_by_document": {
+      "okf/market/acl.md": 7,
+      "okf/market/distribuidoras-e-tarifas.md": 8,
+      "okf/market/energia-solar-por-assinatura.md": 7,
+      "okf/market/glossario.md": 1,
+      "okf/market/marcos-regulatorios.md": 8,
+      "okf/market/regulamentacao-e-atores.md": 11,
+      "okf/sales/contratos-e-pos-venda.md": 7,
+      "okf/sales/leitura-de-fatura.md": 11,
+      "okf/sales/objecoes.md": 13,
+      "okf/sales/perguntas-frequentes-de-clientes.md": 13
+    },
+    "size_definition": {
+      "field": "content",
+      "characters": "Unicode code points, including whitespace and Markdown",
+      "whitespace_units": "Nonempty units produced by Python str.split(); not model tokens"
+    },
+    "sizes": {
+      "characters": {
+        "n": 86,
+        "minimum": 112,
+        "median": 485.5,
+        "mean": 601.0581395348837,
+        "p95": 1619,
+        "maximum": 2882,
+        "total": 51691
+      },
+      "whitespace_units": {
+        "n": 86,
+        "minimum": 17,
+        "median": 71.5,
+        "mean": 92.97674418604652,
+        "p95": 247,
+        "maximum": 458,
+        "total": 7996
+      }
+    },
+    "sizes_by_document": {
+      "okf/market/acl.md": {
+        "characters": {
+          "n": 7,
+          "minimum": 338,
+          "median": 560,
+          "mean": 567.8571428571429,
+          "p95": 912,
+          "maximum": 912,
+          "total": 3975
+        },
+        "whitespace_units": {
+          "n": 7,
+          "minimum": 51,
+          "median": 82,
+          "mean": 87.42857142857143,
+          "p95": 151,
+          "maximum": 151,
+          "total": 612
+        }
+      },
+      "okf/market/distribuidoras-e-tarifas.md": {
+        "characters": {
+          "n": 8,
+          "minimum": 112,
+          "median": 770.0,
+          "mean": 663.625,
+          "p95": 1166,
+          "maximum": 1166,
+          "total": 5309
+        },
+        "whitespace_units": {
+          "n": 8,
+          "minimum": 17,
+          "median": 116.0,
+          "mean": 103,
+          "p95": 190,
+          "maximum": 190,
+          "total": 824
+        }
+      },
+      "okf/market/energia-solar-por-assinatura.md": {
+        "characters": {
+          "n": 7,
+          "minimum": 276,
+          "median": 572,
+          "mean": 664.8571428571429,
+          "p95": 1692,
+          "maximum": 1692,
+          "total": 4654
+        },
+        "whitespace_units": {
+          "n": 7,
+          "minimum": 45,
+          "median": 87,
+          "mean": 102.85714285714286,
+          "p95": 261,
+          "maximum": 261,
+          "total": 720
+        }
+      },
+      "okf/market/glossario.md": {
+        "characters": {
+          "n": 1,
+          "minimum": 724,
+          "median": 724,
+          "mean": 724,
+          "p95": 724,
+          "maximum": 724,
+          "total": 724
+        },
+        "whitespace_units": {
+          "n": 1,
+          "minimum": 107,
+          "median": 107,
+          "mean": 107,
+          "p95": 107,
+          "maximum": 107,
+          "total": 107
+        }
+      },
+      "okf/market/marcos-regulatorios.md": {
+        "characters": {
+          "n": 8,
+          "minimum": 260,
+          "median": 524.5,
+          "mean": 682.125,
+          "p95": 1779,
+          "maximum": 1779,
+          "total": 5457
+        },
+        "whitespace_units": {
+          "n": 8,
+          "minimum": 35,
+          "median": 78.5,
+          "mean": 105.25,
+          "p95": 285,
+          "maximum": 285,
+          "total": 842
+        }
+      },
+      "okf/market/regulamentacao-e-atores.md": {
+        "characters": {
+          "n": 11,
+          "minimum": 169,
+          "median": 321,
+          "mean": 491,
+          "p95": 1619,
+          "maximum": 1619,
+          "total": 5401
+        },
+        "whitespace_units": {
+          "n": 11,
+          "minimum": 26,
+          "median": 37,
+          "mean": 73.63636363636364,
+          "p95": 245,
+          "maximum": 245,
+          "total": 810
+        }
+      },
+      "okf/sales/contratos-e-pos-venda.md": {
+        "characters": {
+          "n": 7,
+          "minimum": 167,
+          "median": 305,
+          "mean": 446.2857142857143,
+          "p95": 719,
+          "maximum": 719,
+          "total": 3124
+        },
+        "whitespace_units": {
+          "n": 7,
+          "minimum": 29,
+          "median": 50,
+          "mean": 69.57142857142857,
+          "p95": 114,
+          "maximum": 114,
+          "total": 487
+        }
+      },
+      "okf/sales/leitura-de-fatura.md": {
+        "characters": {
+          "n": 11,
+          "minimum": 117,
+          "median": 534,
+          "mean": 598.8181818181819,
+          "p95": 1419,
+          "maximum": 1419,
+          "total": 6587
+        },
+        "whitespace_units": {
+          "n": 11,
+          "minimum": 19,
+          "median": 80,
+          "mean": 96.27272727272727,
+          "p95": 247,
+          "maximum": 247,
+          "total": 1059
+        }
+      },
+      "okf/sales/objecoes.md": {
+        "characters": {
+          "n": 13,
+          "minimum": 300,
+          "median": 672,
+          "mean": 967.2307692307693,
+          "p95": 2882,
+          "maximum": 2882,
+          "total": 12574
+        },
+        "whitespace_units": {
+          "n": 13,
+          "minimum": 46,
+          "median": 105,
+          "mean": 150.15384615384616,
+          "p95": 458,
+          "maximum": 458,
+          "total": 1952
+        }
+      },
+      "okf/sales/perguntas-frequentes-de-clientes.md": {
+        "characters": {
+          "n": 13,
+          "minimum": 242,
+          "median": 284,
+          "mean": 298.9230769230769,
+          "p95": 468,
+          "maximum": 468,
+          "total": 3886
+        },
+        "whitespace_units": {
+          "n": 13,
+          "minimum": 36,
+          "median": 44,
+          "mean": 44.84615384615385,
+          "p95": 72,
+          "maximum": 72,
+          "total": 583
+        }
+      }
+    }
+  },
+  "retrieval": {
+    "k": 3,
+    "eligible_cases": 91,
+    "excluded_no_reference": [
+      "CASE-001",
+      "CASE-019",
+      "CASE-025",
+      "CASE-036",
+      "CASE-040",
+      "CASE-044",
+      "CASE-048",
+      "CASE-056",
+      "CASE-089"
+    ],
+    "reference_size_counts": {
+      "3": 88,
+      "2": 3
+    },
+    "methods": {
+      "fts": {
+        "n": 91,
+        "recall_at_3": 0.15567765567765568,
+        "mrr_at_3": 0.30952380952380953,
+        "cases_with_match": 39,
+        "per_case": [
+          {
+            "case_id": "CASE-002",
+            "status": "completed",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-316da47fa5a82c28d5fe"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-003",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-f971e50d7199cda6e4e2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-004",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "retrieved_ids": [
+              "pub-263f0640880b4ff7906b",
+              "pub-de6fd0bd156d864c7311",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-005",
+            "status": "completed",
+            "reference_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-80709c88e332c945d4f3",
+              "pub-464b3ff4625894dde088"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-006",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-37a47e2b9b4356e9b548",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-263f0640880b4ff7906b",
+              "pub-34ee99ac0111f8ed9bd2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-007",
+            "status": "completed",
+            "reference_ids": [
+              "pub-353c44b48b3b31369650",
+              "pub-5f381856c96fe0482a1d",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-353c44b48b3b31369650",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-008",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98",
+              "pub-c3182845110451a41d98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-009",
+            "status": "completed",
+            "reference_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-38a50986927ccb570a49",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-010",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-6c34bd39f66a20b5a6ef",
+              "pub-263f0640880b4ff7906b"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-011",
+            "status": "completed",
+            "reference_ids": [
+              "pub-464b3ff4625894dde088",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-012",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a7b3b165de17c218d721",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-013",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "retrieved_ids": [
+              "pub-687df57f795c6703bcd8",
+              "pub-d22068add7bef373f7b9",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-014",
+            "status": "completed",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-316da47fa5a82c28d5fe"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-015",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-016",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-5f85372a6768990399f7",
+              "pub-263f0640880b4ff7906b"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-017",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-c3182845110451a41d98",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-018",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-fa7fac8814908f4d177a",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-8136f071383eb2397582",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-020",
+            "status": "completed",
+            "reference_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-80709c88e332c945d4f3",
+              "pub-5f85372a6768990399f7"
+            ],
+            "retrieved_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-021",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-022",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-6c34bd39f66a20b5a6ef"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-023",
+            "status": "completed",
+            "reference_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98"
+            ],
+            "retrieved_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-024",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-026",
+            "status": "completed",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-316da47fa5a82c28d5fe"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-027",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-61a26859e8808af2999a",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-a7b3b165de17c218d721",
+              "pub-d22068add7bef373f7b9"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-028",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-80709c88e332c945d4f3"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-263f0640880b4ff7906b",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-029",
+            "status": "completed",
+            "reference_ids": [
+              "pub-13bd45bd46f5667531b6",
+              "pub-ebd4bd19808060848e8a",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-13bd45bd46f5667531b6",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-030",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-38a50986927ccb570a49",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-031",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-ebd4bd19808060848e8a",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-ac432ea9bf8967937663"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-032",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-033",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-d0cf4e6cc5300cabf11f"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-034",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-263f0640880b4ff7906b",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-035",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-de6fd0bd156d864c7311",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-037",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-c3182845110451a41d98",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-038",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-039",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-263f0640880b4ff7906b",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-041",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-b59526707eff57a56879",
+              "pub-5f85372a6768990399f7"
+            ],
+            "retrieved_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-263f0640880b4ff7906b",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-042",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-8136f071383eb2397582"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-043",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-263f0640880b4ff7906b",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-045",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-38a50986927ccb570a49",
+              "pub-5f381856c96fe0482a1d",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-046",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-f971e50d7199cda6e4e2",
+              "pub-d22068add7bef373f7b9"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-047",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-263f0640880b4ff7906b",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-049",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-050",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-8136f071383eb2397582"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-051",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-052",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-6b99075172a499312248",
+              "pub-316da47fa5a82c28d5fe"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-053",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-054",
+            "status": "completed",
+            "reference_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-38a50986927ccb570a49",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-055",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-de6fd0bd156d864c7311",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-057",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c3182845110451a41d98",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-38a50986927ccb570a49",
+              "pub-6b99075172a499312248",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-058",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-059",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "recall": 0.5,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-060",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-061",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-062",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-063",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-5f85372a6768990399f7",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-064",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-065",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-13bd45bd46f5667531b6",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-a436e767bf049ba20f98",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-066",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-c3182845110451a41d98",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-067",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-5f381856c96fe0482a1d",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-068",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-069",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-070",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-071",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-072",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-263f0640880b4ff7906b"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-073",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-074",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-38a50986927ccb570a49",
+              "pub-5f381856c96fe0482a1d",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-075",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "retrieved_ids": [
+              "pub-5f381856c96fe0482a1d",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-d0cf4e6cc5300cabf11f"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-076",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-263f0640880b4ff7906b",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-077",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-464b3ff4625894dde088"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d0cf4e6cc5300cabf11f"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-078",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-079",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-080",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-081",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "retrieved_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-73d09b96d05ac083ebd4"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-082",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-083",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-5f381856c96fe0482a1d",
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-084",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-085",
+            "status": "completed",
+            "reference_ids": [
+              "pub-232eafc437f5a99a84af",
+              "pub-353c44b48b3b31369650"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-086",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-087",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-088",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-090",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-091",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-5f381856c96fe0482a1d",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-092",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-263f0640880b4ff7906b",
+              "pub-de6fd0bd156d864c7311",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-093",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-316da47fa5a82c28d5fe"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-094",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-61a26859e8808af2999a",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-a7b3b165de17c218d721",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-095",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-096",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-5f85372a6768990399f7",
+              "pub-c3182845110451a41d98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-097",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-c3182845110451a41d98"
+            ],
+            "retrieved_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-d22068add7bef373f7b9",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-098",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-099",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-53451a998cf2c2cd3e44",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-100",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-d0cf4e6cc5300cabf11f",
+              "pub-d22068add7bef373f7b9",
+              "pub-f971e50d7199cda6e4e2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          }
+        ]
+      },
+      "neuro_symbolic": {
+        "n": 91,
+        "recall_at_3": 0.3333333333333333,
+        "mrr_at_3": 0.47435897435897434,
+        "cases_with_match": 59,
+        "per_case": [
+          {
+            "case_id": "CASE-002",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-003",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-9fc045bb74de5a5eab63"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-004",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-a436e767bf049ba20f98",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-005",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-80709c88e332c945d4f3",
+              "pub-464b3ff4625894dde088"
+            ],
+            "retrieved_ids": [
+              "pub-232eafc437f5a99a84af",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-006",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-37a47e2b9b4356e9b548",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-34ee99ac0111f8ed9bd2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-007",
+            "status": "completed",
+            "reference_ids": [
+              "pub-353c44b48b3b31369650",
+              "pub-5f381856c96fe0482a1d",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-232eafc437f5a99a84af",
+              "pub-a3f940cab411dbd6c29f",
+              "pub-a2d774f2abd95a5783c5"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-008",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-009",
+            "status": "completed",
+            "reference_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-38a50986927ccb570a49",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-f971e50d7199cda6e4e2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-010",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-34ee99ac0111f8ed9bd2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-011",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-464b3ff4625894dde088",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-012",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-7ec79d1009004fc77c7d",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-013",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "retrieved_ids": [
+              "pub-5b5fbdfb6bfa195083a0",
+              "pub-1806e52eb7044377b085",
+              "pub-d22068add7bef373f7b9"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-014",
+            "status": "completed",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-015",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-61a26859e8808af2999a",
+              "pub-24c4f657fff094437ead",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-016",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-7ec79d1009004fc77c7d"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-017",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-018",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-fa7fac8814908f4d177a",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "retrieved_ids": [
+              "pub-8136f071383eb2397582",
+              "pub-232eafc437f5a99a84af",
+              "pub-79396dbd2ba9d7e777c9"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-020",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-80709c88e332c945d4f3",
+              "pub-5f85372a6768990399f7"
+            ],
+            "retrieved_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-021",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-f971e50d7199cda6e4e2",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-022",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-a436e767bf049ba20f98",
+              "pub-8136f071383eb2397582"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-023",
+            "status": "completed",
+            "reference_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-024",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-7ec79d1009004fc77c7d",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-026",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-5f85372a6768990399f7",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-027",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-61a26859e8808af2999a",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "retrieved_ids": [
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-d22068add7bef373f7b9",
+              "pub-464b3ff4625894dde088"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-028",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-80709c88e332c945d4f3"
+            ],
+            "retrieved_ids": [
+              "pub-6b99075172a499312248",
+              "pub-8cf1753f90efade76be9",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-029",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-13bd45bd46f5667531b6",
+              "pub-ebd4bd19808060848e8a",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-5f381856c96fe0482a1d",
+              "pub-316da47fa5a82c28d5fe"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-030",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-38a50986927ccb570a49",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-031",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-ebd4bd19808060848e8a",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "retrieved_ids": [
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-1806e52eb7044377b085",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-032",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-b59526707eff57a56879",
+              "pub-cb2eb1c9f4867eea2c0b"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-033",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-61a26859e8808af2999a",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-034",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-5f381856c96fe0482a1d",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-035",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-037",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-038",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-07196fe47ad40f47e594",
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-039",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-1806e52eb7044377b085",
+              "pub-37a47e2b9b4356e9b548"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-041",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-b59526707eff57a56879",
+              "pub-5f85372a6768990399f7"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-93263905e98c02a37f7f",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-042",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-f971e50d7199cda6e4e2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-043",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-5378b90dc95726a60190"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-045",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f",
+              "pub-b59526707eff57a56879"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-046",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-a41970fc1d945b1b0db6",
+              "pub-1806e52eb7044377b085",
+              "pub-5b5fbdfb6bfa195083a0"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-047",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-93263905e98c02a37f7f",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-049",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-050",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-61a26859e8808af2999a",
+              "pub-24c4f657fff094437ead",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-051",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-052",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-232eafc437f5a99a84af",
+              "pub-93263905e98c02a37f7f",
+              "pub-fb0a06901d429f8e1d09"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-053",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-054",
+            "status": "completed",
+            "reference_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-f971e50d7199cda6e4e2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-055",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-057",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c3182845110451a41d98",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-d5754f11d020d83826af"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-058",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-059",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-8cf1753f90efade76be9",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.5,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-060",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-061",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-a41970fc1d945b1b0db6",
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-5b5fbdfb6bfa195083a0"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-062",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-063",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-d5754f11d020d83826af"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-064",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-065",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-13bd45bd46f5667531b6",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "retrieved_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-5378b90dc95726a60190",
+              "pub-9fc045bb74de5a5eab63"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-066",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-067",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-d5754f11d020d83826af",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-068",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-069",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-070",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f",
+              "pub-b59526707eff57a56879"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-071",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-525a64f44808ede46675",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-072",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-687df57f795c6703bcd8"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-073",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-d22068add7bef373f7b9",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-074",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-a436e767bf049ba20f98",
+              "pub-cb2eb1c9f4867eea2c0b"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-075",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-a436e767bf049ba20f98",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-076",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-37a47e2b9b4356e9b548",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-077",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-464b3ff4625894dde088"
+            ],
+            "retrieved_ids": [
+              "pub-a41970fc1d945b1b0db6",
+              "pub-1806e52eb7044377b085",
+              "pub-5b5fbdfb6bfa195083a0"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-078",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-079",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-d22068add7bef373f7b9",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-080",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-081",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-d22068add7bef373f7b9"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-082",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-083",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-5f381856c96fe0482a1d",
+              "pub-9fc045bb74de5a5eab63"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-084",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-085",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-232eafc437f5a99a84af",
+              "pub-353c44b48b3b31369650"
+            ],
+            "retrieved_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-93263905e98c02a37f7f",
+              "pub-cb2eb1c9f4867eea2c0b"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-086",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-087",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-088",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-090",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-b59526707eff57a56879"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-091",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-092",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-93263905e98c02a37f7f",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-093",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-094",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-61a26859e8808af2999a",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-095",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-9fc045bb74de5a5eab63",
+              "pub-5378b90dc95726a60190",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "recall": 0.5,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-096",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-097",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-c3182845110451a41d98"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-098",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-099",
+            "status": "blocked",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-53451a998cf2c2cd3e44",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-100",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          }
+        ]
+      },
+      "vector": {
+        "n": 91,
+        "recall_at_3": 0.30769230769230765,
+        "mrr_at_3": 0.4945054945054945,
+        "cases_with_match": 58,
+        "per_case": [
+          {
+            "case_id": "CASE-002",
+            "status": "completed",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-93263905e98c02a37f7f",
+              "pub-cb2eb1c9f4867eea2c0b"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-003",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-9fc045bb74de5a5eab63",
+              "pub-d22068add7bef373f7b9"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-004",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-37a47e2b9b4356e9b548"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-005",
+            "status": "completed",
+            "reference_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-80709c88e332c945d4f3",
+              "pub-464b3ff4625894dde088"
+            ],
+            "retrieved_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-232eafc437f5a99a84af"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-006",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-37a47e2b9b4356e9b548",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-007",
+            "status": "completed",
+            "reference_ids": [
+              "pub-353c44b48b3b31369650",
+              "pub-5f381856c96fe0482a1d",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-232eafc437f5a99a84af",
+              "pub-a3f940cab411dbd6c29f",
+              "pub-fb0a06901d429f8e1d09"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-008",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-009",
+            "status": "completed",
+            "reference_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-38a50986927ccb570a49",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-010",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-011",
+            "status": "completed",
+            "reference_ids": [
+              "pub-464b3ff4625894dde088",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-525a64f44808ede46675",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-012",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-8cf1753f90efade76be9",
+              "pub-7ec79d1009004fc77c7d"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-013",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "retrieved_ids": [
+              "pub-5b5fbdfb6bfa195083a0",
+              "pub-1806e52eb7044377b085",
+              "pub-5378b90dc95726a60190"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-014",
+            "status": "completed",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-015",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-61a26859e8808af2999a",
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-016",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-017",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-ebd4bd19808060848e8a",
+              "pub-c3182845110451a41d98"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-018",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-fa7fac8814908f4d177a",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "retrieved_ids": [
+              "pub-8136f071383eb2397582",
+              "pub-232eafc437f5a99a84af",
+              "pub-fb0a06901d429f8e1d09"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-020",
+            "status": "completed",
+            "reference_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-80709c88e332c945d4f3",
+              "pub-5f85372a6768990399f7"
+            ],
+            "retrieved_ids": [
+              "pub-9b3c940964b79395eae8",
+              "pub-eed2c51f2e2846e4d4d2",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-021",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-f971e50d7199cda6e4e2",
+              "pub-1806e52eb7044377b085",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-022",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-8136f071383eb2397582",
+              "pub-7ec79d1009004fc77c7d"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-023",
+            "status": "completed",
+            "reference_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-024",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-026",
+            "status": "completed",
+            "reference_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-5f85372a6768990399f7",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-fa748a50c5fb80f8b1a7"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-027",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-61a26859e8808af2999a",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "retrieved_ids": [
+              "pub-464b3ff4625894dde088",
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-d22068add7bef373f7b9"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-028",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-80709c88e332c945d4f3"
+            ],
+            "retrieved_ids": [
+              "pub-5378b90dc95726a60190",
+              "pub-8cf1753f90efade76be9",
+              "pub-80709c88e332c945d4f3"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-029",
+            "status": "completed",
+            "reference_ids": [
+              "pub-13bd45bd46f5667531b6",
+              "pub-ebd4bd19808060848e8a",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-ebd4bd19808060848e8a",
+              "pub-38a50986927ccb570a49",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-030",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-38a50986927ccb570a49",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-525a64f44808ede46675",
+              "pub-eed2c51f2e2846e4d4d2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-031",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-ebd4bd19808060848e8a",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-5b5fbdfb6bfa195083a0"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-032",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-033",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-034",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-5f381856c96fe0482a1d",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-035",
+            "status": "completed",
+            "reference_ids": [
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-a436e767bf049ba20f98",
+              "pub-38a50986927ccb570a49"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-037",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-038",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-07196fe47ad40f47e594",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-039",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-82a87243ea2aa97f5fd3",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-34ee99ac0111f8ed9bd2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-041",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-b59526707eff57a56879",
+              "pub-5f85372a6768990399f7"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-93263905e98c02a37f7f",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-042",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-a41970fc1d945b1b0db6",
+              "pub-f971e50d7199cda6e4e2"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-043",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-5378b90dc95726a60190"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-045",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-046",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-5b5fbdfb6bfa195083a0",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-047",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-37a47e2b9b4356e9b548",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-049",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-050",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-61a26859e8808af2999a",
+              "pub-24c4f657fff094437ead",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-051",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-93263905e98c02a37f7f",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-052",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-b59526707eff57a56879",
+              "pub-cb2eb1c9f4867eea2c0b"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-053",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-93263905e98c02a37f7f",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-054",
+            "status": "completed",
+            "reference_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-525a64f44808ede46675",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-055",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-057",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c3182845110451a41d98",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-058",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-d5754f11d020d83826af",
+              "pub-5f381856c96fe0482a1d"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-059",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "recall": 0.5,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-060",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-b59526707eff57a56879",
+              "pub-cb2eb1c9f4867eea2c0b"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-061",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "retrieved_ids": [
+              "pub-a41970fc1d945b1b0db6",
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-464b3ff4625894dde088"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-062",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-063",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-064",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-ebd4bd19808060848e8a"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-065",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-13bd45bd46f5667531b6",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "retrieved_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-5378b90dc95726a60190",
+              "pub-9fc045bb74de5a5eab63"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-066",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-067",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-9fc045bb74de5a5eab63",
+              "pub-d5754f11d020d83826af",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-068",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-5378b90dc95726a60190"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-069",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-070",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-071",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-525a64f44808ede46675",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-072",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-24c4f657fff094437ead"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-93263905e98c02a37f7f",
+              "pub-687df57f795c6703bcd8"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-073",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "retrieved_ids": [
+              "pub-1806e52eb7044377b085",
+              "pub-d22068add7bef373f7b9",
+              "pub-a41970fc1d945b1b0db6"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-074",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-a436e767bf049ba20f98",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-cb2eb1c9f4867eea2c0b"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-075",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "retrieved_ids": [
+              "pub-66e8fbecf89a09d58e6e",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-a436e767bf049ba20f98"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-076",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-82a87243ea2aa97f5fd3"
+            ],
+            "retrieved_ids": [
+              "pub-37a47e2b9b4356e9b548",
+              "pub-93263905e98c02a37f7f",
+              "pub-5378b90dc95726a60190"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-077",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-464b3ff4625894dde088"
+            ],
+            "retrieved_ids": [
+              "pub-a41970fc1d945b1b0db6",
+              "pub-1806e52eb7044377b085",
+              "pub-5b5fbdfb6bfa195083a0"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-078",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-079",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-4d4a84dd215de90230ba",
+              "pub-61a26859e8808af2999a"
+            ],
+            "retrieved_ids": [
+              "pub-6a5e86b5f6e2733c03a8",
+              "pub-d22068add7bef373f7b9",
+              "pub-464b3ff4625894dde088"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-080",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-081",
+            "status": "completed",
+            "reference_ids": [
+              "pub-d22068add7bef373f7b9",
+              "pub-ebd4bd19808060848e8a",
+              "pub-8cf1753f90efade76be9"
+            ],
+            "retrieved_ids": [
+              "pub-a41970fc1d945b1b0db6",
+              "pub-d22068add7bef373f7b9",
+              "pub-6a5e86b5f6e2733c03a8"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-082",
+            "status": "completed",
+            "reference_ids": [
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-38a50986927ccb570a49"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-93263905e98c02a37f7f",
+              "pub-525a64f44808ede46675"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-083",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-13bd45bd46f5667531b6",
+              "pub-1806e52eb7044377b085"
+            ],
+            "retrieved_ids": [
+              "pub-9fc045bb74de5a5eab63",
+              "pub-d5754f11d020d83826af",
+              "pub-66e8fbecf89a09d58e6e"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-084",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-6b99075172a499312248"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-085",
+            "status": "completed",
+            "reference_ids": [
+              "pub-232eafc437f5a99a84af",
+              "pub-353c44b48b3b31369650"
+            ],
+            "retrieved_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-086",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-087",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-088",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-de6fd0bd156d864c7311",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "retrieved_ids": [
+              "pub-de6fd0bd156d864c7311",
+              "pub-8cf1753f90efade76be9",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-090",
+            "status": "completed",
+            "reference_ids": [
+              "pub-b59526707eff57a56879",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-b59526707eff57a56879"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-091",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-d5754f11d020d83826af",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-43a7b6c0fb4e7e31197c"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-092",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-024e4f42ca0c20fb2e7a"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-34ee99ac0111f8ed9bd2",
+              "pub-687df57f795c6703bcd8"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-093",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-d5754f11d020d83826af"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-d5754f11d020d83826af",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.6666666666666666,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-094",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-61a26859e8808af2999a",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "retrieved_ids": [
+              "pub-cb2eb1c9f4867eea2c0b",
+              "pub-93263905e98c02a37f7f",
+              "pub-5f85372a6768990399f7"
+            ],
+            "recall": 0.0,
+            "reciprocal_rank": 0.0,
+            "first_reference_rank": null
+          },
+          {
+            "case_id": "CASE-095",
+            "status": "completed",
+            "reference_ids": [
+              "pub-01e16bb9f70c82d8d798",
+              "pub-13bd45bd46f5667531b6"
+            ],
+            "retrieved_ids": [
+              "pub-5378b90dc95726a60190",
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798"
+            ],
+            "recall": 0.5,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-096",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "retrieved_ids": [
+              "pub-fa748a50c5fb80f8b1a7",
+              "pub-c3182845110451a41d98",
+              "pub-ac0a33085f3197373c2b"
+            ],
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "first_reference_rank": 1
+          },
+          {
+            "case_id": "CASE-097",
+            "status": "completed",
+            "reference_ids": [
+              "pub-24c4f657fff094437ead",
+              "pub-956e3a26cfe47d8878fe",
+              "pub-c3182845110451a41d98"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-c3182845110451a41d98",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-098",
+            "status": "completed",
+            "reference_ids": [
+              "pub-3039d4d0bfb6f82bba2f",
+              "pub-01e16bb9f70c82d8d798",
+              "pub-de6fd0bd156d864c7311"
+            ],
+            "retrieved_ids": [
+              "pub-93263905e98c02a37f7f",
+              "pub-5378b90dc95726a60190",
+              "pub-3039d4d0bfb6f82bba2f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.3333333333333333,
+            "first_reference_rank": 3
+          },
+          {
+            "case_id": "CASE-099",
+            "status": "completed",
+            "reference_ids": [
+              "pub-43a7b6c0fb4e7e31197c",
+              "pub-53451a998cf2c2cd3e44",
+              "pub-525a64f44808ede46675"
+            ],
+            "retrieved_ids": [
+              "pub-c791563cbdd6bca5a0b8",
+              "pub-525a64f44808ede46675",
+              "pub-956e3a26cfe47d8878fe"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          },
+          {
+            "case_id": "CASE-100",
+            "status": "completed",
+            "reference_ids": [
+              "pub-c3182845110451a41d98",
+              "pub-525a64f44808ede46675",
+              "pub-c791563cbdd6bca5a0b8"
+            ],
+            "retrieved_ids": [
+              "pub-ac0a33085f3197373c2b",
+              "pub-c3182845110451a41d98",
+              "pub-93263905e98c02a37f7f"
+            ],
+            "recall": 0.3333333333333333,
+            "reciprocal_rank": 0.5,
+            "first_reference_rank": 2
+          }
+        ]
+      }
+    }
+  },
+  "methods": {
+    "heuristic": {
+      "matrix": {
+        "VP": 13,
+        "VN": 77,
+        "FP": 6,
+        "FN": 4
+      },
+      "metrics": {
+        "accuracy": 0.9,
+        "precision": 0.6842105263157895,
+        "recall": 0.7647058823529411,
+        "f1": 0.7222222222222222,
+        "accuracy_wilson95": [
+          0.8256343384950865,
+          0.9447708629393249
+        ]
+      },
+      "initial_matrix": {
+        "VP": 13,
+        "VN": 77,
+        "FP": 6,
+        "FN": 4
+      },
+      "latency": {
+        "mean": 0.00041915159061318264,
+        "median": 0.0003877080016536638,
+        "p95": 0.0006280420057009906
+      },
+      "states": {
+        "completed": 100
+      }
+    },
+    "fts": {
+      "matrix": {
+        "VP": 17,
+        "VN": 80,
+        "FP": 3,
+        "FN": 0
+      },
+      "metrics": {
+        "accuracy": 0.97,
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1": 0.918918918918919,
+        "accuracy_wilson95": [
+          0.9154806357094724,
+          0.9897454759759611
+        ]
+      },
+      "initial_matrix": {
+        "VP": 17,
+        "VN": 80,
+        "FP": 3,
+        "FN": 0
+      },
+      "latency": {
+        "mean": 8.706451503320714,
+        "median": 8.218123583501438,
+        "p95": 12.048776042007376
+      },
+      "states": {
+        "completed": 100
+      }
+    },
+    "neuro_symbolic": {
+      "matrix": {
+        "VP": 17,
+        "VN": 45,
+        "FP": 38,
+        "FN": 0
+      },
+      "metrics": {
+        "accuracy": 0.62,
+        "precision": 0.3090909090909091,
+        "recall": 1.0,
+        "f1": 0.4722222222222222,
+        "accuracy_wilson95": [
+          0.5220975529551107,
+          0.7090240074752127
+        ]
+      },
+      "initial_matrix": {
+        "VP": 17,
+        "VN": 80,
+        "FP": 3,
+        "FN": 0
+      },
+      "latency": {
+        "mean": 58.817055567018976,
+        "median": 53.53712089601322,
+        "p95": 128.31972604201292
+      },
+      "states": {
+        "completed": 60,
+        "blocked": 40
+      }
+    },
+    "vector": {
+      "matrix": {
+        "VP": 17,
+        "VN": 80,
+        "FP": 3,
+        "FN": 0
+      },
+      "metrics": {
+        "accuracy": 0.97,
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1": 0.918918918918919,
+        "accuracy_wilson95": [
+          0.9154806357094724,
+          0.9897454759759611
+        ]
+      },
+      "initial_matrix": {
+        "VP": 17,
+        "VN": 80,
+        "FP": 3,
+        "FN": 0
+      },
+      "latency": {
+        "mean": 9.286047562862223,
+        "median": 9.07336691650562,
+        "p95": 12.868301250011427
+      },
+      "states": {
+        "completed": 100
+      }
+    }
+  },
+  "paired": {
+    "neuro_symbolic": {
+      "n": 60,
+      "matrix": {
+        "VP": 13,
+        "VN": 45,
+        "FP": 2,
+        "FN": 0
+      },
+      "metrics": {
+        "accuracy": 0.9666666666666667,
+        "precision": 0.8666666666666667,
+        "recall": 1.0,
+        "f1": 0.9285714285714286,
+        "accuracy_wilson95": [
+          0.886362257256914,
+          0.9908106807438021
+        ]
+      },
+      "latency": {
+        "mean": 58.1553877110496,
+        "median": 54.12188364600297,
+        "p95": 126.01082891700207
+      }
+    },
+    "vector": {
+      "n": 60,
+      "matrix": {
+        "VP": 13,
+        "VN": 45,
+        "FP": 2,
+        "FN": 0
+      },
+      "metrics": {
+        "accuracy": 0.9666666666666667,
+        "precision": 0.8666666666666667,
+        "recall": 1.0,
+        "f1": 0.9285714285714286,
+        "accuracy_wilson95": [
+          0.886362257256914,
+          0.9908106807438021
+        ]
+      },
+      "latency": {
+        "mean": 9.157556889601498,
+        "median": 8.73738287499873,
+        "p95": 13.143346458004089
+      }
+    }
+  },
+  "rejection_codes": {
+    "unsupported_claim": 24,
+    "citation_not_found": 11,
+    "unsupported_or_contradicted_claim": 1,
+    "claim_not_in_draft": 2,
+    "unit_coverage_mismatch": 2
+  },
+  "rejection_categories": {
+    "content": 25,
+    "citation": 11,
+    "coverage": 4
+  },
+  "latency_wilcoxon": {
+    "n": 100,
+    "w": 0,
+    "p_two_sided": 1.5777218104420236e-30,
+    "median_difference_s": 44.0713623539923,
+    "positive_differences": 100
+  },
+  "latency_figure": {
+    "heuristic": {
+      "n": 100,
+      "q1": 0.0003025107507710345,
+      "median": 0.0003877080016536638,
+      "q3": 0.0004717499832622707,
+      "lower_whisker": 0.00011870800517499447,
+      "upper_whisker": 0.0006573749997187406,
+      "outliers": [
+        0.0010122079984284937,
+        0.0042955829994753
+      ]
+    },
+    "fts": {
+      "n": 100,
+      "q1": 7.155764343493502,
+      "median": 8.218123583501438,
+      "q3": 9.648087791494618,
+      "lower_whisker": 6.009066124999663,
+      "upper_whisker": 13.18792008300079,
+      "outliers": [
+        13.563266207987908,
+        15.427964250004152,
+        16.001791833987227
+      ]
+    },
+    "neuro_symbolic": {
+      "n": 100,
+      "q1": 36.84895228148525,
+      "median": 53.53712089601322,
+      "q3": 71.78458372900786,
+      "lower_whisker": 14.377164540986996,
+      "upper_whisker": 121.41825399998925,
+      "outliers": [
+        126.01082891700207,
+        128.31972604201292,
+        129.46819533300004,
+        130.10314854199532,
+        140.29712879197905,
+        142.632927166007,
+        153.93898649999755
+      ]
+    },
+    "vector": {
+      "n": 100,
+      "q1": 7.782956364251731,
+      "median": 9.07336691650562,
+      "q3": 10.20389845801401,
+      "lower_whisker": 6.337586582987569,
+      "upper_whisker": 13.693618249992142,
+      "outliers": [
+        15.90866983300657,
+        16.433872082998278
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "clarified_on": "2026-09-28",
+  "source": "Esclarecimento do avaliador na conversa de revisão da monografia",
+  "evaluator_statement": "quando marquei o bloqueio como incorreto o que estava dizendo é que a resposta do assistente foi adequada e poderia ter sido entregue ao invés de fazer o handoff.",
+  "review_export_sha256": "1720d59b914df36f4ebfa50188519e40dd827629e4b6bed826202c01ba914d57",
+  "interpretation": {
+    "block_incorrect_means_response_adequate_for_delivery": true,
+    "block_correct_implies_response_inadequate": false,
+    "scope": "global_adequacy_of_displayed_response",
+    "claim_level_factuality_assessed": false
+  },
+  "original_judgments_changed": false,
+  "new_model_runs": false
+}

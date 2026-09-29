@@ -1,0 +1,2779 @@
+{
+  "export_sha256": "1720d59b914df36f4ebfa50188519e40dd827629e4b6bed826202c01ba914d57",
+  "inputs": {
+    "results_sha256": "7b037106994b96d623d6c25f42256387e1f613faa4955067ac7b79e9dcc1a836",
+    "cases_sha256": "6c9244ff1cea3c615851442d2273fad74b80e23c92461e98997865f01e775a81",
+    "corpus_sha256": "75efcbf8185464ead54b4a9b9f166486e1823ac968a5a72dc1ad4706aaec4f22"
+  },
+  "counts": {
+    "fts": {
+      "response_correct": 90,
+      "response_incorrect": 10
+    },
+    "heuristic": {
+      "response_incorrect": 96,
+      "response_correct": 4
+    },
+    "vector": {
+      "response_correct": 88,
+      "response_incorrect": 12
+    },
+    "neuro_symbolic": {
+      "block_incorrect": 34,
+      "response_correct": 47,
+      "response_incorrect": 13,
+      "block_correct": 6
+    }
+  },
+  "blocking_reasons": {
+    "unsupported_claim": {
+      "incorrect": 20,
+      "correct": 4
+    },
+    "citation_not_found": {
+      "incorrect": 9,
+      "correct": 2
+    },
+    "claim_not_in_draft": {
+      "incorrect": 2
+    },
+    "unit_coverage_mismatch": {
+      "incorrect": 2
+    },
+    "unsupported_or_contradicted_claim": {
+      "incorrect": 1
+    }
+  },
+  "pairs": {
+    "fts__vector": {
+      "n": 100,
+      "both_correct": 87,
+      "only_first_correct": 3,
+      "only_second_correct": 1,
+      "both_incorrect": 9,
+      "mcnemar_exact_two_sided_p": 0.625,
+      "difference_percentage_points": 2.0
+    },
+    "neuro_symbolic__vector": {
+      "n": 60,
+      "both_correct": 46,
+      "only_first_correct": 1,
+      "only_second_correct": 3,
+      "both_incorrect": 10,
+      "mcnemar_exact_two_sided_p": 0.625,
+      "difference_percentage_points": -3.3333333333333335
+    }
+  },
+  "clarification_sha256": "29e1982604f730116acc0b7682e0868bffc4c9fc1c104bc62c80e8785a4c7857",
+  "clarified_on": "2026-09-28",
+  "adequacy_and_delivery": {
+    "heuristic": {
+      "total_questions": 100,
+      "delivered_adequate": 4,
+      "delivered_inadequate": 96,
+      "blocked_adequate_for_delivery": 0,
+      "blocked_text_adequacy_unclassified": 0,
+      "adequate_text_lower_bound": 4
+    },
+    "fts": {
+      "total_questions": 100,
+      "delivered_adequate": 90,
+      "delivered_inadequate": 10,
+      "blocked_adequate_for_delivery": 0,
+      "blocked_text_adequacy_unclassified": 0,
+      "adequate_text_lower_bound": 90
+    },
+    "neuro_symbolic": {
+      "total_questions": 100,
+      "delivered_adequate": 47,
+      "delivered_inadequate": 13,
+      "blocked_adequate_for_delivery": 34,
+      "blocked_text_adequacy_unclassified": 6,
+      "adequate_text_lower_bound": 81
+    },
+    "vector": {
+      "total_questions": 100,
+      "delivered_adequate": 88,
+      "delivered_inadequate": 12,
+      "blocked_adequate_for_delivery": 0,
+      "blocked_text_adequacy_unclassified": 0,
+      "adequate_text_lower_bound": 88
+    }
+  },
+  "proportion_intervals": {
+    "heuristic": {
+      "adequacy_among_delivered": {
+        "successes": 4,
+        "denominator": 100,
+        "proportion": 0.04,
+        "wilson95": [
+          0.01566330399154762,
+          0.0983707143588792
+        ]
+      },
+      "adequate_delivery": {
+        "successes": 4,
+        "denominator": 100,
+        "proportion": 0.04,
+        "wilson95": [
+          0.01566330399154762,
+          0.0983707143588792
+        ]
+      }
+    },
+    "fts": {
+      "adequacy_among_delivered": {
+        "successes": 90,
+        "denominator": 100,
+        "proportion": 0.9,
+        "wilson95": [
+          0.8256343384950865,
+          0.9447708629393249
+        ]
+      },
+      "adequate_delivery": {
+        "successes": 90,
+        "denominator": 100,
+        "proportion": 0.9,
+        "wilson95": [
+          0.8256343384950865,
+          0.9447708629393249
+        ]
+      }
+    },
+    "neuro_symbolic": {
+      "adequacy_among_delivered": {
+        "successes": 47,
+        "denominator": 60,
+        "proportion": 0.7833333333333333,
+        "wilson95": [
+          0.6637997242680521,
+          0.868769559518097
+        ]
+      },
+      "adequate_delivery": {
+        "successes": 47,
+        "denominator": 100,
+        "proportion": 0.47,
+        "wilson95": [
+          0.3751081795934127,
+          0.5671114302990063
+        ]
+      }
+    },
+    "vector": {
+      "adequacy_among_delivered": {
+        "successes": 88,
+        "denominator": 100,
+        "proportion": 0.88,
+        "wilson95": [
+          0.8018790057328857,
+          0.9300059356298052
+        ]
+      },
+      "adequate_delivery": {
+        "successes": 88,
+        "denominator": 100,
+        "proportion": 0.88,
+        "wilson95": [
+          0.8018790057328857,
+          0.9300059356298052
+        ]
+      }
+    }
+  },
+  "review_history": {
+    "events": 407,
+    "items": 400,
+    "first_saved_at": "2026-09-28T00:01:03.837707+00:00",
+    "last_saved_at": "2026-09-28T01:25:32.286409+00:00",
+    "elapsed_span_s": 5068.448702,
+    "groups": {
+      "response": {
+        "items": 360,
+        "saves": 365,
+        "resaved_items": 5,
+        "first_verdicts": {
+          "correct": 230,
+          "incorrect": 130
+        },
+        "final_verdicts": {
+          "correct": 229,
+          "incorrect": 131
+        },
+        "verdict_changes": 3,
+        "unchanged_verdict_resaves": 2,
+        "transitions": {
+          "correct__incorrect": 2,
+          "incorrect__incorrect": 1,
+          "incorrect__correct": 1,
+          "correct__correct": 1
+        },
+        "gaps_ending_at_target": {
+          "n": 364,
+          "minimum": 0.633104,
+          "median": 3.7835565,
+          "mean": 12.115481862637363,
+          "p95": 33.172767,
+          "maximum": 885.792133,
+          "total": 4410.035398
+        }
+      },
+      "block": {
+        "items": 40,
+        "saves": 42,
+        "resaved_items": 2,
+        "first_verdicts": {
+          "incorrect": 32,
+          "correct": 8
+        },
+        "final_verdicts": {
+          "incorrect": 34,
+          "correct": 6
+        },
+        "verdict_changes": 2,
+        "unchanged_verdict_resaves": 0,
+        "transitions": {
+          "correct__incorrect": 2
+        },
+        "gaps_ending_at_target": {
+          "n": 42,
+          "minimum": 1.3692,
+          "median": 8.3009425,
+          "mean": 15.676507238095239,
+          "p95": 32.750142,
+          "maximum": 177.706911,
+          "total": 658.413304
+        }
+      }
+    },
+    "resaved_items": [
+      {
+        "item_id": "R-0016",
+        "case_id": "CASE-073",
+        "method": "vector",
+        "target": "response",
+        "verdicts": [
+          "correct",
+          "incorrect"
+        ],
+        "revisions": 2
+      },
+      {
+        "item_id": "R-0075",
+        "case_id": "CASE-088",
+        "method": "neuro_symbolic",
+        "target": "block",
+        "verdicts": [
+          "correct",
+          "incorrect"
+        ],
+        "revisions": 2
+      },
+      {
+        "item_id": "R-0174",
+        "case_id": "CASE-056",
+        "method": "neuro_symbolic",
+        "target": "response",
+        "verdicts": [
+          "correct",
+          "incorrect"
+        ],
+        "revisions": 2
+      },
+      {
+        "item_id": "R-0175",
+        "case_id": "CASE-019",
+        "method": "heuristic",
+        "target": "response",
+        "verdicts": [
+          "incorrect",
+          "incorrect"
+        ],
+        "revisions": 2
+      },
+      {
+        "item_id": "R-0195",
+        "case_id": "CASE-050",
+        "method": "neuro_symbolic",
+        "target": "block",
+        "verdicts": [
+          "correct",
+          "incorrect"
+        ],
+        "revisions": 2
+      },
+      {
+        "item_id": "R-0270",
+        "case_id": "CASE-009",
+        "method": "heuristic",
+        "target": "response",
+        "verdicts": [
+          "incorrect",
+          "correct"
+        ],
+        "revisions": 2
+      },
+      {
+        "item_id": "R-0400",
+        "case_id": "CASE-014",
+        "method": "fts",
+        "target": "response",
+        "verdicts": [
+          "correct",
+          "correct"
+        ],
+        "revisions": 2
+      }
+    ],
+    "consecutive_gaps": {
+      "n": 406,
+      "minimum": 0.633104,
+      "median": 4.191698000000001,
+      "mean": 12.483863798029557,
+      "p95": 33.172767,
+      "maximum": 885.792133,
+      "total": 5068.448702
+    },
+    "gaps_at_most_5s": 220,
+    "gap_definition": "Elapsed wall time between successive saved events, grouped by the target of the later save. Not reading time.",
+    "gaps": [
+      {
+        "previous_item_id": "R-0001",
+        "item_id": "R-0002",
+        "target": "response",
+        "seconds": 72.262071
+      },
+      {
+        "previous_item_id": "R-0002",
+        "item_id": "R-0003",
+        "target": "response",
+        "seconds": 40.691859
+      },
+      {
+        "previous_item_id": "R-0003",
+        "item_id": "R-0004",
+        "target": "block",
+        "seconds": 177.706911
+      },
+      {
+        "previous_item_id": "R-0004",
+        "item_id": "R-0005",
+        "target": "response",
+        "seconds": 27.160201
+      },
+      {
+        "previous_item_id": "R-0005",
+        "item_id": "R-0006",
+        "target": "response",
+        "seconds": 13.075908
+      },
+      {
+        "previous_item_id": "R-0006",
+        "item_id": "R-0007",
+        "target": "response",
+        "seconds": 10.74541
+      },
+      {
+        "previous_item_id": "R-0007",
+        "item_id": "R-0008",
+        "target": "response",
+        "seconds": 4.583531
+      },
+      {
+        "previous_item_id": "R-0008",
+        "item_id": "R-0009",
+        "target": "response",
+        "seconds": 21.49597
+      },
+      {
+        "previous_item_id": "R-0009",
+        "item_id": "R-0010",
+        "target": "response",
+        "seconds": 29.103684
+      },
+      {
+        "previous_item_id": "R-0010",
+        "item_id": "R-0011",
+        "target": "block",
+        "seconds": 30.04819
+      },
+      {
+        "previous_item_id": "R-0011",
+        "item_id": "R-0012",
+        "target": "response",
+        "seconds": 10.919546
+      },
+      {
+        "previous_item_id": "R-0012",
+        "item_id": "R-0013",
+        "target": "block",
+        "seconds": 32.750142
+      },
+      {
+        "previous_item_id": "R-0013",
+        "item_id": "R-0014",
+        "target": "response",
+        "seconds": 39.789014
+      },
+      {
+        "previous_item_id": "R-0014",
+        "item_id": "R-0015",
+        "target": "response",
+        "seconds": 15.779167
+      },
+      {
+        "previous_item_id": "R-0015",
+        "item_id": "R-0016",
+        "target": "response",
+        "seconds": 19.049339
+      },
+      {
+        "previous_item_id": "R-0016",
+        "item_id": "R-0017",
+        "target": "response",
+        "seconds": 72.485816
+      },
+      {
+        "previous_item_id": "R-0017",
+        "item_id": "R-0018",
+        "target": "response",
+        "seconds": 42.642474
+      },
+      {
+        "previous_item_id": "R-0018",
+        "item_id": "R-0019",
+        "target": "response",
+        "seconds": 8.054487
+      },
+      {
+        "previous_item_id": "R-0019",
+        "item_id": "R-0020",
+        "target": "response",
+        "seconds": 7.296808
+      },
+      {
+        "previous_item_id": "R-0020",
+        "item_id": "R-0021",
+        "target": "response",
+        "seconds": 2.801339
+      },
+      {
+        "previous_item_id": "R-0021",
+        "item_id": "R-0022",
+        "target": "response",
+        "seconds": 62.191684
+      },
+      {
+        "previous_item_id": "R-0022",
+        "item_id": "R-0023",
+        "target": "response",
+        "seconds": 6.863306
+      },
+      {
+        "previous_item_id": "R-0023",
+        "item_id": "R-0024",
+        "target": "response",
+        "seconds": 8.48192
+      },
+      {
+        "previous_item_id": "R-0024",
+        "item_id": "R-0025",
+        "target": "response",
+        "seconds": 11.068437
+      },
+      {
+        "previous_item_id": "R-0025",
+        "item_id": "R-0026",
+        "target": "response",
+        "seconds": 7.716301
+      },
+      {
+        "previous_item_id": "R-0026",
+        "item_id": "R-0027",
+        "target": "response",
+        "seconds": 17.23549
+      },
+      {
+        "previous_item_id": "R-0027",
+        "item_id": "R-0028",
+        "target": "response",
+        "seconds": 11.083498
+      },
+      {
+        "previous_item_id": "R-0028",
+        "item_id": "R-0029",
+        "target": "response",
+        "seconds": 28.380637
+      },
+      {
+        "previous_item_id": "R-0029",
+        "item_id": "R-0030",
+        "target": "response",
+        "seconds": 10.051242
+      },
+      {
+        "previous_item_id": "R-0030",
+        "item_id": "R-0031",
+        "target": "response",
+        "seconds": 9.881561
+      },
+      {
+        "previous_item_id": "R-0031",
+        "item_id": "R-0032",
+        "target": "response",
+        "seconds": 8.033347
+      },
+      {
+        "previous_item_id": "R-0032",
+        "item_id": "R-0033",
+        "target": "response",
+        "seconds": 7.798889
+      },
+      {
+        "previous_item_id": "R-0033",
+        "item_id": "R-0034",
+        "target": "response",
+        "seconds": 5.521114
+      },
+      {
+        "previous_item_id": "R-0034",
+        "item_id": "R-0035",
+        "target": "response",
+        "seconds": 2.130624
+      },
+      {
+        "previous_item_id": "R-0035",
+        "item_id": "R-0036",
+        "target": "response",
+        "seconds": 2.381872
+      },
+      {
+        "previous_item_id": "R-0036",
+        "item_id": "R-0037",
+        "target": "response",
+        "seconds": 6.55065
+      },
+      {
+        "previous_item_id": "R-0037",
+        "item_id": "R-0038",
+        "target": "response",
+        "seconds": 6.033591
+      },
+      {
+        "previous_item_id": "R-0038",
+        "item_id": "R-0039",
+        "target": "response",
+        "seconds": 11.816733
+      },
+      {
+        "previous_item_id": "R-0039",
+        "item_id": "R-0040",
+        "target": "response",
+        "seconds": 2.833998
+      },
+      {
+        "previous_item_id": "R-0040",
+        "item_id": "R-0041",
+        "target": "response",
+        "seconds": 11.250263
+      },
+      {
+        "previous_item_id": "R-0041",
+        "item_id": "R-0042",
+        "target": "block",
+        "seconds": 20.166462
+      },
+      {
+        "previous_item_id": "R-0042",
+        "item_id": "R-0043",
+        "target": "response",
+        "seconds": 17.997357
+      },
+      {
+        "previous_item_id": "R-0043",
+        "item_id": "R-0044",
+        "target": "response",
+        "seconds": 14.385127
+      },
+      {
+        "previous_item_id": "R-0044",
+        "item_id": "R-0045",
+        "target": "response",
+        "seconds": 7.25114
+      },
+      {
+        "previous_item_id": "R-0045",
+        "item_id": "R-0046",
+        "target": "response",
+        "seconds": 4.733949
+      },
+      {
+        "previous_item_id": "R-0046",
+        "item_id": "R-0047",
+        "target": "response",
+        "seconds": 12.511829
+      },
+      {
+        "previous_item_id": "R-0047",
+        "item_id": "R-0048",
+        "target": "response",
+        "seconds": 25.920894
+      },
+      {
+        "previous_item_id": "R-0048",
+        "item_id": "R-0049",
+        "target": "response",
+        "seconds": 4.582978
+      },
+      {
+        "previous_item_id": "R-0049",
+        "item_id": "R-0050",
+        "target": "response",
+        "seconds": 14.53484
+      },
+      {
+        "previous_item_id": "R-0050",
+        "item_id": "R-0051",
+        "target": "response",
+        "seconds": 14.770504
+      },
+      {
+        "previous_item_id": "R-0051",
+        "item_id": "R-0052",
+        "target": "response",
+        "seconds": 4.044408
+      },
+      {
+        "previous_item_id": "R-0052",
+        "item_id": "R-0053",
+        "target": "response",
+        "seconds": 19.785444
+      },
+      {
+        "previous_item_id": "R-0053",
+        "item_id": "R-0054",
+        "target": "response",
+        "seconds": 3.948298
+      },
+      {
+        "previous_item_id": "R-0054",
+        "item_id": "R-0055",
+        "target": "response",
+        "seconds": 1.983044
+      },
+      {
+        "previous_item_id": "R-0055",
+        "item_id": "R-0056",
+        "target": "response",
+        "seconds": 8.787239
+      },
+      {
+        "previous_item_id": "R-0056",
+        "item_id": "R-0057",
+        "target": "response",
+        "seconds": 14.279965
+      },
+      {
+        "previous_item_id": "R-0057",
+        "item_id": "R-0058",
+        "target": "block",
+        "seconds": 19.016981
+      },
+      {
+        "previous_item_id": "R-0058",
+        "item_id": "R-0059",
+        "target": "response",
+        "seconds": 5.632695
+      },
+      {
+        "previous_item_id": "R-0059",
+        "item_id": "R-0060",
+        "target": "response",
+        "seconds": 20.400936
+      },
+      {
+        "previous_item_id": "R-0060",
+        "item_id": "R-0061",
+        "target": "response",
+        "seconds": 1.452848
+      },
+      {
+        "previous_item_id": "R-0061",
+        "item_id": "R-0062",
+        "target": "response",
+        "seconds": 7.013618
+      },
+      {
+        "previous_item_id": "R-0062",
+        "item_id": "R-0063",
+        "target": "response",
+        "seconds": 2.085901
+      },
+      {
+        "previous_item_id": "R-0063",
+        "item_id": "R-0064",
+        "target": "response",
+        "seconds": 7.96509
+      },
+      {
+        "previous_item_id": "R-0064",
+        "item_id": "R-0065",
+        "target": "response",
+        "seconds": 15.767638
+      },
+      {
+        "previous_item_id": "R-0065",
+        "item_id": "R-0066",
+        "target": "response",
+        "seconds": 4.465345
+      },
+      {
+        "previous_item_id": "R-0066",
+        "item_id": "R-0067",
+        "target": "response",
+        "seconds": 8.16596
+      },
+      {
+        "previous_item_id": "R-0067",
+        "item_id": "R-0068",
+        "target": "response",
+        "seconds": 7.167257
+      },
+      {
+        "previous_item_id": "R-0068",
+        "item_id": "R-0069",
+        "target": "response",
+        "seconds": 18.315829
+      },
+      {
+        "previous_item_id": "R-0069",
+        "item_id": "R-0070",
+        "target": "response",
+        "seconds": 2.651669
+      },
+      {
+        "previous_item_id": "R-0070",
+        "item_id": "R-0071",
+        "target": "block",
+        "seconds": 18.916421
+      },
+      {
+        "previous_item_id": "R-0071",
+        "item_id": "R-0072",
+        "target": "response",
+        "seconds": 36.27181
+      },
+      {
+        "previous_item_id": "R-0072",
+        "item_id": "R-0073",
+        "target": "response",
+        "seconds": 1.378195
+      },
+      {
+        "previous_item_id": "R-0073",
+        "item_id": "R-0074",
+        "target": "block",
+        "seconds": 7.865911
+      },
+      {
+        "previous_item_id": "R-0074",
+        "item_id": "R-0075",
+        "target": "block",
+        "seconds": 8.268156
+      },
+      {
+        "previous_item_id": "R-0075",
+        "item_id": "R-0075",
+        "target": "block",
+        "seconds": 20.533751
+      },
+      {
+        "previous_item_id": "R-0075",
+        "item_id": "R-0076",
+        "target": "response",
+        "seconds": 18.134014
+      },
+      {
+        "previous_item_id": "R-0076",
+        "item_id": "R-0077",
+        "target": "response",
+        "seconds": 1.753935
+      },
+      {
+        "previous_item_id": "R-0077",
+        "item_id": "R-0078",
+        "target": "response",
+        "seconds": 9.144492
+      },
+      {
+        "previous_item_id": "R-0078",
+        "item_id": "R-0079",
+        "target": "response",
+        "seconds": 3.283718
+      },
+      {
+        "previous_item_id": "R-0079",
+        "item_id": "R-0080",
+        "target": "response",
+        "seconds": 9.982587
+      },
+      {
+        "previous_item_id": "R-0080",
+        "item_id": "R-0081",
+        "target": "response",
+        "seconds": 20.503703
+      },
+      {
+        "previous_item_id": "R-0081",
+        "item_id": "R-0082",
+        "target": "response",
+        "seconds": 5.080814
+      },
+      {
+        "previous_item_id": "R-0082",
+        "item_id": "R-0083",
+        "target": "block",
+        "seconds": 12.800437
+      },
+      {
+        "previous_item_id": "R-0083",
+        "item_id": "R-0084",
+        "target": "response",
+        "seconds": 2.599112
+      },
+      {
+        "previous_item_id": "R-0084",
+        "item_id": "R-0085",
+        "target": "response",
+        "seconds": 5.181293
+      },
+      {
+        "previous_item_id": "R-0085",
+        "item_id": "R-0086",
+        "target": "response",
+        "seconds": 2.035328
+      },
+      {
+        "previous_item_id": "R-0086",
+        "item_id": "R-0087",
+        "target": "response",
+        "seconds": 6.084638
+      },
+      {
+        "previous_item_id": "R-0087",
+        "item_id": "R-0088",
+        "target": "response",
+        "seconds": 3.634504
+      },
+      {
+        "previous_item_id": "R-0088",
+        "item_id": "R-0089",
+        "target": "response",
+        "seconds": 5.513987
+      },
+      {
+        "previous_item_id": "R-0089",
+        "item_id": "R-0090",
+        "target": "response",
+        "seconds": 3.783779
+      },
+      {
+        "previous_item_id": "R-0090",
+        "item_id": "R-0091",
+        "target": "response",
+        "seconds": 7.716841
+      },
+      {
+        "previous_item_id": "R-0091",
+        "item_id": "R-0092",
+        "target": "response",
+        "seconds": 14.569605
+      },
+      {
+        "previous_item_id": "R-0092",
+        "item_id": "R-0093",
+        "target": "response",
+        "seconds": 6.513991
+      },
+      {
+        "previous_item_id": "R-0093",
+        "item_id": "R-0094",
+        "target": "response",
+        "seconds": 9.767217
+      },
+      {
+        "previous_item_id": "R-0094",
+        "item_id": "R-0095",
+        "target": "response",
+        "seconds": 1.567368
+      },
+      {
+        "previous_item_id": "R-0095",
+        "item_id": "R-0096",
+        "target": "block",
+        "seconds": 7.364291
+      },
+      {
+        "previous_item_id": "R-0096",
+        "item_id": "R-0097",
+        "target": "block",
+        "seconds": 53.440094
+      },
+      {
+        "previous_item_id": "R-0097",
+        "item_id": "R-0098",
+        "target": "response",
+        "seconds": 5.143662
+      },
+      {
+        "previous_item_id": "R-0098",
+        "item_id": "R-0099",
+        "target": "response",
+        "seconds": 7.433817
+      },
+      {
+        "previous_item_id": "R-0099",
+        "item_id": "R-0100",
+        "target": "response",
+        "seconds": 8.934248
+      },
+      {
+        "previous_item_id": "R-0100",
+        "item_id": "R-0101",
+        "target": "response",
+        "seconds": 7.50118
+      },
+      {
+        "previous_item_id": "R-0101",
+        "item_id": "R-0102",
+        "target": "response",
+        "seconds": 3.784129
+      },
+      {
+        "previous_item_id": "R-0102",
+        "item_id": "R-0103",
+        "target": "response",
+        "seconds": 3.481844
+      },
+      {
+        "previous_item_id": "R-0103",
+        "item_id": "R-0104",
+        "target": "response",
+        "seconds": 1.698509
+      },
+      {
+        "previous_item_id": "R-0104",
+        "item_id": "R-0105",
+        "target": "response",
+        "seconds": 0.917433
+      },
+      {
+        "previous_item_id": "R-0105",
+        "item_id": "R-0106",
+        "target": "response",
+        "seconds": 0.654455
+      },
+      {
+        "previous_item_id": "R-0106",
+        "item_id": "R-0107",
+        "target": "response",
+        "seconds": 1.395924
+      },
+      {
+        "previous_item_id": "R-0107",
+        "item_id": "R-0108",
+        "target": "response",
+        "seconds": 10.767077
+      },
+      {
+        "previous_item_id": "R-0108",
+        "item_id": "R-0109",
+        "target": "response",
+        "seconds": 5.817257
+      },
+      {
+        "previous_item_id": "R-0109",
+        "item_id": "R-0110",
+        "target": "response",
+        "seconds": 5.699294
+      },
+      {
+        "previous_item_id": "R-0110",
+        "item_id": "R-0111",
+        "target": "response",
+        "seconds": 2.646545
+      },
+      {
+        "previous_item_id": "R-0111",
+        "item_id": "R-0112",
+        "target": "block",
+        "seconds": 8.673319
+      },
+      {
+        "previous_item_id": "R-0112",
+        "item_id": "R-0113",
+        "target": "response",
+        "seconds": 885.792133
+      },
+      {
+        "previous_item_id": "R-0113",
+        "item_id": "R-0114",
+        "target": "response",
+        "seconds": 102.84733
+      },
+      {
+        "previous_item_id": "R-0114",
+        "item_id": "R-0115",
+        "target": "response",
+        "seconds": 6.411096
+      },
+      {
+        "previous_item_id": "R-0115",
+        "item_id": "R-0116",
+        "target": "response",
+        "seconds": 3.50198
+      },
+      {
+        "previous_item_id": "R-0116",
+        "item_id": "R-0117",
+        "target": "response",
+        "seconds": 43.714552
+      },
+      {
+        "previous_item_id": "R-0117",
+        "item_id": "R-0118",
+        "target": "response",
+        "seconds": 42.697964
+      },
+      {
+        "previous_item_id": "R-0118",
+        "item_id": "R-0119",
+        "target": "response",
+        "seconds": 5.52008
+      },
+      {
+        "previous_item_id": "R-0119",
+        "item_id": "R-0120",
+        "target": "response",
+        "seconds": 57.47132
+      },
+      {
+        "previous_item_id": "R-0120",
+        "item_id": "R-0121",
+        "target": "response",
+        "seconds": 17.748754
+      },
+      {
+        "previous_item_id": "R-0121",
+        "item_id": "R-0122",
+        "target": "response",
+        "seconds": 11.066501
+      },
+      {
+        "previous_item_id": "R-0122",
+        "item_id": "R-0123",
+        "target": "response",
+        "seconds": 10.169212
+      },
+      {
+        "previous_item_id": "R-0123",
+        "item_id": "R-0124",
+        "target": "response",
+        "seconds": 12.530666
+      },
+      {
+        "previous_item_id": "R-0124",
+        "item_id": "R-0125",
+        "target": "response",
+        "seconds": 8.897287
+      },
+      {
+        "previous_item_id": "R-0125",
+        "item_id": "R-0126",
+        "target": "response",
+        "seconds": 1.620128
+      },
+      {
+        "previous_item_id": "R-0126",
+        "item_id": "R-0127",
+        "target": "response",
+        "seconds": 8.738219
+      },
+      {
+        "previous_item_id": "R-0127",
+        "item_id": "R-0128",
+        "target": "response",
+        "seconds": 11.860299
+      },
+      {
+        "previous_item_id": "R-0128",
+        "item_id": "R-0129",
+        "target": "response",
+        "seconds": 1.398359
+      },
+      {
+        "previous_item_id": "R-0129",
+        "item_id": "R-0130",
+        "target": "block",
+        "seconds": 21.631747
+      },
+      {
+        "previous_item_id": "R-0130",
+        "item_id": "R-0131",
+        "target": "block",
+        "seconds": 13.643338
+      },
+      {
+        "previous_item_id": "R-0131",
+        "item_id": "R-0132",
+        "target": "response",
+        "seconds": 13.562205
+      },
+      {
+        "previous_item_id": "R-0132",
+        "item_id": "R-0133",
+        "target": "response",
+        "seconds": 8.804055
+      },
+      {
+        "previous_item_id": "R-0133",
+        "item_id": "R-0134",
+        "target": "response",
+        "seconds": 5.478787
+      },
+      {
+        "previous_item_id": "R-0134",
+        "item_id": "R-0135",
+        "target": "response",
+        "seconds": 2.601059
+      },
+      {
+        "previous_item_id": "R-0135",
+        "item_id": "R-0136",
+        "target": "response",
+        "seconds": 5.983109
+      },
+      {
+        "previous_item_id": "R-0136",
+        "item_id": "R-0137",
+        "target": "response",
+        "seconds": 2.482193
+      },
+      {
+        "previous_item_id": "R-0137",
+        "item_id": "R-0138",
+        "target": "response",
+        "seconds": 20.346774
+      },
+      {
+        "previous_item_id": "R-0138",
+        "item_id": "R-0139",
+        "target": "response",
+        "seconds": 51.465854
+      },
+      {
+        "previous_item_id": "R-0139",
+        "item_id": "R-0140",
+        "target": "response",
+        "seconds": 5.088441
+      },
+      {
+        "previous_item_id": "R-0140",
+        "item_id": "R-0141",
+        "target": "response",
+        "seconds": 20.369993
+      },
+      {
+        "previous_item_id": "R-0141",
+        "item_id": "R-0142",
+        "target": "response",
+        "seconds": 28.380302
+      },
+      {
+        "previous_item_id": "R-0142",
+        "item_id": "R-0143",
+        "target": "response",
+        "seconds": 8.30053
+      },
+      {
+        "previous_item_id": "R-0143",
+        "item_id": "R-0144",
+        "target": "response",
+        "seconds": 1.351273
+      },
+      {
+        "previous_item_id": "R-0144",
+        "item_id": "R-0145",
+        "target": "response",
+        "seconds": 2.632739
+      },
+      {
+        "previous_item_id": "R-0145",
+        "item_id": "R-0146",
+        "target": "response",
+        "seconds": 3.017814
+      },
+      {
+        "previous_item_id": "R-0146",
+        "item_id": "R-0147",
+        "target": "response",
+        "seconds": 1.366898
+      },
+      {
+        "previous_item_id": "R-0147",
+        "item_id": "R-0148",
+        "target": "response",
+        "seconds": 6.415168
+      },
+      {
+        "previous_item_id": "R-0148",
+        "item_id": "R-0149",
+        "target": "response",
+        "seconds": 4.269954
+      },
+      {
+        "previous_item_id": "R-0149",
+        "item_id": "R-0150",
+        "target": "response",
+        "seconds": 5.01987
+      },
+      {
+        "previous_item_id": "R-0150",
+        "item_id": "R-0151",
+        "target": "response",
+        "seconds": 5.993113
+      },
+      {
+        "previous_item_id": "R-0151",
+        "item_id": "R-0152",
+        "target": "response",
+        "seconds": 13.784106
+      },
+      {
+        "previous_item_id": "R-0152",
+        "item_id": "R-0153",
+        "target": "response",
+        "seconds": 40.690348
+      },
+      {
+        "previous_item_id": "R-0153",
+        "item_id": "R-0154",
+        "target": "response",
+        "seconds": 4.978684
+      },
+      {
+        "previous_item_id": "R-0154",
+        "item_id": "R-0155",
+        "target": "response",
+        "seconds": 4.398591
+      },
+      {
+        "previous_item_id": "R-0155",
+        "item_id": "R-0156",
+        "target": "response",
+        "seconds": 54.980542
+      },
+      {
+        "previous_item_id": "R-0156",
+        "item_id": "R-0157",
+        "target": "response",
+        "seconds": 6.287567
+      },
+      {
+        "previous_item_id": "R-0157",
+        "item_id": "R-0158",
+        "target": "response",
+        "seconds": 717.680018
+      },
+      {
+        "previous_item_id": "R-0158",
+        "item_id": "R-0159",
+        "target": "response",
+        "seconds": 2.99172
+      },
+      {
+        "previous_item_id": "R-0159",
+        "item_id": "R-0160",
+        "target": "block",
+        "seconds": 5.481101
+      },
+      {
+        "previous_item_id": "R-0160",
+        "item_id": "R-0161",
+        "target": "response",
+        "seconds": 11.368649
+      },
+      {
+        "previous_item_id": "R-0161",
+        "item_id": "R-0162",
+        "target": "response",
+        "seconds": 10.313422
+      },
+      {
+        "previous_item_id": "R-0162",
+        "item_id": "R-0163",
+        "target": "response",
+        "seconds": 4.869187
+      },
+      {
+        "previous_item_id": "R-0163",
+        "item_id": "R-0164",
+        "target": "response",
+        "seconds": 33.172767
+      },
+      {
+        "previous_item_id": "R-0164",
+        "item_id": "R-0165",
+        "target": "response",
+        "seconds": 6.024791
+      },
+      {
+        "previous_item_id": "R-0165",
+        "item_id": "R-0166",
+        "target": "response",
+        "seconds": 24.854821
+      },
+      {
+        "previous_item_id": "R-0166",
+        "item_id": "R-0167",
+        "target": "response",
+        "seconds": 9.31575
+      },
+      {
+        "previous_item_id": "R-0167",
+        "item_id": "R-0168",
+        "target": "response",
+        "seconds": 6.367526
+      },
+      {
+        "previous_item_id": "R-0168",
+        "item_id": "R-0169",
+        "target": "response",
+        "seconds": 1.4837
+      },
+      {
+        "previous_item_id": "R-0169",
+        "item_id": "R-0170",
+        "target": "response",
+        "seconds": 1.864578
+      },
+      {
+        "previous_item_id": "R-0170",
+        "item_id": "R-0171",
+        "target": "response",
+        "seconds": 1.384932
+      },
+      {
+        "previous_item_id": "R-0171",
+        "item_id": "R-0172",
+        "target": "response",
+        "seconds": 3.235146
+      },
+      {
+        "previous_item_id": "R-0172",
+        "item_id": "R-0173",
+        "target": "response",
+        "seconds": 1.24777
+      },
+      {
+        "previous_item_id": "R-0173",
+        "item_id": "R-0174",
+        "target": "response",
+        "seconds": 13.498993
+      },
+      {
+        "previous_item_id": "R-0174",
+        "item_id": "R-0175",
+        "target": "response",
+        "seconds": 1.402788
+      },
+      {
+        "previous_item_id": "R-0175",
+        "item_id": "R-0174",
+        "target": "response",
+        "seconds": 16.915195
+      },
+      {
+        "previous_item_id": "R-0174",
+        "item_id": "R-0175",
+        "target": "response",
+        "seconds": 11.101636
+      },
+      {
+        "previous_item_id": "R-0175",
+        "item_id": "R-0176",
+        "target": "response",
+        "seconds": 11.768262
+      },
+      {
+        "previous_item_id": "R-0176",
+        "item_id": "R-0177",
+        "target": "response",
+        "seconds": 2.497683
+      },
+      {
+        "previous_item_id": "R-0177",
+        "item_id": "R-0178",
+        "target": "response",
+        "seconds": 1.382208
+      },
+      {
+        "previous_item_id": "R-0178",
+        "item_id": "R-0179",
+        "target": "response",
+        "seconds": 14.168037
+      },
+      {
+        "previous_item_id": "R-0179",
+        "item_id": "R-0180",
+        "target": "block",
+        "seconds": 15.200325
+      },
+      {
+        "previous_item_id": "R-0180",
+        "item_id": "R-0181",
+        "target": "response",
+        "seconds": 12.6664
+      },
+      {
+        "previous_item_id": "R-0181",
+        "item_id": "R-0182",
+        "target": "response",
+        "seconds": 2.300555
+      },
+      {
+        "previous_item_id": "R-0182",
+        "item_id": "R-0183",
+        "target": "response",
+        "seconds": 5.418062
+      },
+      {
+        "previous_item_id": "R-0183",
+        "item_id": "R-0184",
+        "target": "response",
+        "seconds": 2.283744
+      },
+      {
+        "previous_item_id": "R-0184",
+        "item_id": "R-0185",
+        "target": "response",
+        "seconds": 5.663393
+      },
+      {
+        "previous_item_id": "R-0185",
+        "item_id": "R-0186",
+        "target": "response",
+        "seconds": 2.472485
+      },
+      {
+        "previous_item_id": "R-0186",
+        "item_id": "R-0187",
+        "target": "response",
+        "seconds": 1.664344
+      },
+      {
+        "previous_item_id": "R-0187",
+        "item_id": "R-0188",
+        "target": "response",
+        "seconds": 1.517787
+      },
+      {
+        "previous_item_id": "R-0188",
+        "item_id": "R-0189",
+        "target": "response",
+        "seconds": 3.980666
+      },
+      {
+        "previous_item_id": "R-0189",
+        "item_id": "R-0190",
+        "target": "block",
+        "seconds": 19.417521
+      },
+      {
+        "previous_item_id": "R-0190",
+        "item_id": "R-0191",
+        "target": "response",
+        "seconds": 2.549344
+      },
+      {
+        "previous_item_id": "R-0191",
+        "item_id": "R-0192",
+        "target": "response",
+        "seconds": 1.982075
+      },
+      {
+        "previous_item_id": "R-0192",
+        "item_id": "R-0193",
+        "target": "response",
+        "seconds": 0.804658
+      },
+      {
+        "previous_item_id": "R-0193",
+        "item_id": "R-0194",
+        "target": "response",
+        "seconds": 5.214988
+      },
+      {
+        "previous_item_id": "R-0194",
+        "item_id": "R-0195",
+        "target": "block",
+        "seconds": 1.3692
+      },
+      {
+        "previous_item_id": "R-0195",
+        "item_id": "R-0195",
+        "target": "block",
+        "seconds": 7.21623
+      },
+      {
+        "previous_item_id": "R-0195",
+        "item_id": "R-0196",
+        "target": "response",
+        "seconds": 7.967531
+      },
+      {
+        "previous_item_id": "R-0196",
+        "item_id": "R-0197",
+        "target": "response",
+        "seconds": 2.629675
+      },
+      {
+        "previous_item_id": "R-0197",
+        "item_id": "R-0198",
+        "target": "response",
+        "seconds": 3.167384
+      },
+      {
+        "previous_item_id": "R-0198",
+        "item_id": "R-0199",
+        "target": "response",
+        "seconds": 6.253131
+      },
+      {
+        "previous_item_id": "R-0199",
+        "item_id": "R-0200",
+        "target": "response",
+        "seconds": 1.118484
+      },
+      {
+        "previous_item_id": "R-0200",
+        "item_id": "R-0201",
+        "target": "block",
+        "seconds": 3.729538
+      },
+      {
+        "previous_item_id": "R-0201",
+        "item_id": "R-0202",
+        "target": "block",
+        "seconds": 7.619979
+      },
+      {
+        "previous_item_id": "R-0202",
+        "item_id": "R-0203",
+        "target": "response",
+        "seconds": 10.441225
+      },
+      {
+        "previous_item_id": "R-0203",
+        "item_id": "R-0204",
+        "target": "block",
+        "seconds": 6.289433
+      },
+      {
+        "previous_item_id": "R-0204",
+        "item_id": "R-0205",
+        "target": "block",
+        "seconds": 8.333729
+      },
+      {
+        "previous_item_id": "R-0205",
+        "item_id": "R-0206",
+        "target": "response",
+        "seconds": 2.850938
+      },
+      {
+        "previous_item_id": "R-0206",
+        "item_id": "R-0207",
+        "target": "block",
+        "seconds": 21.318531
+      },
+      {
+        "previous_item_id": "R-0207",
+        "item_id": "R-0208",
+        "target": "response",
+        "seconds": 6.759556
+      },
+      {
+        "previous_item_id": "R-0208",
+        "item_id": "R-0209",
+        "target": "response",
+        "seconds": 4.76022
+      },
+      {
+        "previous_item_id": "R-0209",
+        "item_id": "R-0210",
+        "target": "response",
+        "seconds": 35.019918
+      },
+      {
+        "previous_item_id": "R-0210",
+        "item_id": "R-0211",
+        "target": "response",
+        "seconds": 1.992068
+      },
+      {
+        "previous_item_id": "R-0211",
+        "item_id": "R-0212",
+        "target": "response",
+        "seconds": 8.501484
+      },
+      {
+        "previous_item_id": "R-0212",
+        "item_id": "R-0213",
+        "target": "response",
+        "seconds": 1.551194
+      },
+      {
+        "previous_item_id": "R-0213",
+        "item_id": "R-0214",
+        "target": "response",
+        "seconds": 10.880722
+      },
+      {
+        "previous_item_id": "R-0214",
+        "item_id": "R-0215",
+        "target": "response",
+        "seconds": 6.87091
+      },
+      {
+        "previous_item_id": "R-0215",
+        "item_id": "R-0216",
+        "target": "response",
+        "seconds": 5.438818
+      },
+      {
+        "previous_item_id": "R-0216",
+        "item_id": "R-0217",
+        "target": "response",
+        "seconds": 16.166972
+      },
+      {
+        "previous_item_id": "R-0217",
+        "item_id": "R-0218",
+        "target": "response",
+        "seconds": 3.94347
+      },
+      {
+        "previous_item_id": "R-0218",
+        "item_id": "R-0219",
+        "target": "response",
+        "seconds": 6.835241
+      },
+      {
+        "previous_item_id": "R-0219",
+        "item_id": "R-0220",
+        "target": "response",
+        "seconds": 3.783334
+      },
+      {
+        "previous_item_id": "R-0220",
+        "item_id": "R-0221",
+        "target": "block",
+        "seconds": 9.89706
+      },
+      {
+        "previous_item_id": "R-0221",
+        "item_id": "R-0222",
+        "target": "response",
+        "seconds": 3.916928
+      },
+      {
+        "previous_item_id": "R-0222",
+        "item_id": "R-0223",
+        "target": "response",
+        "seconds": 3.531626
+      },
+      {
+        "previous_item_id": "R-0223",
+        "item_id": "R-0224",
+        "target": "response",
+        "seconds": 2.786471
+      },
+      {
+        "previous_item_id": "R-0224",
+        "item_id": "R-0225",
+        "target": "response",
+        "seconds": 2.165003
+      },
+      {
+        "previous_item_id": "R-0225",
+        "item_id": "R-0226",
+        "target": "response",
+        "seconds": 2.798414
+      },
+      {
+        "previous_item_id": "R-0226",
+        "item_id": "R-0227",
+        "target": "response",
+        "seconds": 8.28706
+      },
+      {
+        "previous_item_id": "R-0227",
+        "item_id": "R-0228",
+        "target": "response",
+        "seconds": 1.229418
+      },
+      {
+        "previous_item_id": "R-0228",
+        "item_id": "R-0229",
+        "target": "block",
+        "seconds": 8.203989
+      },
+      {
+        "previous_item_id": "R-0229",
+        "item_id": "R-0230",
+        "target": "response",
+        "seconds": 1.265081
+      },
+      {
+        "previous_item_id": "R-0230",
+        "item_id": "R-0231",
+        "target": "response",
+        "seconds": 5.016497
+      },
+      {
+        "previous_item_id": "R-0231",
+        "item_id": "R-0232",
+        "target": "response",
+        "seconds": 1.182835
+      },
+      {
+        "previous_item_id": "R-0232",
+        "item_id": "R-0233",
+        "target": "response",
+        "seconds": 1.598515
+      },
+      {
+        "previous_item_id": "R-0233",
+        "item_id": "R-0234",
+        "target": "response",
+        "seconds": 3.852663
+      },
+      {
+        "previous_item_id": "R-0234",
+        "item_id": "R-0235",
+        "target": "response",
+        "seconds": 1.003463
+      },
+      {
+        "previous_item_id": "R-0235",
+        "item_id": "R-0236",
+        "target": "response",
+        "seconds": 1.296275
+      },
+      {
+        "previous_item_id": "R-0236",
+        "item_id": "R-0237",
+        "target": "response",
+        "seconds": 1.865616
+      },
+      {
+        "previous_item_id": "R-0237",
+        "item_id": "R-0238",
+        "target": "response",
+        "seconds": 1.916721
+      },
+      {
+        "previous_item_id": "R-0238",
+        "item_id": "R-0239",
+        "target": "response",
+        "seconds": 4.35168
+      },
+      {
+        "previous_item_id": "R-0239",
+        "item_id": "R-0240",
+        "target": "response",
+        "seconds": 5.430016
+      },
+      {
+        "previous_item_id": "R-0240",
+        "item_id": "R-0241",
+        "target": "response",
+        "seconds": 1.237085
+      },
+      {
+        "previous_item_id": "R-0241",
+        "item_id": "R-0242",
+        "target": "response",
+        "seconds": 14.914937
+      },
+      {
+        "previous_item_id": "R-0242",
+        "item_id": "R-0243",
+        "target": "response",
+        "seconds": 1.215673
+      },
+      {
+        "previous_item_id": "R-0243",
+        "item_id": "R-0244",
+        "target": "response",
+        "seconds": 6.934746
+      },
+      {
+        "previous_item_id": "R-0244",
+        "item_id": "R-0245",
+        "target": "response",
+        "seconds": 2.254655
+      },
+      {
+        "previous_item_id": "R-0245",
+        "item_id": "R-0246",
+        "target": "block",
+        "seconds": 13.180857
+      },
+      {
+        "previous_item_id": "R-0246",
+        "item_id": "R-0247",
+        "target": "response",
+        "seconds": 3.719796
+      },
+      {
+        "previous_item_id": "R-0247",
+        "item_id": "R-0248",
+        "target": "response",
+        "seconds": 4.295643
+      },
+      {
+        "previous_item_id": "R-0248",
+        "item_id": "R-0249",
+        "target": "response",
+        "seconds": 1.835091
+      },
+      {
+        "previous_item_id": "R-0249",
+        "item_id": "R-0250",
+        "target": "response",
+        "seconds": 2.515172
+      },
+      {
+        "previous_item_id": "R-0250",
+        "item_id": "R-0251",
+        "target": "response",
+        "seconds": 2.442118
+      },
+      {
+        "previous_item_id": "R-0251",
+        "item_id": "R-0252",
+        "target": "response",
+        "seconds": 1.95414
+      },
+      {
+        "previous_item_id": "R-0252",
+        "item_id": "R-0253",
+        "target": "response",
+        "seconds": 1.275533
+      },
+      {
+        "previous_item_id": "R-0253",
+        "item_id": "R-0254",
+        "target": "response",
+        "seconds": 1.342271
+      },
+      {
+        "previous_item_id": "R-0254",
+        "item_id": "R-0255",
+        "target": "block",
+        "seconds": 3.96848
+      },
+      {
+        "previous_item_id": "R-0255",
+        "item_id": "R-0256",
+        "target": "response",
+        "seconds": 1.351355
+      },
+      {
+        "previous_item_id": "R-0256",
+        "item_id": "R-0257",
+        "target": "response",
+        "seconds": 1.353302
+      },
+      {
+        "previous_item_id": "R-0257",
+        "item_id": "R-0258",
+        "target": "response",
+        "seconds": 0.681095
+      },
+      {
+        "previous_item_id": "R-0258",
+        "item_id": "R-0259",
+        "target": "response",
+        "seconds": 2.306924
+      },
+      {
+        "previous_item_id": "R-0259",
+        "item_id": "R-0260",
+        "target": "response",
+        "seconds": 1.153201
+      },
+      {
+        "previous_item_id": "R-0260",
+        "item_id": "R-0261",
+        "target": "block",
+        "seconds": 4.113442
+      },
+      {
+        "previous_item_id": "R-0261",
+        "item_id": "R-0262",
+        "target": "response",
+        "seconds": 2.434561
+      },
+      {
+        "previous_item_id": "R-0262",
+        "item_id": "R-0263",
+        "target": "response",
+        "seconds": 1.405538
+      },
+      {
+        "previous_item_id": "R-0263",
+        "item_id": "R-0264",
+        "target": "response",
+        "seconds": 2.686907
+      },
+      {
+        "previous_item_id": "R-0264",
+        "item_id": "R-0265",
+        "target": "response",
+        "seconds": 1.581434
+      },
+      {
+        "previous_item_id": "R-0265",
+        "item_id": "R-0266",
+        "target": "response",
+        "seconds": 2.263557
+      },
+      {
+        "previous_item_id": "R-0266",
+        "item_id": "R-0267",
+        "target": "response",
+        "seconds": 1.220462
+      },
+      {
+        "previous_item_id": "R-0267",
+        "item_id": "R-0268",
+        "target": "response",
+        "seconds": 1.76921
+      },
+      {
+        "previous_item_id": "R-0268",
+        "item_id": "R-0269",
+        "target": "response",
+        "seconds": 9.20352
+      },
+      {
+        "previous_item_id": "R-0269",
+        "item_id": "R-0270",
+        "target": "response",
+        "seconds": 2.397721
+      },
+      {
+        "previous_item_id": "R-0270",
+        "item_id": "R-0270",
+        "target": "response",
+        "seconds": 8.468699
+      },
+      {
+        "previous_item_id": "R-0270",
+        "item_id": "R-0271",
+        "target": "response",
+        "seconds": 12.290213
+      },
+      {
+        "previous_item_id": "R-0271",
+        "item_id": "R-0272",
+        "target": "response",
+        "seconds": 3.511493
+      },
+      {
+        "previous_item_id": "R-0272",
+        "item_id": "R-0273",
+        "target": "response",
+        "seconds": 6.149838
+      },
+      {
+        "previous_item_id": "R-0273",
+        "item_id": "R-0274",
+        "target": "response",
+        "seconds": 2.731213
+      },
+      {
+        "previous_item_id": "R-0274",
+        "item_id": "R-0275",
+        "target": "response",
+        "seconds": 1.532796
+      },
+      {
+        "previous_item_id": "R-0275",
+        "item_id": "R-0276",
+        "target": "response",
+        "seconds": 3.551128
+      },
+      {
+        "previous_item_id": "R-0276",
+        "item_id": "R-0277",
+        "target": "response",
+        "seconds": 2.366222
+      },
+      {
+        "previous_item_id": "R-0277",
+        "item_id": "R-0278",
+        "target": "response",
+        "seconds": 8.204039
+      },
+      {
+        "previous_item_id": "R-0278",
+        "item_id": "R-0279",
+        "target": "response",
+        "seconds": 3.265972
+      },
+      {
+        "previous_item_id": "R-0279",
+        "item_id": "R-0280",
+        "target": "response",
+        "seconds": 3.016078
+      },
+      {
+        "previous_item_id": "R-0280",
+        "item_id": "R-0281",
+        "target": "response",
+        "seconds": 2.180055
+      },
+      {
+        "previous_item_id": "R-0281",
+        "item_id": "R-0282",
+        "target": "response",
+        "seconds": 1.708192
+      },
+      {
+        "previous_item_id": "R-0282",
+        "item_id": "R-0283",
+        "target": "response",
+        "seconds": 1.245374
+      },
+      {
+        "previous_item_id": "R-0283",
+        "item_id": "R-0284",
+        "target": "response",
+        "seconds": 3.699461
+      },
+      {
+        "previous_item_id": "R-0284",
+        "item_id": "R-0285",
+        "target": "block",
+        "seconds": 7.699772
+      },
+      {
+        "previous_item_id": "R-0285",
+        "item_id": "R-0286",
+        "target": "response",
+        "seconds": 4.040543
+      },
+      {
+        "previous_item_id": "R-0286",
+        "item_id": "R-0287",
+        "target": "response",
+        "seconds": 1.358965
+      },
+      {
+        "previous_item_id": "R-0287",
+        "item_id": "R-0288",
+        "target": "response",
+        "seconds": 5.519541
+      },
+      {
+        "previous_item_id": "R-0288",
+        "item_id": "R-0289",
+        "target": "response",
+        "seconds": 1.699211
+      },
+      {
+        "previous_item_id": "R-0289",
+        "item_id": "R-0290",
+        "target": "response",
+        "seconds": 6.574354
+      },
+      {
+        "previous_item_id": "R-0290",
+        "item_id": "R-0291",
+        "target": "response",
+        "seconds": 1.207192
+      },
+      {
+        "previous_item_id": "R-0291",
+        "item_id": "R-0292",
+        "target": "response",
+        "seconds": 1.90329
+      },
+      {
+        "previous_item_id": "R-0292",
+        "item_id": "R-0293",
+        "target": "response",
+        "seconds": 1.450951
+      },
+      {
+        "previous_item_id": "R-0293",
+        "item_id": "R-0294",
+        "target": "response",
+        "seconds": 1.235156
+      },
+      {
+        "previous_item_id": "R-0294",
+        "item_id": "R-0295",
+        "target": "response",
+        "seconds": 0.808181
+      },
+      {
+        "previous_item_id": "R-0295",
+        "item_id": "R-0296",
+        "target": "response",
+        "seconds": 1.302202
+      },
+      {
+        "previous_item_id": "R-0296",
+        "item_id": "R-0297",
+        "target": "response",
+        "seconds": 2.666308
+      },
+      {
+        "previous_item_id": "R-0297",
+        "item_id": "R-0298",
+        "target": "response",
+        "seconds": 1.340117
+      },
+      {
+        "previous_item_id": "R-0298",
+        "item_id": "R-0299",
+        "target": "response",
+        "seconds": 1.445258
+      },
+      {
+        "previous_item_id": "R-0299",
+        "item_id": "R-0300",
+        "target": "response",
+        "seconds": 0.633104
+      },
+      {
+        "previous_item_id": "R-0300",
+        "item_id": "R-0301",
+        "target": "response",
+        "seconds": 1.304413
+      },
+      {
+        "previous_item_id": "R-0301",
+        "item_id": "R-0302",
+        "target": "response",
+        "seconds": 1.24065
+      },
+      {
+        "previous_item_id": "R-0302",
+        "item_id": "R-0303",
+        "target": "response",
+        "seconds": 1.506801
+      },
+      {
+        "previous_item_id": "R-0303",
+        "item_id": "R-0304",
+        "target": "response",
+        "seconds": 1.528714
+      },
+      {
+        "previous_item_id": "R-0304",
+        "item_id": "R-0305",
+        "target": "response",
+        "seconds": 2.321756
+      },
+      {
+        "previous_item_id": "R-0305",
+        "item_id": "R-0306",
+        "target": "response",
+        "seconds": 1.36248
+      },
+      {
+        "previous_item_id": "R-0306",
+        "item_id": "R-0307",
+        "target": "response",
+        "seconds": 3.082853
+      },
+      {
+        "previous_item_id": "R-0307",
+        "item_id": "R-0308",
+        "target": "response",
+        "seconds": 1.487912
+      },
+      {
+        "previous_item_id": "R-0308",
+        "item_id": "R-0309",
+        "target": "response",
+        "seconds": 1.517068
+      },
+      {
+        "previous_item_id": "R-0309",
+        "item_id": "R-0310",
+        "target": "response",
+        "seconds": 1.765567
+      },
+      {
+        "previous_item_id": "R-0310",
+        "item_id": "R-0311",
+        "target": "response",
+        "seconds": 0.980638
+      },
+      {
+        "previous_item_id": "R-0311",
+        "item_id": "R-0312",
+        "target": "block",
+        "seconds": 8.422143
+      },
+      {
+        "previous_item_id": "R-0312",
+        "item_id": "R-0313",
+        "target": "response",
+        "seconds": 1.86498
+      },
+      {
+        "previous_item_id": "R-0313",
+        "item_id": "R-0314",
+        "target": "response",
+        "seconds": 2.73275
+      },
+      {
+        "previous_item_id": "R-0314",
+        "item_id": "R-0315",
+        "target": "response",
+        "seconds": 5.483692
+      },
+      {
+        "previous_item_id": "R-0315",
+        "item_id": "R-0316",
+        "target": "response",
+        "seconds": 0.963979
+      },
+      {
+        "previous_item_id": "R-0316",
+        "item_id": "R-0317",
+        "target": "response",
+        "seconds": 1.918415
+      },
+      {
+        "previous_item_id": "R-0317",
+        "item_id": "R-0318",
+        "target": "response",
+        "seconds": 1.603484
+      },
+      {
+        "previous_item_id": "R-0318",
+        "item_id": "R-0319",
+        "target": "response",
+        "seconds": 2.780638
+      },
+      {
+        "previous_item_id": "R-0319",
+        "item_id": "R-0320",
+        "target": "response",
+        "seconds": 1.315471
+      },
+      {
+        "previous_item_id": "R-0320",
+        "item_id": "R-0321",
+        "target": "response",
+        "seconds": 2.113101
+      },
+      {
+        "previous_item_id": "R-0321",
+        "item_id": "R-0322",
+        "target": "response",
+        "seconds": 2.73612
+      },
+      {
+        "previous_item_id": "R-0322",
+        "item_id": "R-0323",
+        "target": "response",
+        "seconds": 2.397805
+      },
+      {
+        "previous_item_id": "R-0323",
+        "item_id": "R-0324",
+        "target": "block",
+        "seconds": 4.748548
+      },
+      {
+        "previous_item_id": "R-0324",
+        "item_id": "R-0325",
+        "target": "response",
+        "seconds": 12.323265
+      },
+      {
+        "previous_item_id": "R-0325",
+        "item_id": "R-0326",
+        "target": "response",
+        "seconds": 4.064892
+      },
+      {
+        "previous_item_id": "R-0326",
+        "item_id": "R-0327",
+        "target": "response",
+        "seconds": 2.470049
+      },
+      {
+        "previous_item_id": "R-0327",
+        "item_id": "R-0328",
+        "target": "response",
+        "seconds": 2.714175
+      },
+      {
+        "previous_item_id": "R-0328",
+        "item_id": "R-0329",
+        "target": "response",
+        "seconds": 3.048746
+      },
+      {
+        "previous_item_id": "R-0329",
+        "item_id": "R-0330",
+        "target": "response",
+        "seconds": 1.302034
+      },
+      {
+        "previous_item_id": "R-0330",
+        "item_id": "R-0331",
+        "target": "response",
+        "seconds": 6.535856
+      },
+      {
+        "previous_item_id": "R-0331",
+        "item_id": "R-0332",
+        "target": "block",
+        "seconds": 5.250685
+      },
+      {
+        "previous_item_id": "R-0332",
+        "item_id": "R-0333",
+        "target": "response",
+        "seconds": 3.834567
+      },
+      {
+        "previous_item_id": "R-0333",
+        "item_id": "R-0334",
+        "target": "response",
+        "seconds": 4.381262
+      },
+      {
+        "previous_item_id": "R-0334",
+        "item_id": "R-0335",
+        "target": "response",
+        "seconds": 7.582557
+      },
+      {
+        "previous_item_id": "R-0335",
+        "item_id": "R-0336",
+        "target": "response",
+        "seconds": 2.959814
+      },
+      {
+        "previous_item_id": "R-0336",
+        "item_id": "R-0337",
+        "target": "block",
+        "seconds": 9.590509
+      },
+      {
+        "previous_item_id": "R-0337",
+        "item_id": "R-0338",
+        "target": "response",
+        "seconds": 1.071404
+      },
+      {
+        "previous_item_id": "R-0338",
+        "item_id": "R-0339",
+        "target": "response",
+        "seconds": 0.694523
+      },
+      {
+        "previous_item_id": "R-0339",
+        "item_id": "R-0340",
+        "target": "response",
+        "seconds": 14.253149
+      },
+      {
+        "previous_item_id": "R-0340",
+        "item_id": "R-0341",
+        "target": "response",
+        "seconds": 2.062204
+      },
+      {
+        "previous_item_id": "R-0341",
+        "item_id": "R-0342",
+        "target": "response",
+        "seconds": 2.984201
+      },
+      {
+        "previous_item_id": "R-0342",
+        "item_id": "R-0343",
+        "target": "response",
+        "seconds": 2.467233
+      },
+      {
+        "previous_item_id": "R-0343",
+        "item_id": "R-0344",
+        "target": "response",
+        "seconds": 1.799753
+      },
+      {
+        "previous_item_id": "R-0344",
+        "item_id": "R-0345",
+        "target": "response",
+        "seconds": 1.285905
+      },
+      {
+        "previous_item_id": "R-0345",
+        "item_id": "R-0346",
+        "target": "response",
+        "seconds": 0.916175
+      },
+      {
+        "previous_item_id": "R-0346",
+        "item_id": "R-0347",
+        "target": "response",
+        "seconds": 1.349438
+      },
+      {
+        "previous_item_id": "R-0347",
+        "item_id": "R-0348",
+        "target": "response",
+        "seconds": 1.799951
+      },
+      {
+        "previous_item_id": "R-0348",
+        "item_id": "R-0349",
+        "target": "response",
+        "seconds": 4.743769
+      },
+      {
+        "previous_item_id": "R-0349",
+        "item_id": "R-0350",
+        "target": "response",
+        "seconds": 1.471523
+      },
+      {
+        "previous_item_id": "R-0350",
+        "item_id": "R-0351",
+        "target": "response",
+        "seconds": 1.667697
+      },
+      {
+        "previous_item_id": "R-0351",
+        "item_id": "R-0352",
+        "target": "response",
+        "seconds": 1.78361
+      },
+      {
+        "previous_item_id": "R-0352",
+        "item_id": "R-0353",
+        "target": "response",
+        "seconds": 1.83001
+      },
+      {
+        "previous_item_id": "R-0353",
+        "item_id": "R-0354",
+        "target": "response",
+        "seconds": 4.684824
+      },
+      {
+        "previous_item_id": "R-0354",
+        "item_id": "R-0355",
+        "target": "response",
+        "seconds": 9.714364
+      },
+      {
+        "previous_item_id": "R-0355",
+        "item_id": "R-0356",
+        "target": "response",
+        "seconds": 2.650427
+      },
+      {
+        "previous_item_id": "R-0356",
+        "item_id": "R-0357",
+        "target": "response",
+        "seconds": 2.555624
+      },
+      {
+        "previous_item_id": "R-0357",
+        "item_id": "R-0358",
+        "target": "block",
+        "seconds": 2.898521
+      },
+      {
+        "previous_item_id": "R-0358",
+        "item_id": "R-0359",
+        "target": "response",
+        "seconds": 2.19966
+      },
+      {
+        "previous_item_id": "R-0359",
+        "item_id": "R-0360",
+        "target": "response",
+        "seconds": 1.432338
+      },
+      {
+        "previous_item_id": "R-0360",
+        "item_id": "R-0361",
+        "target": "response",
+        "seconds": 3.597973
+      },
+      {
+        "previous_item_id": "R-0361",
+        "item_id": "R-0362",
+        "target": "response",
+        "seconds": 3.871353
+      },
+      {
+        "previous_item_id": "R-0362",
+        "item_id": "R-0363",
+        "target": "response",
+        "seconds": 0.764862
+      },
+      {
+        "previous_item_id": "R-0363",
+        "item_id": "R-0364",
+        "target": "response",
+        "seconds": 2.063301
+      },
+      {
+        "previous_item_id": "R-0364",
+        "item_id": "R-0365",
+        "target": "response",
+        "seconds": 3.552843
+      },
+      {
+        "previous_item_id": "R-0365",
+        "item_id": "R-0366",
+        "target": "block",
+        "seconds": 2.801197
+      },
+      {
+        "previous_item_id": "R-0366",
+        "item_id": "R-0367",
+        "target": "response",
+        "seconds": 8.770403
+      },
+      {
+        "previous_item_id": "R-0367",
+        "item_id": "R-0368",
+        "target": "response",
+        "seconds": 17.21748
+      },
+      {
+        "previous_item_id": "R-0368",
+        "item_id": "R-0369",
+        "target": "response",
+        "seconds": 1.195514
+      },
+      {
+        "previous_item_id": "R-0369",
+        "item_id": "R-0370",
+        "target": "response",
+        "seconds": 7.802507
+      },
+      {
+        "previous_item_id": "R-0370",
+        "item_id": "R-0371",
+        "target": "response",
+        "seconds": 1.24856
+      },
+      {
+        "previous_item_id": "R-0371",
+        "item_id": "R-0372",
+        "target": "block",
+        "seconds": 2.434202
+      },
+      {
+        "previous_item_id": "R-0372",
+        "item_id": "R-0373",
+        "target": "response",
+        "seconds": 1.251618
+      },
+      {
+        "previous_item_id": "R-0373",
+        "item_id": "R-0374",
+        "target": "response",
+        "seconds": 2.481476
+      },
+      {
+        "previous_item_id": "R-0374",
+        "item_id": "R-0375",
+        "target": "response",
+        "seconds": 2.028822
+      },
+      {
+        "previous_item_id": "R-0375",
+        "item_id": "R-0376",
+        "target": "response",
+        "seconds": 4.452561
+      },
+      {
+        "previous_item_id": "R-0376",
+        "item_id": "R-0377",
+        "target": "response",
+        "seconds": 10.091115
+      },
+      {
+        "previous_item_id": "R-0377",
+        "item_id": "R-0378",
+        "target": "response",
+        "seconds": 4.008495
+      },
+      {
+        "previous_item_id": "R-0378",
+        "item_id": "R-0379",
+        "target": "response",
+        "seconds": 0.852896
+      },
+      {
+        "previous_item_id": "R-0379",
+        "item_id": "R-0380",
+        "target": "response",
+        "seconds": 3.900197
+      },
+      {
+        "previous_item_id": "R-0380",
+        "item_id": "R-0381",
+        "target": "response",
+        "seconds": 1.716852
+      },
+      {
+        "previous_item_id": "R-0381",
+        "item_id": "R-0382",
+        "target": "response",
+        "seconds": 3.186598
+      },
+      {
+        "previous_item_id": "R-0382",
+        "item_id": "R-0383",
+        "target": "response",
+        "seconds": 1.677054
+      },
+      {
+        "previous_item_id": "R-0383",
+        "item_id": "R-0384",
+        "target": "response",
+        "seconds": 0.902604
+      },
+      {
+        "previous_item_id": "R-0384",
+        "item_id": "R-0385",
+        "target": "response",
+        "seconds": 0.915684
+      },
+      {
+        "previous_item_id": "R-0385",
+        "item_id": "R-0386",
+        "target": "response",
+        "seconds": 2.016615
+      },
+      {
+        "previous_item_id": "R-0386",
+        "item_id": "R-0387",
+        "target": "response",
+        "seconds": 1.46826
+      },
+      {
+        "previous_item_id": "R-0387",
+        "item_id": "R-0388",
+        "target": "response",
+        "seconds": 1.420319
+      },
+      {
+        "previous_item_id": "R-0388",
+        "item_id": "R-0389",
+        "target": "block",
+        "seconds": 9.11875
+      },
+      {
+        "previous_item_id": "R-0389",
+        "item_id": "R-0390",
+        "target": "response",
+        "seconds": 3.178053
+      },
+      {
+        "previous_item_id": "R-0390",
+        "item_id": "R-0391",
+        "target": "response",
+        "seconds": 2.116395
+      },
+      {
+        "previous_item_id": "R-0391",
+        "item_id": "R-0392",
+        "target": "response",
+        "seconds": 0.884657
+      },
+      {
+        "previous_item_id": "R-0392",
+        "item_id": "R-0393",
+        "target": "block",
+        "seconds": 6.849928
+      },
+      {
+        "previous_item_id": "R-0393",
+        "item_id": "R-0394",
+        "target": "block",
+        "seconds": 4.698563
+      },
+      {
+        "previous_item_id": "R-0394",
+        "item_id": "R-0395",
+        "target": "response",
+        "seconds": 2.248007
+      },
+      {
+        "previous_item_id": "R-0395",
+        "item_id": "R-0396",
+        "target": "response",
+        "seconds": 1.915336
+      },
+      {
+        "previous_item_id": "R-0396",
+        "item_id": "R-0397",
+        "target": "response",
+        "seconds": 1.237626
+      },
+      {
+        "previous_item_id": "R-0397",
+        "item_id": "R-0398",
+        "target": "block",
+        "seconds": 5.73492
+      },
+      {
+        "previous_item_id": "R-0398",
+        "item_id": "R-0399",
+        "target": "response",
+        "seconds": 2.005848
+      },
+      {
+        "previous_item_id": "R-0399",
+        "item_id": "R-0400",
+        "target": "response",
+        "seconds": 1.792315
+      },
+      {
+        "previous_item_id": "R-0400",
+        "item_id": "R-0400",
+        "target": "response",
+        "seconds": 6.064872
+      },
+      {
+        "previous_item_id": "R-0400",
+        "item_id": "R-0016",
+        "target": "response",
+        "seconds": 56.530874
+      }
+    ]
+  }
+}

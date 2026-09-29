@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-09-24T17:30:05.537183+00:00",
+  "curator_model": "openai/gpt-4o",
+  "total_raw_input": 120,
+  "total_lexical_duplicates": 0,
+  "total_llm_discarded": 15,
+  "total_discarded": 15,
+  "total_selected": 100,
+  "selected_by_category": {
+    "solicitacao_humana": 18,
+    "energia_assinatura_gd": 21,
+    "leitura_fatura_tarifas": 21,
+    "mercado_livre_acl": 20,
+    "pos_venda_e_suporte": 11,
+    "objecoes_e_seguranca": 9
+  },
+  "selected_by_source_model": {
+    "openai/gpt-4o-mini": 32,
+    "gemini/gemini-2.5-flash": 38,
+    "openrouter/anthropic/claude-3-haiku": 30
+  },
+  "discard_reasons": {
+    "irrelevante": 3,
+    "ambigua": 2,
+    "duplicada": 10
+  }
+}

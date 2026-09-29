@@ -1,0 +1,18 @@
+{
+  "scope": "market_and_customer_service",
+  "documents": [
+    "okf/market/acl.md",
+    "okf/market/distribuidoras-e-tarifas.md",
+    "okf/market/energia-solar-por-assinatura.md",
+    "okf/market/glossario.md",
+    "okf/market/marcos-regulatorios.md",
+    "okf/market/regulamentacao-e-atores.md",
+    "okf/sales/contratos-e-pos-venda.md",
+    "okf/sales/leitura-de-fatura.md",
+    "okf/sales/objecoes.md",
+    "okf/sales/perguntas-frequentes-de-clientes.md"
+  ],
+  "chunks": 86,
+  "corpus_sha256": "75efcbf8185464ead54b4a9b9f166486e1823ac968a5a72dc1ad4706aaec4f22",
+  "review": "Explicit document allowlist; internal, remuneration, contact and operational chunks excluded; editorial/private source references removed."
+}

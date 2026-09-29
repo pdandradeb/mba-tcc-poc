@@ -1,0 +1,13 @@
+[project]
+name = "mba-poc"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dependencies = ["litellm==1.100.1", "psycopg[binary]==3.3.3"]
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+[tool.uv]
+package = false
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["database: integration against the isolated PostgreSQL database"]

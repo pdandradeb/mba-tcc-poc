@@ -1,0 +1,690 @@
+[
+  {
+    "chunk_id": "pub-3039d4d0bfb6f82bba2f",
+    "source_path": "okf/market/acl.md",
+    "title": "ACL (Mercado Livre de Energia)",
+    "content": "O Ambiente de Contratação Livre (ACL) permite que consumidores comprem energia elétrica diretamente de comercializadoras e geradoras, com liberdade para negociar preço, volume, prazo e fonte de fornecimento. Na abordagem da Condutive, a migração para o mercado livre é tratada como uma **decisão estratégica financeira e orçamentária**, e não como mera caça a descontos pontuais.\n\n---",
+    "content_hash": "3039d4d0bfb6f82bba2f59803dd71228ed190f846a8c7c910ece4d6282b84c9e",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-01e16bb9f70c82d8d798",
+    "source_path": "okf/market/acl.md",
+    "title": "ACL (Mercado Livre de Energia) > Elegibilidade e operação no Grupo A",
+    "content": "* **Grupo A 100% elegível:** Desde 1º de janeiro de 2024 (Portaria MME 50/2022), qualquer consumidor conectado em média ou alta tensão (tensão a partir de 2,3 kV) pode migrar para o mercado livre, independentemente do volume de carga ou gasto mensal.\n* **Modelo Varejista simplificado:** Consumidores com carga individual inferior a 500 kW são representados na CCEE por um **Comercializador Varejista**. Esse agente assume os trâmites regulatórios, relatórios e garantias financeiras, eliminando a complexidade burocrática para médias e pequenas empresas.\n\n---",
+    "content_hash": "01e16bb9f70c82d8d7983a32ab2cead99cd806ffd33993e23059eae8abbfd352",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-de6fd0bd156d864c7311",
+    "source_path": "okf/market/acl.md",
+    "title": "ACL (Mercado Livre de Energia) > Modelos de contratação no Mercado Livre",
+    "content": "Ao migrar para o ACL, a empresa escolhe a estrutura de precificação que melhor atende à sua estratégia de fluxo de caixa:\n\n| Modelo de Contratação | Como Funciona | Perfil de Cliente Recomendado |\n| :--- | :--- | :--- |\n| **Desconto Garantido** | O fornecedor garante um percentual de desconto fixo (ex.: 15% a 25%) sobre a Tarifa de Energia (TE) da distribuidora local. Se a tarifa da distribuidora sobe, a economia absoluta cresce. | Empresas em primeira migração, que buscam baixo atrito de entendimento e garantia contínua de economia frente à conta cativa tradicional. |\n| **Preço Fixo (R$/MWh)** | A empresa contrata um volume determinado de energia por um valor pré-fixado em contrato durante 2, 3 ou 5 anos, com correção anual pela inflação (IPCA). | Empresas com maturidade orçamentária, que priorizam previsibilidade de custos e proteção total contra disparadas tarifárias e bandeiras vermelhas. |\n\n---",
+    "content_hash": "de6fd0bd156d864c73114eec4112dd839588f7a76cecce86e42925b83cc10fff",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-82a87243ea2aa97f5fd3",
+    "source_path": "okf/market/acl.md",
+    "title": "ACL (Mercado Livre de Energia) > A CCEE explicada de forma simples: o \"Cartório do Mercado Livre\"",
+    "content": "Uma das dúvidas mais frequentes dos empresários é quem audita e garante a entrega da energia contratada. A analogia recomendada para a conversa consultiva é posicionar a **CCEE (Câmara de Comercialização de Energia)** como o **cartório oficial do setor elétrico**:\n\n* A CCEE não vende energia e não é dona de postes ou fios.\n* Sua função institucional é registrar todos os contratos de compra e venda, receber os dados de medição dos relógios da distribuidora, confrontar a energia contratada em papel com o consumo físico real e liquidar as diferenças financeiras no Mercado de Curto Prazo (MCP).\n* Essa governança dá aos contratos no ACL a mesma segurança jurídica de transações cartoriais registradas sob as normas da ANEEL.\n\n---",
+    "content_hash": "82a87243ea2aa97f5fd384a3042ba4b5915a17e552ba5d4ff6aa8a826af810e8",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-9fc045bb74de5a5eab63",
+    "source_path": "okf/market/acl.md",
+    "title": "ACL (Mercado Livre de Energia) > Demanda contratada: gancho consultivo de pré-venda",
+    "content": "No Grupo A, as faturas cobram não apenas a energia consumida (kWh), mas também a **demanda de potência contratada (kW)**, referente à reserva de capacidade da rede da distribuidora.\n\nA análise do histórico de 12 meses da fatura permite identificar ineficiências antes mesmo de apresentar a proposta de energia:\n\n1. **Demanda ociosa (sobra de potência):** Quando a demanda medida fica consistentemente abaixo da contratada. A empresa está pagando por uma capacidade que não utiliza.\n2. **Ultrapassagem de demanda:** Quando o pico de operação da empresa supera a potência contratada em mais de 5%, acionando multas pesadas com tarifas em dobro.",
+    "content_hash": "9fc045bb74de5a5eab63637b110261e5108305c3c16cb34596870549f28662ce",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-5378b90dc95726a60190",
+    "source_path": "okf/market/acl.md",
+    "title": "ACL (Mercado Livre de Energia) > Demanda contratada: gancho consultivo de pré-venda > Impacto no relacionamento comercial",
+    "content": "Ajudar o cliente a recalibrar a demanda contratada junto à distribuidora gera economia imediata de rede. Essa postura transforma a relação: o corretor deixa de ser um \"vendedor de migração\" e passa a ser reconhecido como um **consultor de inteligência energética**, pavimentando o fechamento do contrato livre com extrema autoridade.\n\n---",
+    "content_hash": "5378b90dc95726a601907b3a02e05fac0aab74a1077a02920457545f3082ebe2",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-1cca213bac7e70a6ac31",
+    "source_path": "okf/market/acl.md",
+    "title": "ACL (Mercado Livre de Energia) > Tipos de energia negociados",
+    "content": "* **Energia Incentivada:** Proveniente de fontes renováveis não convencionais (solar, eólica, biomassa e pequenas centrais hidrelétricas - PCHs). Concede descontos na TUSD e fortalece o posicionamento de sustentabilidade (ESG) da empresa.\n* **Energia Convencional:** Proveniente de grandes hidrelétricas e térmicas tradicionais. Geralmente possui preço de compra mais competitivo no mercado atacadista.\n\n---",
+    "content_hash": "1cca213bac7e70a6ac3187ec4bccb327a2ea9299df78939539d9da13dfbcb857",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-13bd45bd46f5667531b6",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > O papel da distribuidora",
+    "content": "A distribuição de energia elétrica é um serviço público concedido ou permitido pela União e regulado pela ANEEL. A distribuidora é a concessionária responsável por construir, operar e manter a infraestrutura física de rede (postes, transformadores, cabeamento, subestações e medidores) que entrega a eletricidade aos usuários finais em uma área geográfica delimitada (área de concessão).\n\nAs redes de distribuição operam nos seguintes níveis de tensão:\n\n| Nível | Faixa de Tensão | Grupo Tarifário Típico |\n| :--- | :--- | :--- |\n| **Alta Tensão de Distribuição** | De 69 kV a 230 kV | Subgrupos A1, A2, A3 |\n| **Média Tensão** | De 2,3 kV a 69 kV | Subgrupos A3a, A4, AS (Subterrâneo) |\n| **Baixa Tensão** | Abaixo de 2,3 kV (tipicamente 127V, 220V ou 380V) | Subgrupos B1 (Residencial), B2 (Rural), B3 (Comercial/Industrial), B4 (Iluminação Pública) |\n\nA distribuidora é uma entidade separada do fornecedor comercial de energia. No modelo de contratação livre (ACL) e na geração compartilhada (Energia solar por assinatura), o consumidor escolhe de quem compra a energia, mas continua atendido fisicamente e faturado pela distribuidora local pelo uso da rede.\n\n---",
+    "content_hash": "13bd45bd46f5667531b6124d8b9476c22747e654a3a8c7da65190a4ceb16af44",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-24c4f657fff094437ead",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > Composição tarifária: TUSD e TE",
+    "content": "A fatura de energia emitida pela distribuidora é composta essencialmente por dois blocos tarifários homologados pela ANEEL:\n\n1. **TUSD (Tarifa de Uso do Sistema de Distribuição):**\n   * Remunera o transporte da energia pela rede física, os custos operacionais da concessionária (Fio B), custos do sistema de transmissão (Fio A), encargos setoriais (CDE, PROINFA, TFSEE) e perdas técnicas e não técnicas.\n   * Cobrada tanto em reais por quilowatt-hora consumido (R$/kWh) quanto em reais por quilowatt de demanda de potência contratada (R$/kW) no caso do Grupo A.\n2. **TE (Tarifa de Energia):**\n   * Remunera a commodity energia elétrica (o insumo físico gerado pelas usinas) e os encargos vinculados à compra e contratação regulada de suprimento.\n   * Cobrada estritamente em reais por quilowatt-hora consumido (R$/kWh).\n\n```text\nTarifa Homologada da Distribuidora = TUSD + TE\nFatura Final = (Consumo x TE) + (Uso da Rede x TUSD) + Encargos + Tributos (ICMS/PIS/COFINS) + CIP/COSIP\n```\n\n---",
+    "content_hash": "24c4f657fff094437eadee23afe4fbd6874dd0b710b95e9e2f251ae605eb6146",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-4d4a84dd215de90230ba",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > Reajuste e revisão tarifária: alavanca comercial",
+    "content": "As tarifas das distribuidoras não são estáticas; elas passam por atualizações periódicas conduzidas pela ANEEL:\n\n* **RTA (Reajuste Tarifário Anual):** Acontece todo ano, na data de aniversário do contrato de concessão da distribuidora. Repassa custos não gerenciáveis (Parcela A: energia comprada, transmissão e encargos) e atualiza os custos gerenciáveis (Parcela B) pelo índice de inflação (IPCA ou IGP-M) descontado pelo Fator X (ganho de produtividade).\n* **RTP (Revisão Tarifária Periódica):** Acontece ordinariamente a cada 4 ou 5 anos. A ANEEL reavalia integralmente a base de ativos regulatórios da distribuidora, custos operacionais eficientes e define a nova receita requerida.",
+    "content_hash": "4d4a84dd215de90230bac4ccb747244ef7cc8813182e37efdc83566414bc399e",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-07196fe47ad40f47e594",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > Postos e modalidades tarifárias",
+    "content": "Para diagnosticar a conta e apresentar uma proposta correta, o vendedor deve identificar a modalidade na fatura:",
+    "content_hash": "07196fe47ad40f47e594b9b396136d7c616539bdd8c204aa731ed088ef7d41ee",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-70b1436f173cfa83fef8",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > Postos e modalidades tarifárias > 1. Grupo A (Alta e Média Tensão)",
+    "content": "* **Estrutura de postos horários:**\n  * **Ponta (Horário de Ponta):** Três horas diárias consecutivas nos dias úteis (geralmente entre 17h30 e 20h30 ou 18h e 21h, definido por cada distribuidora) em que o consumo no sistema elétrico atinge o pico. A tarifa da TUSD nesse período é significativamente mais cara.\n  * **Fora Ponta:** Todas as demais horas dos dias úteis, além de finais de semana e feriados nacionais inteiros.\n* **Modalidade Tarifária Azul:** Tarifação diferenciada para demanda (R$/kW) e consumo (R$/kWh) tanto na ponta quanto fora da ponta. Obrigatória para tensão a partir de 69 kV e opcional para média tensão.\n* **Modalidade Tarifária Verde:** Tarifação de demanda única para todos os horários; o consumo em horário de ponta paga uma TUSD diferenciada mais alta. Muito comum em indústrias leves, supermercados e edifícios comerciais.",
+    "content_hash": "70b1436f173cfa83fef8ac4a759c17b75712a058277dedc20431ade1e3d979f6",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-53451a998cf2c2cd3e44",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > Postos e modalidades tarifárias > 2. Grupo B (Baixa Tensão)",
+    "content": "* **Modalidade Convencional:** Tarifa monômia única em R$/kWh para qualquer hora do dia.\n* **Custo de disponibilidade:** Cobrança mínima obrigatória da distribuidora mesmo sem consumo (30 kWh para monofásico, 50 kWh para bifásico e 100 kWh para trifásico).\n\n---",
+    "content_hash": "53451a998cf2c2cd3e447b0706872617030112c66bd6e089084c795410a16907",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-43a7b6c0fb4e7e31197c",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > Onde incide a economia para o cliente?",
+    "content": "Compreender onde o desconto atua evita falsas expectativas no cliente:\n\n| Solução | Onde incide o ganho / desconto | O que continua sendo pago à distribuidora |\n| :--- | :--- | :--- |\n| **Energia solar por assinatura (GD compartilhada)** | Desconto aplicado sobre o volume de créditos de energia compensados na fatura (incidindo sobre a TE e a parcela compensável da TUSD, conforme a Lei 14.300/2022). | Custo de disponibilidade, parcela não compensável da TUSD (Fio B), taxa municipal de iluminação pública (CIP/COSIP) e eventuais bandeiras tarifárias sobre o saldo líquido. |\n| **Mercado Livre de Energia (ACL)** | Compra da energia (TE) a preço livre competitivo e previsível (desconto de 15% a 35% frente à tarifa regulada da distribuidora). | Fatura da distribuidora referente ao CUSD (uso da rede, demanda contratada e TUSD consumo regulada), encargos de conexão, tributos e CIP/COSIP. |\n\n---",
+    "content_hash": "43a7b6c0fb4e7e31197ccce8127fe098222ac51b16f7aede2c86ea368e1f1d71",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-c071a908fd4c674e9ee6",
+    "source_path": "okf/market/distribuidoras-e-tarifas.md",
+    "title": "Distribuidoras e tarifas de energia > Aliases do conceito",
+    "content": "* **Distribuidora:** Concessionária de distribuição, operadora de rede, permissionária, companhia de eletricidade local (ex.: Enel, CPFL, Cemig, Copel, Equatorial, Neoenergia, EDP, Light).\n* **TUSD:** Tarifa de Fio, tarifa de rede, tarifa de transporte.\n* **TE:** Tarifa de consumo, tarifa de geração, tarifa de energia propriamente dita.\n\n---",
+    "content_hash": "c071a908fd4c674e9ee6d5cf66d3be997db90ee4db1d733246714a1d8a374e41",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-b59526707eff57a56879",
+    "source_path": "okf/market/energia-solar-por-assinatura.md",
+    "title": "Energia solar por assinatura",
+    "content": "O serviço de energia solar por assinatura, que se enquadra no modelo de Geração Distribuída (GD), aparece na base comercial da Condutive como ferramenta de redução de custo com baixa fricção operacional, desde que o perfil da unidade consumidora e a oferta disponível façam sentido.",
+    "content_hash": "b59526707eff57a5687920536dcb3227753c198bf6ad07a518bc52f82326ce54",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-93263905e98c02a37f7f",
+    "source_path": "okf/market/energia-solar-por-assinatura.md",
+    "title": "Energia solar por assinatura > Enquadramento comercial",
+    "content": "- boa porta de entrada quando o cliente busca simplicidade e previsibilidade;\n- não deve ser forçada quando o problema real está em demanda, modalidade tarifária ou outra camada do custo;\n- deve ser tratada como parte de um portfólio de decisões, não como resposta automática.",
+    "content_hash": "93263905e98c02a37f7f778c3549fde256b86d772e7ce1ba0a46256fa6e940a0",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-5f85372a6768990399f7",
+    "source_path": "okf/market/energia-solar-por-assinatura.md",
+    "title": "Energia solar por assinatura > Serviço de Economia vs. Investimento em Ativo Próprio",
+    "content": "Uma das maiores causas de confusão no mercado é tratar a energia por assinatura como se fosse venda de placas solares. A postura consultiva exige separar claramente a natureza de cada solução:\n\n| Dimensão | Energia Solar por Assinatura (GD Remota) | Solar Fotovoltaico Próprio (Autoconsumo Local) |\n| :--- | :--- | :--- |\n| **Natureza da decisão** | **Contratação de serviço:** busca de economia imediata na conta sem imobilização de capital. | **Aquisição de ativo patrimonial:** decisão de investimento em bens de capital (Capex). |\n| **Investimento inicial** | Zero. Sem obras, sem compra de placas e sem taxas antecipadas. | Exige desembolso inicial à vista ou financiamento bancário de longo prazo. |\n| **Infraestrutura física** | Nenhuma intervenção no imóvel. Não depende de telhado, insolação ou padrão elétrico. | Exige avaliação estrutural de telhado, medição de sombreamento e homologação na distribuidora. |\n| **Risco e manutenção** | Responsabilidade operacional integral da usina remota e do gerador parceiro. | Manutenção preventiva, limpeza de placas, substituição de inversores e seguro sob encargo do cliente. |\n| **Perfil do cliente ideal** | Inquilinos, comércios sem telhado disponível, empresas e residências que buscam agilidade e simplicidade. | Proprietários de imóveis com estabilidade de longo prazo no local e capital para investimento com foco em payback. |\n\n> **Aviso para vendas:** Utilizar argumentos de investimento (como prazo de retorno/payback, vida útil de 25 anos ou garantias técnicas de placas) ao ofertar assinatura de energia cria barreiras psicológicas desnecessárias e gera objeções sobre obras e riscos que não pertencem ao modelo de serviço.\n\n---",
+    "content_hash": "5f85372a6768990399f7d2a1df559361320168948c07b2765ef6dad9915df19b",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-c791563cbdd6bca5a0b8",
+    "source_path": "okf/market/energia-solar-por-assinatura.md",
+    "title": "Energia solar por assinatura > Contingência da Usina e Garantia do Fornecimento Físico",
+    "content": "Uma objeção frequente é o receio de ficar sem luz caso a usina parceira sofra paralisações temporárias (chuvas severas, manutenções técnicas ou sinistros):\n\n* **A rede pública é a garantidora do fornecimento:** A energia elétrica consumida no estabelecimento continua sendo entregue fisicamente pela distribuidora local através da rede pública. Não há cabeamento exclusivo ligando a usina solar remota ao imóvel do cliente.\n* **Impacto estritamente financeiro:** Se a usina gerar menos em um determinado mês, o volume de créditos de energia compensados pode oscilar temporariamente, refletindo-se no valor final da fatura daquele período. **Em nenhuma hipótese a energia do cliente é cortada ou interrompida** por problemas operacionais na usina remota.\n\n---",
+    "content_hash": "c791563cbdd6bca5a0b8c67c1b784882955ec37d2e0084aa6cc0ca396078e9f8",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-525a64f44808ede46675",
+    "source_path": "okf/market/energia-solar-por-assinatura.md",
+    "title": "Energia solar por assinatura > Compensação, Fornecimento Físico e Economia",
+    "content": "No Sistema de Compensação de Energia Elétrica (SCEE), a energia excedente injetada na rede é usada para compensar consumo nas condições aplicáveis. Essa compensação não substitui a distribuidora no fornecimento físico nem garante uma rede sem interrupções.\n\nA compensação não elimina necessariamente todos os valores cobrados. A economia de uma oferta depende do consumo, das tarifas, dos itens compensáveis e das condições comerciais. Compare o custo total com e sem a oferta; uma explicação geral do SCEE não confirma um desconto ou cláusula de um fornecedor específico.",
+    "content_hash": "525a64f44808ede46675540b8871b840db74be44a23ddf42ffa38121eae447e8",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-c3182845110451a41d98",
+    "source_path": "okf/market/energia-solar-por-assinatura.md",
+    "title": "Energia solar por assinatura > Quem pode contratar (elegibilidade)",
+    "content": "- **Titularidade da conta:** a contratação deve ser feita sempre pelo titular da conta de energia (unidade consumidora) perante a distribuidora.\n- **Propriedade do imóvel não exigida:** não é necessário ser o proprietário do imóvel para contratar. O critério determinante é a titularidade da fatura de energia, não o título de propriedade do local.\n- **Imóveis alugados e inquilinos:** quem mora ou opera em imóvel alugado pode contratar normalmente, desde que a conta de energia esteja em seu próprio nome (inquilino como titular da UC). Se a conta ainda estiver em nome do proprietário ou de terceiros, é necessário transferir a titularidade da conta na concessionária antes de efetivar a contratação.",
+    "content_hash": "c3182845110451a41d9833ed5d3b04e74afd27a8e9bcff157792526f6dd05c66",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-cb2eb1c9f4867eea2c0b",
+    "source_path": "okf/market/energia-solar-por-assinatura.md",
+    "title": "Energia solar por assinatura > Mensagens estáveis",
+    "content": "- primeiro validar encaixe, depois falar de economia;\n- vender clareza sobre quando a energia solar por assinatura não é a melhor rota também aumenta confiança;\n- a conversa deve começar na dor do cliente, não no jargão técnico;\n- a geração remota dispensa painéis próprios no imóvel; titularidade, elegibilidade da unidade e condições da oferta precisam ser verificadas.",
+    "content_hash": "cb2eb1c9f4867eea2c0bbe265eb90b499e70afb7f43ef342a9cad588ed3418b6",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-9d28fdf1db21d2302d57",
+    "source_path": "okf/market/glossario.md",
+    "title": "Glossário",
+    "content": "- `ACL`: Ambiente de Contratação Livre, o mercado livre de energia.\n- `Energia solar por assinatura`: serviço de geração distribuída (GD) vendido como solução de menor fricção operacional quando há encaixe. O termo `GD` é o jargão técnico para geração distribuída, mas para o cliente final, usamos `Energia solar por assinatura`.\n- `UC`: unidade consumidora, entidade operacional central da jornada comercial.\n- `mercado cativo`: modelo tradicional de contratação com distribuidora.\n- `CCEE`: câmara que organiza contabilização e liquidação do mercado livre.\n- `demanda contratada`: componente crítico na leitura de contas de Grupo A.\n- `SCEE`: sistema de compensação ligado ao contexto de Energia solar por assinatura (GD).",
+    "content_hash": "9d28fdf1db21d2302d576de9b4741336b8c922600782b6847520b27548d8deac",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-23d9d6c323443573473e",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico",
+    "content": "Este catálogo reúne a legislação estrutural e as resoluções que fundamentam os produtos oferecidos pela Condutive: Mercado Livre de Energia (ACL), Geração Distribuída compartilhada (Energia solar por assinatura) e regras de atendimento das distribuidoras.\n\n---",
+    "content_hash": "23d9d6c323443573473ebce2697e33128160b665fa5e0663e902b680687f9e8e",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-263f0640880b4ff7906b",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico > Catálogo de normas por status > 1. Normas vigentes operacionais",
+    "content": "| Norma | Abrangência | Efeito Prático no Mercado | Relevância para Vendas e Diagnóstico |\n| :--- | :--- | :--- | :--- |\n| **Portaria Normativa MME 50/2022** | ACL / Mercado Livre | Em vigor desde 01/01/2024. Permite a **todos os consumidores do Grupo A** (alta e média tensão) comprar energia no mercado livre, independente do volume de demanda. | Permite migrar qualquer cliente de média tensão (ex.: padarias, supermercados, clínicas, pequenas indústrias) sem limite de 500 kW, operando via Comercializador Varejista. |\n| **Lei 14.300/2022** | MMGD / SCEE | Marco legal definitivo da Micro e Minigeração Distribuída e do Sistema de Compensação de Energia Elétrica. | Dá segurança jurídica definitiva para **Energia solar por assinatura**. Define regras de compensação de créditos e transição do Fio B. |\n| **REN ANEEL 1.000/2021** | Distribuição e Consumidor | Regras de prestação do serviço público de distribuição de energia elétrica. | Padroniza regras de ligação, faturamento, leitura de faturas, devolução de cobranças indevidas, direitos do titular da UC e prazos de resposta da distribuidora. |\n| **REN ANEEL 1.059/2023** | MMGD na Distribuição | Incorporou as diretrizes da Lei 14.300/2022 na REN 1.000/2021. | Define como as distribuidoras devem processar faturamento de UCs participantes de consórcios e cooperativas de geração compartilhada. |\n| **Lei 10.848/2004** | Estrutura de Mercado | Criação do ACR, ACL e institucionalização da CCEE. | Define a separação comercial entre ambiente cativo regulado e ambiente livre. |\n| **Lei 9.074/1995** | Bases do Livre Acesso | Instituiu o livre acesso às redes de distribuição e o conceito de consumidor livre. | Garante que nenhuma distribuidora pode bloquear o uso de seus fios por agentes e consumidores livres. |\n\n---",
+    "content_hash": "263f0640880b4ff7906b57a2055f96d72f47acd4189ba30914436cd5a825b23e",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-04222f50f5ce9acaf07c",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico > Catálogo de normas por status > 2. Normas vigentes com efeitos futuros programados",
+    "content": "| Norma | Vigência | Conteúdo Principal | Impacto na Estratégia Comercial |\n| :--- | :--- | :--- | :--- |\n| **Lei 15.269/2025** | Publicada em 2025 | Modernização ampla do setor: autoriza a abertura da Baixa Tensão (Grupo B), cria o Suprimento de Última Instância (SUI), produto padrão, armazenamento de energia e moderniza a governança da CCEE. | Estabelece as bases legais da universalização do mercado livre no Brasil. |\n| **Decreto 13.097/2026** | Publicado em 2026 | Cronograma de abertura da Baixa Tensão: 25/11/2027 para industrial e comercial; 25/11/2028 para demais consumidores (residencial e rural). | Baliza o cronograma comercial: até nov/2027, o comércio em baixa tensão economiza via GD compartilhada; a partir dessa data, migra para o ACL. |\n\n---",
+    "content_hash": "04222f50f5ce9acaf07cfa8864dd11e3fe86fea639a15c07e8136ee97cdcb581",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-9517234d0dd927fe8d2b",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico > Catálogo de normas por status > 3. Marcos históricos e antecedentes",
+    "content": "Estas normas foram substituídas ou revogadas, mas mantêm valor explicativo sobre a origem dos conceitos:\n\n* **Resolução Normativa ANEEL 482/2012:** Criou as primeiras regras de MMGD e compensação 1:1 de créditos. Foi substituída pela Lei 14.300/2022. *Atenção:* Não deve ser citada como regra atual de conexão de usinas.\n* **Resolução Normativa ANEEL 687/2015:** Criou as modalidades de autoconsumo remoto e geração compartilhada. Seus conceitos foram consolidados e aprimorados na Lei 14.300/2022.\n* **Lei 8.631/1993:** Extinguiu o sistema tarifário unificado nacional e o regime de rentabilidade garantida das estatais, permitindo tarifas proporcionais ao custo real de cada distribuidora.\n\n---",
+    "content_hash": "9517234d0dd927fe8d2bb6afcfa1c9dbf6fbfcff428c0edd86722e79dbdeb66f",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-34ee99ac0111f8ed9bd2",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico > Aplicação prática para a equipe comercial > 1. Argumentação sobre Mercado Livre (Grupo A)",
+    "content": "* **Pergunta do cliente:** \"Minha conta é de apenas R$ 8.000/mês. Achei que Mercado Livre era só para montadoras de veículos.\"\n* **Fundamento normativo:** Citar a **Portaria Normativa MME 50/2022**. Desde 1º de janeiro de 2024, a barreira de carga mínima de 500 kW e 1.000 kW foi totalmente extinta para clientes em média ou alta tensão (Grupo A). A adesão ocorre sob a figura do Comercializador Varejista, eliminando riscos de aporte de garantias na CCEE pelo consumidor.",
+    "content_hash": "34ee99ac0111f8ed9bd24f2f810194cf60cadc0fb7a97c937f449b113398f2be",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-d5754f11d020d83826af",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico > Aplicação prática para a equipe comercial > 2. Argumentação sobre Energia Solar por Assinatura (Grupo B e GD)",
+    "content": "* **Pergunta do cliente:** \"Essa economia é legal? A distribuidora não vai multar minha empresa?\"\n* **Fundamento normativo:** Citar a **Lei Federal 14.300/2022**. O Sistema de Compensação de Energia Elétrica (SCEE) é assegurado por lei federal e regulamentado pela ANEEL (REN 1.000/2021). Os créditos gerados pela usina remota são faturados diretamente no sistema da distribuidora e abatidos como direito do titular da unidade consumidora.",
+    "content_hash": "d5754f11d020d83826afbf6dde089bf642ed17ad357dbcaf8e118ea87250a4d9",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-687df57f795c6703bcd8",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico > Aplicação prática para a equipe comercial > 3. Argumentação sobre Baixa Tensão Residencial e Comercial",
+    "content": "* **Pergunta do cliente:** \"Ouvi dizer que o mercado livre já vai abrir para todo mundo.\"\n* **Fundamento normativo:** Citar a **Lei 15.269/2025** e o **Decreto 13.097/2026**. O cronograma oficial prevê abertura para indústrias e comércios em baixa tensão em novembro de 2027 e para residências em novembro de 2028. Para economizar hoje, a solução contratual imediata é a **Energia solar por assinatura**, que já entrega redução imediata de custos sem necessidade de esperar a abertura regulatória.\n\n---",
+    "content_hash": "687df57f795c6703bcd8d01f2cd854b2a23c6ee104a6bb36fb87f0fa92686980",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-7c80e06bb2e7364044c3",
+    "source_path": "okf/market/marcos-regulatorios.md",
+    "title": "Marcos regulatórios do setor elétrico > Mapa de dependências normativas",
+    "content": "```text\nLei 8.987/1995 (Concessões de Serviço Público)\n  └── Lei 9.074/1995 (Livre Acesso e Consumidor Livre)\n        └── Lei 10.848/2004 (Separação ACR / ACL e CCEE)\n              ├── Portaria MME 50/2022 (Abertura 100% Grupo A a partir de 2024)\n              └── Lei 15.269/2025 & Decreto 13.097/2026 (Abertura Baixa Tensão 2027/2028)\n\nREN ANEEL 482/2012 & REN 687/2015 (Antecedentes de GD)\n  └── Lei 14.300/2022 (Marco Legal da MMGD / SCEE)\n        └── REN ANEEL 1.059/2023 + REN ANEEL 1.000/2021 (Regras de Distribuição e Faturamento)\n```\n\n---",
+    "content_hash": "7c80e06bb2e7364044c393eb59efb5c188a71e07ef295a554be6b5d3d00c432c",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-41197fe432c5e6075989",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado",
+    "content": "No setor elétrico brasileiro, os papéis institucionais e comerciais são rigorosamente delimitados por lei. Compreender a responsabilidade de cada agente confere autoridade ao vendedor e esclarece as dúvidas de segurança dos clientes.\n\n---",
+    "content_hash": "41197fe432c5e60759898cdf53e22d627624da6268e57eb338fe9041e779816b",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-6c34bd39f66a20b5a6ef",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Estrutura institucional do setor elétrico",
+    "content": "| Função | Órgãos / Entidades | Papel Principal | Pergunta Central que Responde |\n| :--- | :--- | :--- | :--- |\n| **Política Energética** | **CNPE** (Conselho Nacional de Política Energética) e **MME** (Ministério de Minas e Energia) | Formuladores superiores de políticas públicas, decretos, diretrizes de expansão e portarias de abertura de mercado. | *\"Qual é a diretriz estratégica e o calendário definido pelo governo federal?\"* |\n| **Planejamento** | **EPE** (Empresa de Pesquisa Energética) | Realiza estudos técnicos, balanços energéticos e projeta o Plano Decenal de Expansão de Energia (PDE). | *\"Quais usinas e linhas de transmissão precisarão ser construídas nos próximos anos?\"* |\n| **Regulação e Fiscalização** | **ANEEL** (Agência Nacional de Energia Elétrica) | Autarquia federal que regulamenta os serviços de energia, homologa tarifas, fiscaliza concessões e media conflitos. | *\"Quais são as regras vigentes e quais limites tarifários a distribuidora deve obedecer?\"* |\n| **Operação Física** | **ONS** (Operador Nacional do Sistema Elétrico) | Entidade de direito privado responsável pelo despacho da geração, segurança e controle físico da transmissão no Sistema Interligado Nacional (SIN). | *\"Como garantir que o fornecimento de energia elétrica não sofra colapsos nem apagões?\"* |\n| **Governança Comercial** | **CCEE** (Câmara de Comercialização de Energia) | Associação civil sem fins lucrativos que gerencia a contratação, medição, liquidação financeira e contabilização das sobras e déficits de energia. | *\"Quem registra, valida e audita a compra e venda de energia no Mercado Livre?\"* |\n\n---",
+    "content_hash": "6c34bd39f66a20b5a6efe45141188afe22b4189894bf3bfb08e5039e26de970b",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-545b94e8dbb936d6a09e",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > O que cada entidade NÃO faz (Mitos comuns)",
+    "content": "* **A ANEEL** não vende energia elétrica e não opera linhas de transmissão ou transformadores.\n* **O ONS** não define preços contratuais, não atua como comercializadora e não atende o consumidor final.\n* **A CCEE** não opera a rede física, não realiza manutenção de postes e não é a distribuidora local.\n* **A Distribuidora** não detém exclusividade na comercialização de energia para clientes livres ou com GD compartilhada.\n* **A Comercializadora** não é dona dos postes ou da fiação que chega ao estabelecimento do cliente.\n\n---",
+    "content_hash": "545b94e8dbb936d6a09ed09e32bdbb734963eb7cb7821a63768a436699859fd9",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-f7fbf2cec363f6a71ec0",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Agentes da cadeia de valor > 1. Geradoras",
+    "content": "Empresas que produzem energia elétrica a partir de diversas fontes (hidrelétricas, solares, eólicas, biomassa, térmicas a gás natural ou nuclear). Vendem sua produção no mercado regulado (leilões para distribuidoras) ou em contratos bilaterais no mercado livre.",
+    "content_hash": "f7fbf2cec363f6a71ec0541fff7fa9452777888ac32633335c6d500454812306",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-615913553ac78884fa30",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Agentes da cadeia de valor > 2. Transmissoras",
+    "content": "Concessionárias que operam as linhas e subestações em extra-alta e alta tensão (a partir de 230 kV), transportando os grandes blocos de energia dos centros de geração até as portas das cidades.",
+    "content_hash": "615913553ac78884fa3080e9645ceebf9da88cb74667a6a4e91371af8918f04b",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-2bc7e3352cfdec7d93d8",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Agentes da cadeia de valor > 3. Distribuidoras",
+    "content": "Concessionárias de rede local que operam a malha de média e baixa tensão. São responsáveis pelo atendimento físico, conexão, faturamento de taxas de uso da rede e religação de unidades consumidoras.",
+    "content_hash": "2bc7e3352cfdec7d93d81860526546c75eab0f8948188629faa3148c7bc9fca8",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-050d72cdfd92843d9633",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Agentes da cadeia de valor > 4. Comercializadoras",
+    "content": "Empresas autorizadas pela ANEEL e membros da CCEE que atuam na compra, venda e estruturação de produtos de energia elétrica para consumidores elegíveis e outros agentes.",
+    "content_hash": "050d72cdfd92843d963359c7ef7f8ba7de73bc0fa6bba17499b705310a5ed9e8",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-024e4f42ca0c20fb2e7a",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Agentes da cadeia de valor > 5. Comercializador Varejista (Agente Varejista)",
+    "content": "Figura central na expansão do Mercado Livre. O agente varejista representa múltiplos consumidores de menor porte perante a CCEE, centralizando obrigações burocráticas, contabilização e aportes de garantias financeiras.\n* Desde a **Portaria MME 50/2022**, consumidores do Grupo A com carga inferior a 500 kW devem ser representados por um agente varejista.\n* A **Lei 15.269/2025** e o **Decreto 13.097/2026** estabelecem o varejista como a espinha dorsal da futura abertura da Baixa Tensão.\n\n---",
+    "content_hash": "024e4f42ca0c20fb2e7ad504389932e2f4673709d4812049725981de4999c691",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-6b7cfd30ec6be1d94911",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Ambientes e mecanismos comerciais",
+    "content": "* **ACR (Ambiente de Contratação Regulada):** O mercado cativo, onde o consumidor compra energia diretamente da distribuidora local a tarifas fixadas pela ANEEL.\n* **ACL (Ambiente de Contratação Livre):** O mercado livre, onde consumidores escolhem fornecedores, preços e prazos.\n* **MCP (Mercado de Curto Prazo):** Mecanismo gerido pela CCEE para apurar diferenças entre a energia contratada em papel e o consumo físico real verificado pelos medidores.\n* **PLD (Preço de Liquidação das Diferenças):** Preço horário calculado pela CCEE para valorar as diferenças apuradas no MCP. Não é o preço da conta do consumidor final; é uma referência econômica de custo marginal de operação do sistema.\n* **SIN (Sistema Interligado Nacional):** Malha integrada de geração e transmissão que conecta mais de 99% do consumo elétrico nacional.\n\n---",
+    "content_hash": "6b7cfd30ec6be1d949116537bb7f527f4a91cb6c86ef0322b557de0b031fe4ed",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-37a47e2b9b4356e9b548",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Aplicação na abordagem de vendas",
+    "content": "Quando o cliente expressa receio com a troca de fornecedor ou desconfiança sobre o modelo:\n1. **Segurança de Suprimento:** O cliente deve ser informado de que a energia continua vindo pelo SIN e pelos fios da distribuidora, sob coordenação do ONS.\n2. **Segurança Contratual:** A migração ou adesão segue normas estritas da ANEEL, com registro de contratos e validação na CCEE.\n3. **Sem Burocracia:** Explicar que a contratação via agente varejista desonera o cliente de qualquer interação técnica ou complexidade operacional junto à CCEE.\n\n---",
+    "content_hash": "37a47e2b9b4356e9b5484e7fbf79a20d99c28feeb009c42892f08dc617d4b05f",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-b3c968deddfd8140a41f",
+    "source_path": "okf/market/regulamentacao-e-atores.md",
+    "title": "Regulamentação e atores do mercado > Aliases do conceito",
+    "content": "* **CCEE:** Câmara de Comercialização de Energia (denominação legal atualizada pela Lei 15.269/2025), antigamente denominada Câmara de Comercialização de Energia Elétrica.\n* **Agente Varejista:** Comercializador varejista, comercializadora varejista.\n* **Mercado Regulado:** Mercado cativo, suprimento regulado, ACR.\n\n---",
+    "content_hash": "b3c968deddfd8140a41f2eebdfe8ea4c7f954974456aabeb71a84087acb744c6",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-f7578dd2c3c5b970926e",
+    "source_path": "okf/sales/contratos-e-pos-venda.md",
+    "title": "Contratos e pós-venda",
+    "content": "Na metodologia da Condutive, a assinatura do contrato não encerra a operação comercial; ela marca o início da fase mais crítica do relacionamento. O valor do serviço só se consolida quando o cliente percebe a primeira economia na prática e valida que a promessa apresentada se materializou na fatura.\n\n---",
+    "content_hash": "f7578dd2c3c5b970926ea9828523de6bfe9bf2f6b20efbffc3162b7c7c761bd0",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-9b3c940964b79395eae8",
+    "source_path": "okf/sales/contratos-e-pos-venda.md",
+    "title": "Contratos e pós-venda > 1. Tradução e clareza contratual",
+    "content": "O contrato de energia é firmado diretamente entre o cliente e o fornecedor homologado (a Condutive atua como infraestrutura de comparação e viabilização):\n\n* **Tradução das cláusulas:** O consultor deve explicar termos fundamentais antes da assinatura:\n  * Base de incidência do desconto (se sobre a TE ou sobre TE + parcela compensável da TUSD).\n  * Prazo de vigência contratual (há contratos sem fidelidade e contratos com permanência de 12, 24 ou até 60 meses).\n  * Regras e prazos de aviso prévio para rescisão ou saída sem penalidade.\n* **Redução de atrito sem ocultar compromissos:** Apresentar a realidade contratual com transparência evita cancelamentos e protege a reputação do agente.\n\n---",
+    "content_hash": "9b3c940964b79395eae8ea58dbed1b5b366ad04581ae1c124d27eab7d8cd6f38",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-80709c88e332c945d4f3",
+    "source_path": "okf/sales/contratos-e-pos-venda.md",
+    "title": "Contratos e pós-venda > 2. O ciclo regulatório de ativação (30 a 90 dias)",
+    "content": "Após a assinatura do contrato de geração distribuída, inicia-se o trâmite formal de registro da unidade consumidora junto à distribuidora de energia:\n\n```text\nAssinatura Digital -> Envio ao Fornecedor -> Protocolo na Distribuidora -> Início da Compensação (30 a 90 dias)\n```",
+    "content_hash": "80709c88e332c945d4f3ef5ba3ae47d86a8eb3239d02a88f257989a713e57b2e",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-73d09b96d05ac083ebd4",
+    "source_path": "okf/sales/contratos-e-pos-venda.md",
+    "title": "Contratos e pós-venda > 3. O momento ótimo de solicitar indicações",
+    "content": "O erro comum de vendas é pedir indicações logo após o fechamento, quando o cliente ainda vive a expectativa da promessa:\n\n* **O gatilho de confiança:** O momento ideal para pedir indicações ocorre **logo após o pagamento da primeira fatura com economia efetivamente comprovada**.\n* **A abordagem de indicação:**\n  > *\"Olá, [Nome do cliente]! Vimos que sua primeira fatura com os créditos já foi compensada com a economia prevista de R$ [Valor]. Você tem algum empresário parceiro, amigo ou vizinho de comércio que também gostaria de reduzir esse custo fixo de energia sem precisar de obras?\"*\n  Nesse estágio, o cliente já validou o resultado na prática e indica a solução com entusiasmo espontâneo.\n\n---",
+    "content_hash": "73d09b96d05ac083ebd441e9f1cfa65e7cdb1f9be05b6a7a09601c038d4c1b05",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-464b3ff4625894dde088",
+    "source_path": "okf/sales/contratos-e-pos-venda.md",
+    "title": "Contratos e pós-venda > 4. Protocolo de atendimento a queixas de economia (Os três documentos)",
+    "content": "Quando o cliente questionar a ausência de desconto ou alegar que a conta veio mais alta, o consultor deve conduzir uma auditoria técnica em vez de reagir na defensiva.",
+    "content_hash": "464b3ff4625894dde088a526f4c8217a42eac76b6859d4f8b18890d810649aa0",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-a41970fc1d945b1b0db6",
+    "source_path": "okf/sales/contratos-e-pos-venda.md",
+    "title": "Contratos e pós-venda > 4. Protocolo de atendimento a queixas de economia (Os três documentos) > Documentos obrigatórios para a análise:",
+    "content": "1. **Fatura da distribuidora** do mês em questão (detalhando consumo medido e créditos lançados).\n2. **Boleto de cobrança** emitido pelo novo fornecedor.\n3. **Demonstrativo ou extrato de créditos** do fornecedor (explicando a memória de cálculo do boleto).",
+    "content_hash": "a41970fc1d945b1b0db65034e95b41177413cec683597f0e7e9c4f59605817eb",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-6a5e86b5f6e2733c03a8",
+    "source_path": "okf/sales/contratos-e-pos-venda.md",
+    "title": "Contratos e pós-venda > 4. Protocolo de atendimento a queixas de economia (Os três documentos) > Diagnóstico em três causas possíveis:",
+    "content": "* **Causa 1: Aumento físico no consumo do cliente.** Se o cliente consumiu 20% a mais (ex.: ar-condicionado no verão ou aumento de produção), a fatura total será maior, mas o desconto percentual continuou sendo aplicado sobre a energia consumida.\n* **Causa 2: Fatores tarifários externos da distribuidora.** Reajuste tarifário anual da concessionária ou vigência de bandeiras amarela/vermelha encarecem a tarifa regulada, mas a economia relativa frente ao modelo tradicional permanece ativa.\n* **Causa 3: Inconsistência na alocação de créditos.** Atraso na compensação por parte da distribuidora ou divergência de faturamento do fornecedor. O agente aciona o suporte da Condutive para correção junto ao fornecedor.\n\n---",
+    "content_hash": "6a5e86b5f6e2733c03a881bcf3afaa258a919f73e1365ac20eb6af97dbd35fe1",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-1806e52eb7044377b085",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura",
+    "content": "Na metodologia da Condutive, a fatura de energia elétrica é o artefato central de diagnóstico comercial. Uma leitura precisa qualifica o cliente, define a solução técnica adequada (Mercado Livre vs. Energia solar por assinatura) e evita promessas incorretas de economia.\n\n---",
+    "content_hash": "1806e52eb7044377b085c56586b66467f7c5e31bde498ba9d2d6289b18104ecd",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-db590b8ae00a8b60d5c6",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Anatomia da fatura para o diagnóstico comercial",
+    "content": "Ao analisar a conta de energia enviada pelo cliente, o vendedor ou a plataforma deve extrair cinco blocos essenciais:",
+    "content_hash": "db590b8ae00a8b60d5c65cccabc05332b2c229b76b48a93a1b6f6ea8db91c70d",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-3a4a79bf425d2e5a6184",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Anatomia da fatura para o diagnóstico comercial > 1. Dados cadastrais e geográficos",
+    "content": "* **Distribuidora:** Define a área de concessão, a tarifa homologada pela ANEEL e o catálogo de fornecedores disponíveis.\n* **Código da UC / Instalação:** Identificador exclusivo da ligação na distribuidora (usado para emissão de proposta e formalização).\n* **Titularidade e Documento (CPF/CNPJ):** Confirma se o titular coincide com o contratante ou se será necessária troca de titularidade ou procuração.\n* **Município e UF:** Determina se há incidência de ICMS integral, isenções estaduais de GD ou alíquotas locais de iluminação pública.",
+    "content_hash": "3a4a79bf425d2e5a6184aa4343a3b18ccbb99a154f74413361404c137369c7e6",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-ac432ea9bf8967937663",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Anatomia da fatura para o diagnóstico comercial > 2. Grupo e subgrupo tarifário",
+    "content": "* **Grupo A (Alta e Média Tensão):** Atendido em tensão a partir de 2,3 kV (subgrupos comuns: A4 de 2,3 kV a 25 kV; A3a de 30 kV a 44 kV). Faturado com medição horária de demanda (kW) e consumo (kWh). *Direcionamento comercial imediato: Mercado Livre de Energia (ACL).*\n* **Grupo B (Baixa Tensão):** Atendido em tensão abaixo de 2,3 kV (subgrupos: B1 Residencial, B2 Rural, B3 Comercial/Industrial). Faturado em modalidade monômia simples (R$/kWh). *Direcionamento comercial imediato: Energia solar por assinatura (GD compartilhada).*",
+    "content_hash": "ac432ea9bf8967937663896841a9869f905a40185a4bf428c1f12697d0c69bb9",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-fbcfd835ea2f208dcaab",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Anatomia da fatura para o diagnóstico comercial > 3. Modalidade e postos tarifários (Grupo A)",
+    "content": "* **Verde:** Demanda única (R$/kW) para todos os horários; consumo medido em Ponta (três horas no pico noturno, mais cara) e Fora Ponta (mais barata).\n* **Azul:** Tarifas de demanda e de consumo diferenciadas entre Ponta e Fora Ponta. Obrigatória para grandes indústrias e alta tensão.\n* **Convencional / Branca (Grupo B):** A maioria dos clientes B3 está na tarifa convencional (valor fixo independente do horário).",
+    "content_hash": "fbcfd835ea2f208dcaabadc316fe40185a9fa9cff597f3be5f0ef2142f85c3d1",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-61a26859e8808af2999a",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Anatomia da fatura para o diagnóstico comercial > 4. Componentes tarifários: TE e TUSD",
+    "content": "* **Consumo em kWh x TE (Tarifa de Energia):** Custo do insumo energia.\n* **Uso da rede x TUSD (Tarifa de Uso do Sistema de Distribuição):** Custo do transporte e manutenção da rede física.\n* **Bandeira tarifária:** Adicional por kWh decorrente das condições hidrológicas (Verde, Amarela, Vermelha 1 ou Vermelha 2).",
+    "content_hash": "61a26859e8808af2999a04d2e99613d669c42af7e0b6cb58cb525efb85411605",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-7c8e2b3ed2842248159d",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Anatomia da fatura para o diagnóstico comercial > 5. Histórico de 12 meses",
+    "content": "* O histórico informa a sazonalidade do cliente (ex.: aumento no verão por ar condicionado em clínicas ou aumento no inverno em padarias).\n* No Grupo A, comparar a **demanda contratada (kW)** com a **demanda medida (kW)** revela se o cliente está pagando por potência ociosa ou gerando multas de ultrapassagem.\n\n---",
+    "content_hash": "7c8e2b3ed2842248159d708dda51934fe909a77d5b384d07cad0aeeaae680607",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-956e3a26cfe47d8878fe",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > O que é descontável vs. O que permanece fixo",
+    "content": "Um dos erros mais graves do vendedor é prometer desconto sobre o valor total da fatura. A proposta deve deixar claro onde incide a redução:\n\n| Componente da Fatura | O desconto incide? | Explicação técnica |\n| :--- | :---: | :--- |\n| **Consumo TE (kWh)** | **SIM** | O fornecedor substitui ou compensa a energia da distribuidora a preço menor. |\n| **Parcela compensável da TUSD** | **SIM** | Na GD compartilhada, a energia compensada abate componentes da TUSD conforme a Lei 14.300/2022. |\n| **Demanda Contratada (kW)** | **NÃO** | Valor regulado pago diretamente à distribuidora pelo uso da rede física no Grupo A. |\n| **Custo de Disponibilidade (Grupo B)** | **NÃO** | Taxa mínima da distribuidora (30 kWh monofásico, 50 kWh bifásico, 100 kWh trifásico). |\n| **CIP / COSIP (Iluminação Pública)** | **NÃO** | Tributo municipal cobrado na fatura e repassado integralmente à prefeitura. |\n| **Multas e Reativos Excedentes (UFER/FER)** | **NÃO** | Penalidades por baixo fator de potência ou atraso de pagamento, que devem ser corrigidas na instalação do cliente. |\n\n---",
+    "content_hash": "956e3a26cfe47d8878fe4f5251573d435c2a49169c89f0ebaa8c3b3f98f437ce",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-5b5fbdfb6bfa195083a0",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Checklist de Diagnóstico Rápido em Três Minutos (WhatsApp)",
+    "content": "No atendimento dinâmico por mensagens, o consultor deve localizar cinco campos prioritários para qualificar o lead e devolver um pré-diagnóstico imediato:\n\n1. **Cabeçalho:** Distribuidora local, código da instalação/UC e identificação do titular.\n2. **Classificação:** Tensão de atendimento e subclasse (B1 residencial, B3 comercial ou Grupo A).\n3. **Valor Total:** Filtro financeiro para validar se atinge a fatura mínima dos fornecedores parceiros.\n4. **Histórico de 12 Meses:** Volume médio mensal de consumo e picos sazonais.\n5. **Encargos e Ineficiências:** Presença de multas por ultrapassagem de demanda, energia reativa ou bandeiras tarifárias.\n\n---",
+    "content_hash": "5b5fbdfb6bfa195083a0cb93300ae006b756dd575913adce38ef50ef795a0fd0",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-d0cf4e6cc5300cabf11f",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Os Cinco Tipos de Faturas Inválidas ou Rejeitadas",
+    "content": "Para evitar retrabalho na esteira operacional e rejeição pelos fornecedores, o agente deve identificar imediatamente faturas inadequadas:\n\n| Tipo de Inconsistência | Por que a fatura é inválida | Ação recomendada do agente |\n| :--- | :--- | :--- |\n| **1. Histórico cortado ou dobrado** | A dobra do papel oculta os meses anteriores, impedindo o cálculo da média real de consumo. | Solicitar o PDF digital da segunda via pelo app da distribuidora. |\n| **2. Cabeçalho ocultado ou rasurado** | Cliente apaga o nome ou número da instalação por receio de expor dados. Sem a titularidade e o código da UC, nenhum fornecedor aceita a formalização. | Explicar que os dados são obrigatórios para validar se a usina tem disponibilidade técnica para aquela instalação específica. |\n| **3. Corpo tarifário cortado** | Foto corta as linhas discriminativas de TUSD, TE e impostos estaduais (ICMS). | Pedir nova imagem enquadrando a folha inteira ou o arquivo em PDF. |\n| **4. Foto borrada ou ilegível** | Baixa resolução ou reflexo de luz impede a leitura precisa dos dígitos pelo OCR da plataforma. | Orientar o cliente a fotografar a conta sobre uma mesa bem iluminada ou baixar a segunda via digital. |\n| **5. Fatura antiga (mais de 90 dias)** | Emitida há mais de 3 meses da data de submissão. Fornecedores exigem a conta mais recente para análise de crédito e homologação. | Solicitar o download da fatura do mês vigente. |\n\n---",
+    "content_hash": "d0cf4e6cc5300cabf11feccff0adb29fa4488b7a11c2b5110d56af003f49c5b0",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-f971e50d7199cda6e4e2",
+    "source_path": "okf/sales/leitura-de-fatura.md",
+    "title": "Leitura de fatura > Armadilhas frequentes na leitura de fatura",
+    "content": "1. **Confundir Código do Cliente com Número da UC/Instalação:** Muitas distribuidoras trazem ambos no cabeçalho. O identificador que cadastra a unidade no sistema é o número da instalação/UC.\n2. **Ignorar geração solar pré-existente:** Faturas que já trazem \"Saldo de Energia Injetada\", \"Energia Injetada mUC\", \"Energia Compensada GD\" ou código de participação no SCEE indicam que a UC já possui painéis solares ou consórcio ativo. Essas UCs não são elegíveis para nova assinatura de GD sem cancelamento prévio.\n3. **Calcular economia com base em um único mês atípico:** Uma conta de janeiro com alto uso de ar-condicionado superdimensiona a cota recomendada. O dimensionamento deve sempre usar a média dos últimos 12 meses.\n4. **Fatura em formato de foto cortada:** Dificulta a extração por OCR e oculta o histórico de 12 meses. O vendedor deve solicitar o PDF da segunda via digital retirado do app ou site da distribuidora.\n\n---",
+    "content_hash": "f971e50d7199cda6e4e20a6e5c01b3082f3368415199e362a5625f74ef3bde77",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-fb0a06901d429f8e1d09",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções",
+    "content": "Na metodologia da Condutive, objeções não são tratadas com insistência ou técnicas invasivas de convencimento. Uma objeção pode expressar dúvida, falta de informação, uma restrição ou a decisão de não avançar. O objetivo é esclarecer o ponto levantado, respeitando o momento e a autonomia do cliente.",
+    "content_hash": "fb0a06901d429f8e1d0943062062c61d93e26da6b546e6f645540fd38a18bd1d",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-a2d774f2abd95a5783c5",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > Princípios Fundamentais de Resposta",
+    "content": "- **Clareza:** explicar conceitos sem jargões herméticos do setor elétrico.\n- **Transparência:** nunca prometer \"economia garantida\" ou ocultar condicionantes contratuais.\n- **Direcionamento:** conduzir a conversa para diagnóstico, comparação e decisão informada.\n- **Segurança:** delimitar com precisão os papéis da distribuidora, da Condutive e dos fornecedores.\n- **Simplicidade:** usar apenas o contexto necessário para responder; pedir dados da fatura quando a análise solicitada depender deles.\n\n---",
+    "content_hash": "a2d774f2abd95a5783c5827110bf8f99373e0a782112cb4961c65d852ce587ef",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-a3f940cab411dbd6c29f",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > Roteiro de Apoio, Conforme o Pedido",
+    "content": "Quatro recursos ajudam a organizar uma conversa: reconhecer a dúvida, explicar o ponto, relacioná-lo aos dados disponíveis e propor um próximo passo. Eles não formam uma sequência obrigatória para toda resposta. Uma explicação geral pode bastar; uma recusa não exige outra tentativa de obter a fatura.\n\nO pedido mais recente delimita assunto e formato. Se o corretor pedir apenas uma pergunta ou mensagem para copiar, o resultado pode ser somente esse texto, sem diagnóstico, título ou convite adicional. Uma correção de assunto ou uma recusa substitui o encaminhamento sugerido antes.",
+    "content_hash": "a3f940cab411dbd6c29fb9c8f5471231e62c570e15d05bd73e92df6f4f47bd7f",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-a7b3b165de17c218d721",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > Roteiro de Apoio, Conforme o Pedido > Exemplos de Aplicação",
+    "content": "- **Dúvida geral:** “Isso é venda de placa solar?” → “A instalação própria é uma das alternativas. Na energia solar por assinatura, a geração ocorre em uma usina remota e a compensação aparece na conta.”\n- **Recusa:** “Não quero enviar a fatura agora; explique só como funciona.” → Explicar o modelo sem repetir o pedido de documento nem inventar uma economia individual.\n- **Pedido delimitado:** “Ainda não sabemos quem responde por interrupções. Só uma pergunta para copiar.” → “Quem é responsável em caso de interrupção do fornecimento de energia?”\n- **Correção:** “Não quero perguntar sobre créditos; quero saber quem responde pela interrupção.” → Manter a pergunta sobre responsabilidade, mesmo que a resposta ainda precise ser confirmada.\n\n\n---",
+    "content_hash": "a7b3b165de17c218d721f2696a58438290c3e658a95accd0bec3c3a3164b3cbd",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-8136f071383eb2397582",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 2. Objeções sobre Envio e Sigilo da Fatura",
+    "content": "| Objeção | Resposta Recomendada |\n| :--- | :--- |\n| **Por que preciso enviar a fatura para ter uma proposta?** | \"A fatura é o ponto de partida do diagnóstico. É nela que constam distribuidora, histórico de consumo dos últimos 12 meses, modalidade tarifária, tensão e encargos necessários para calcular a economia real.\" |\n| **Existe algum risco em enviar minha fatura?** | \"A fatura contém dados pessoais e de consumo. Antes de compartilhar, confirme o canal oficial e as informações vigentes sobre finalidade e tratamento dos dados. Não é adequado prometer risco zero ou sigilo absoluto.\" |\n| **Não posso passar meus dados agora.** | \"Tudo bem. Podemos esclarecer o funcionamento e as regras gerais sem avançar com seus dados agora.\" |\n| **Quero apenas uma simulação genérica de quanto posso economizar.** | \"Uma simulação preliminar usa os dados disponíveis e as condições da oferta, com as premissas identificadas. Sem base para calcular, podemos explicar os fatores que influenciam a economia; não inventar uma faixa média.\" |\n\n---",
+    "content_hash": "8136f071383eb2397582ea6c101758d40babe0b0e3432362a6159b6099899ed0",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-7ec79d1009004fc77c7d",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 3. Objeções sobre Economia e Benefício Financeiro",
+    "content": "| Objeção | Resposta Recomendada |\n| :--- | :--- |\n| **Quanto exatamente minha empresa vai economizar?** | \"A economia depende do seu histórico de consumo, da tarifa da sua distribuidora e da solução aplicável ao caso. Primeiro analisamos os dados da fatura para depois apresentar a projeção real documentada.\" |\n| **A economia é garantida em contrato?** | \"A economia é estimada com base no modelo regulatório e contratual do fornecedor, nas tarifas da distribuidora e no consumo apurado. Não usamos promessas absolutas porque a conta depende do uso real de energia.\" |\n| **Essa economia parece boa demais para ser verdade.** | \"Não se trata de mágica comercial. O benefício decorre do marco legal de Geração Distribuída (Lei 14.300) e do Mercado Livre, que permitem a contratação de usinas com custos de produção menores que a tarifa da distribuidora.\" |\n| **Se é tão vantajoso, por que todo mundo ainda não fez?** | \"Porque a regulamentação é recente, o tema envolve desconfiança gerada por abordagens agressivas e nem todo consumidor atende aos critérios técnicos de consumo e distribuidora.\" |\n\n---",
+    "content_hash": "7ec79d1009004fc77c7d06fe804d23f28c4f293c0a37671729130b58a3b0bea5",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-a436e767bf049ba20f98",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 4. Objeções sobre Distribuidora e Suprimento Físico",
+    "content": "| Objeção | Resposta Recomendada |\n| :--- | :--- |\n| **Minha distribuidora de energia vai mudar?** | \"Não. A distribuidora local (Enel, Cemig, CPFL, etc.) continua sendo a concessionária física responsável pela rede de distribuição, postes, fiação e manutenção do fornecimento.\" |\n| **A distribuidora pode retaliar ou cortar minha energia se eu trocar de fornecedor?** | \"De forma alguma. O livre acesso às redes é garantido por lei federal (Lei 9.074/1995) e regulado pela ANEEL. A distribuidora continua sendo remunerada pelo uso da rede (TUSD) e é expressamente proibida de discriminar qualquer consumidor. A confiabilidade física do serviço permanece inalterada.\" |\n| **Posso ficar sem luz por causa da contratação?** | \"Não. A qualidade física do fornecimento continua sob estrita responsabilidade da distribuidora local. Interrupções ou quedas de energia decorrem de problemas na rede física do bairro, nunca da escolha comercial do fornecedor de energia.\" |\n| **Por que a distribuidora ainda me manda conta se eu contratei outra empresa?** | \"Porque a entrega física e os serviços de rede (manutenção de postes, fios, transformadores e taxa de iluminação pública da prefeitura) continuam sendo prestados por ela. A energia que você consome é que passa a vir com desconto através do fornecedor contratado.\" |\n| **Vou passar a receber duas contas de energia?** | \"Depende da modalidade e do fornecedor. Em alguns parceiros de energia por assinatura, o cliente recebe a fatura da distribuidora (com encargos e iluminação pública) e o boleto do fornecedor da energia injetada. Em outros, há modelo de fatura única unificada. A soma total das cobranças sempre resultará em economia frente à fatura tradicional.\" |\n| **O que acontece se a usina parceira parar de gerar energia temporariamente por chuva ou manutenção?** | \"O fornecimento de energia para o seu imóvel nunca é interrompido. A eletricidade física continua sendo entregue normalmente pela rede da distribuidora local. O impacto de uma eventual oscilação da usina é estritamente financeiro (variação temporária nos créditos de desconto daquele mês), sem qualquer risco de corte ou prejuízo à operação.\" |\n\n---",
+    "content_hash": "a436e767bf049ba20f98859841df3ec49f5398d4cab990f36f4ffb28d40c23c7",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-eed2c51f2e2846e4d4d2",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 5. Objeções por Tipo de Solução e Elegibilidade",
+    "content": "| Objeção | Resposta Recomendada |\n| :--- | :--- |\n| **Energia por assinatura é a mesma coisa que placa solar no telhado?** | \"Não. Na assinatura, a energia é gerada em usinas solares remotas e injetada na rede da distribuidora como créditos na sua conta. Não exige obra física, compra de equipamentos ou manutenção.\" |\n| **Preciso instalar algum equipamento na minha empresa/casa?** | \"Na energia por assinatura, não é necessária nenhuma instalação ou alteração física no padrão de entrada. Apenas soluções de solar próprio local demandam instalação.\" |\n| **O contrato exige fidelidade ou tem multa rescisória?** | \"Varia conforme o fornecedor e a oferta. Consulte a versão aplicável da proposta ou contrato. Se o prazo de aviso, a permanência mínima ou a multa não estiverem documentados, essas condições ainda não estão confirmadas.\" |\n| **E se meu consumo de energia oscilar bastante no mês?** | \"Em modelos de GD, os créditos gerados e não consumidos acumulam na distribuidora conforme as normas da ANEEL. Analisamos seu histórico para dimensionar a cota sem sobras excessivas.\" |\n| **Vale mais a pena instalar painéis próprios ou assinar energia remota?** | \"Depende da área disponível de telhado, do tíquete de consumo, da capacidade de investimento financeiro e da urgência. O comparador da Condutive confronta os dois caminhos quando ambos são viáveis.\" |\n| **O imóvel é alugado / não sou o proprietário.** | \"Não há impedimento. A energia solar por assinatura não exige obras e independe da posse do imóvel. A titularidade da conta é um dos critérios; também é preciso confirmar a elegibilidade da unidade e as condições da oferta disponível.\" |\n| **Não temos recursos para investir em obras agora.** | \"A assinatura de geração remota pode evitar investimento em painéis próprios. Isso não elimina cobranças do serviço; a vantagem financeira depende da oferta e do perfil de consumo.\" |\n| **Nossa empresa já está no Mercado Livre de Energia.** | \"Podemos auditar o contrato atual, avaliar os custos de demanda, verificar o índice de indexação contratado e comparar com comercializadoras concorrentes para futuras renovações.\" |\n| **Quem garante a segurança dos contratos no Mercado Livre?** | \"Todos os contratos livres são registrados, auditados e liquidados pela CCEE (Câmara de Comercialização de Energia), que atua como o cartório oficial do mercado elétrico, garantindo segurança jurídica sob regulação da ANEEL.\" |\n| **Já temos consultoria de energia contratada.** | \"A Condutive atua como segunda opinião estruturada e camada de checagem comparativa para validar se as condições acordadas continuam competitivas frente ao mercado.\" |\n| **Já recebemos dezenas de propostas parecidas.** | \"Nosso papel é exatamente organizar essas propostas lado a lado com métricas padronizadas, avaliando cláusulas jurídicas e solidez dos ofertantes para apoiar sua decisão.\" |\n\n---",
+    "content_hash": "eed2c51f2e2846e4d4d246cae597681abdbee4b080f1d07960b6cb35bc4b3bc6",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-87a606430c18fb862f56",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 6. Objeções Específicas por ICP > PMEs de Baixa Tensão (ICP 1)",
+    "content": "- **\"Não tenho tempo para mexer com isso agora.\"**  \n  *Resposta:* \"Justamente para poupar seu tempo operacional, nós cuidamos da triagem técnica. Você só precisa enviar a foto da conta e nós devolvemos o estudo pronto.\"\n- **\"Minha conta nem é tão alta assim para compensar.\"**  \n  *Resposta:* \"A análise mostra se a economia acumulada no ano justifica a adesão. O resultado depende dos custos, das condições da oferta e do consumo considerado.\"\n- **\"Já recebi uma proposta parecida no WhatsApp.\"**  \n  *Resposta:* \"Podemos colocar essa proposta ao lado de outras opções no nosso comparador para validar se as cláusulas e o desconto são realmente os melhores disponíveis.\"",
+    "content_hash": "87a606430c18fb862f56b5ac7223c0c1673bf337e2dd04b964f9dba2d987ff56",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-4a2cc4c0843329631150",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 6. Objeções Específicas por ICP > Redes e Multiunidades (ICP 2)",
+    "content": "- **\"Temos dezenas de lojas e cada uma tem um padrão.\"**  \n  *Resposta:* \"Por esse motivo o diagnóstico é realizado individualmente por unidade consumidora, consolidando depois o ganho financeiro total da rede em um painel único.\"\n- **\"É complexo gerenciar tantas faturas de uma vez.\"**  \n  *Resposta:* \"A plataforma centraliza a triagem, identifica quais filiais têm retorno mais imediato e orienta a ativação em lotes organizados.\"",
+    "content_hash": "4a2cc4c0843329631150f0613bed02176e6068eb512f43d1c853e066a146c5ac",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-e71a5943c3b5d0491121",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 6. Objeções Específicas por ICP > Condomínios (ICP 3)",
+    "content": "- **\"Isso precisa de aprovação em assembleia de condôminos?\"**  \n  *Resposta:* \"Depende da convenção condominial e do modelo contratual. A Condutive elabora um relatório executivo claro com prós, contras e segurança jurídica para orientar síndico e conselho.\"\n- **\"Os moradores e conselheiros vão desconfiar de promessas de economia.\"**  \n  *Resposta:* \"O diagnóstico da Condutive é estruturado com embasamento regulatório e formalização dos fornecedores, explicitando condições e riscos para apoiar a decisão do condomínio.\"",
+    "content_hash": "e71a5943c3b5d0491121d8f10588afe3a9c65cbc35453e8828aa3e0272fe1881",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-0429e65e64e8ddf92d68",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > 6. Objeções Específicas por ICP > Grandes Consumidores (ICP 4)",
+    "content": "- **\"Já temos comercializadora e contrato fechado.\"**  \n  *Resposta:* \"Acompanhamos a curva de vencimento do contrato para preparar o processo de concorrência com antecedência ou avaliar soluções complementares de autoprodução e eficiência.\"\n- **\"Nosso departamento jurídico é extremamente exigente.\"**  \n  *Resposta:* \"Nossas análises comparam minutas, garantias exigidas, regras de modulação e penalidades regulatórias da CCEE de forma a subsidiar a avaliação jurídica.\"\n\n---",
+    "content_hash": "0429e65e64e8ddf92d68a075d8db1682baeb47554cd8b227c1bc1bbf3e296456",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-79396dbd2ba9d7e777c9",
+    "source_path": "okf/sales/objecoes.md",
+    "title": "Tratamento de objeções > Respostas e Posturas PROIBIDAS (Armadilhas Comerciais)",
+    "content": "| Resposta / Alegação Proibida | Motivo da Proibição |\n| :--- | :--- |\n| **\"Garantimos economia de X%\"** | Incorreto. Varia com bandeiras tarifárias, regras da distribuidora e perfil de consumo. |\n| **\"Pode confiar em mim\"** | Não oferece argumento fático nem dados técnicos de sustentação. |\n| **\"É muito simples, não precisa entender nada\"** | Atitude paternalista que subestima o cliente e aumenta a insegurança. |\n| **\"Todo mundo economiza com isso\"** | Falso. Nem toda conta ou distribuidora possui solução economicamente viável. |\n| **\"Trabalhamos com todos os fornecedores\"** | Falso. Apenas fornecedores selecionados por curadoria compõem o comparador. |\n| **\"Somos 100% independentes\"** | Impreciso. A empresa recebe remuneração de sucesso das operadoras contratadas. |\n| **\"A distribuidora sai totalmente da jogada\"** | Errado. A distribuidora física permanece mandatória na entrega da energia. |\n| **\"Não tem risco nenhum\"** | Todo contrato possui cláusulas, prazos e obrigações recíprocas a serem observadas. |\n| **\"É só assinar aqui rapidinho\"** | Reduz a credibilidade do processo e acende alerta de golpe no decisor. |",
+    "content_hash": "79396dbd2ba9d7e777c98875ab5fbeec0b413832f5aaede04dcae1c14890f17a",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-232eafc437f5a99a84af",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes",
+    "content": "Na abordagem comercial da Condutive, as perguntas frequentes não funcionam como um repositório passivo de dúvidas de site. Elas constituem instrumentos ativos de redução de risco e dissolução de incertezas durante a conversa entre o consultor (ou assistente) e o decisor da empresa.",
+    "content_hash": "232eafc437f5a99a84af3a9b7996d4e41c6b3a96e77d28b86000e0a932271ebf",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-353c44b48b3b31369650",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas Institucionais e de Modelo > A Condutive cobra alguma coisa para fazer a comparação?",
+    "content": "Não. O diagnóstico da fatura e a apresentação do estudo comparativo são totalmente gratuitos para o cliente. A remuneração da plataforma é viabilizada diretamente pelos fornecedores quando a contratação de uma solução é concluída com sucesso.",
+    "content_hash": "353c44b48b3b313696503eecef8ffa84472b56ccf4e0e3501094c77be8fe46fd",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-316da47fa5a82c28d5fe",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas Institucionais e de Modelo > A Condutive vende apenas energia solar ou placas para telhado?",
+    "content": "Não. A instalação própria de painéis solares é apenas uma das modalidades possíveis no portfólio. A empresa compara energia solar por assinatura (créditos de usinas remotas sem necessidade de obras), mercado livre de energia para empresas do Grupo A, eficiência energética e auditorias tarifárias.",
+    "content_hash": "316da47fa5a82c28d5fe473245b063559f9cd9c16664a2a2149ab79ff613f256",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-fa7fac8814908f4d177a",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas Institucionais e de Modelo > Por que a Condutive não trabalha com todos os fornecedores do mercado?",
+    "content": "A plataforma atua sob o princípio de curadoria técnica e jurídica. São homologados apenas fornecedores que comprovem histórico de cumprimento de contratos, capacidade física de entrega, condições comerciais transparentes e conformidade regulatória perante a ANEEL.\n\n---",
+    "content_hash": "fa7fac8814908f4d177aa053507e7216a532043cc9fbeea190f0f03939eb7537",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-d22068add7bef373f7b9",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas Operacionais e de Fatura > Por que preciso enviar minha conta de luz para receber uma proposta?",
+    "content": "A fatura de energia é a ferramenta primária de diagnóstico. Nela constam dados indispensáveis como a distribuidora local, histórico dos últimos 12 meses, classe de tensão, tarifas aplicáveis e consumo ponta/fora de ponta. Sem esses dados reais, qualquer projeção financeira torna-se imprecisa e descompromissada.",
+    "content_hash": "d22068add7bef373f7b9ad187ae9f94753f0f38891b18d9fbf16027e2dd007ad",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-5f381856c96fe0482a1d",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas Operacionais e de Fatura > Existe risco em compartilhar a fatura com a Condutive?",
+    "content": "A fatura contém dados pessoais e de consumo. Confirme o canal oficial e as informações vigentes sobre finalidade e tratamento dos dados antes do envio. Não há base nesta página para prometer risco zero, sigilo absoluto ou comprovar práticas específicas de tratamento.\n\n---",
+    "content_hash": "5f381856c96fe0482a1dc1bc32797d18852df3b18b4681d10f90c586ac84216c",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-ebd4bd19808060848e8a",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas sobre Fornecimento e Distribuidora > Minha distribuidora de energia vai mudar após a contratação?",
+    "content": "Não. A distribuidora local (como Enel, Cemig, CPFL, Light, etc.) continua sendo a concessionária física responsável pelos postes, cabeamento, leitura do relógio e manutenção da rede que atende o imóvel. Isso não significa ausência de interrupções.",
+    "content_hash": "ebd4bd19808060848e8afd98d0f1af28bd13300aed78b6c9edd70af857f13796",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-38a50986927ccb570a49",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas sobre Fornecimento e Distribuidora > Pode faltar energia por ter contratado outra solução?",
+    "content": "Na energia solar por assinatura, a distribuidora permanece responsável pelo fornecimento físico. A contratação não elimina interrupções na rede. O efeito de uma interrupção sobre créditos, cobrança ou obrigações de um fornecedor específico requer verificação das condições aplicáveis.",
+    "content_hash": "38a50986927ccb570a49b2374483a6fc1acd06ad4d83361512be43e10ab847aa",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-66e8fbecf89a09d58e6e",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas sobre Fornecimento e Distribuidora > Vou passar a receber duas faturas de energia todo mês?",
+    "content": "Em algumas modalidades, como a energia solar por assinatura, o cliente recebe a fatura tradicional da concessionária (contendo os encargos de distribuição, taxa de iluminação pública e impostos residuais) e o boleto do fornecedor de energia referente aos créditos injetados. Duas cobranças não demonstram economia por si só: compare o custo total com o cenário sem a oferta. O formato e as condições de cobrança precisam estar identificados na proposta aplicável.\n\n---",
+    "content_hash": "66e8fbecf89a09d58e6e1d0b3ae94d97f1420165e32408649bf0b2afc5ec760c",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-8cf1753f90efade76be9",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas sobre Economia e Contrato > A economia estimada na proposta é garantida?",
+    "content": "A economia é calculada com base no modelo tarifário vigente, no desconto negociado com o fornecedor homologado e nas médias históricas de consumo da unidade. Não são feitas promessas de \"desconto absoluto e garantido\", pois o valor final depende do consumo real apurado mês a mês no medidor.",
+    "content_hash": "8cf1753f90efade76be970534cb1058a62a9f399f1e20b41f227e1dbe3bb0c58",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-6b99075172a499312248",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Dúvidas sobre Economia e Contrato > Se a proposta é tão vantajosa, por que nem todas as empresas aderiram?",
+    "content": "Porque o marco legal de Geração Distribuída e a abertura do Mercado Livre são transformações regulatórias relativamente recentes no país. Além disso, muitos consumidores ainda desconhecem as regras, foram expostos a abordagens desqualificadas ou possuem padrões de consumo que demandam soluções sob medida.\n\n---",
+    "content_hash": "6b99075172a499312248785f8514e42c3004b95ee3b0d74d2c3b634391a1f2c4",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-fa748a50c5fb80f8b1a7",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Titularidade e Imóveis Alugados > Preciso ser o proprietário do imóvel para contratar energia por assinatura?",
+    "content": "Não. Como a adesão é digital e não envolve obras físicas, não se exige a propriedade do imóvel nem a anuência do locador. A titularidade da conta é um dos critérios. A elegibilidade da unidade e as condições da oferta também precisam ser confirmadas.",
+    "content_hash": "fa748a50c5fb80f8b1a7d2da6dbd2b00da740e911eb3c844490b0135be8a484b",
+    "visibility": "public"
+  },
+  {
+    "chunk_id": "pub-ac0a33085f3197373c2b",
+    "source_path": "okf/sales/perguntas-frequentes-de-clientes.md",
+    "title": "Perguntas frequentes de clientes > Titularidade e Imóveis Alugados > A empresa opera em imóvel alugado. É possível contratar?",
+    "content": "Sim. Se a fatura estiver no CNPJ (ou CPF) do locatário, isso atende ao critério de titularidade; não comprova aprovação ou contratação imediata. Caso a conta ainda esteja cadastrada no nome do proprietário ou da imobiliária, basta solicitar a troca de titularidade diretamente nos canais de atendimento da concessionária local antes da formalização do contrato.",
+    "content_hash": "ac0a33085f3197373c2bd815e06bc0ec2d167386d73a20050d5a7ac7bf1a8bae",
+    "visibility": "public"
+  }
+]

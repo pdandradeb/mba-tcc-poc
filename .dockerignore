@@ -1,0 +1,13 @@
+*
+!Dockerfile
+!compose.yaml
+!pyproject.toml
+!uv.lock
+!src/
+!src/**
+!data/
+!data/**
+!sql/
+!sql/**
+**/__pycache__
+**/*.pyc
